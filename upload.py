@@ -12,7 +12,7 @@ def upload_script(script: tuple[dict, list]):
 
     ## json body
     post_json = dict()
-    post_json["video inputs"] = []
+    post_json["video_inputs"] = []
     for line in script_body:
         clip = dict()
         clip["character"] = dict()
@@ -24,17 +24,18 @@ def upload_script(script: tuple[dict, list]):
 
         clip["voice"] = dict()
         clip["voice"]["type"] = "text"
-        clip["input_text"] = line
-        clip["voice_id"] = script_header["Voice ID"]
+        clip["voice"]["input_text"] = line
+        clip["voice"]["voice_id"] = script_header["Voice ID"]
 
         clip["background"] = dict()
         clip["background"]["type"] = "image"
         clip["background"]["url"] = script_header["Slides"][script_body.index(line)] if script_body.index(line) < len(script_header["Slides"]) else script_header["Slides"][-1]
 
-        post_json["video inputs"].append(clip)
+        post_json["video_inputs"].append(clip)
     post_json["test"] = True
     post_json["caption"] = True
     post_json["dimension"] = {"width": 1280, "height": 720}
 
+    print(post_json)
     response = requests.post("https://api.heygen.com/v2/video/generate", json = post_json, headers=post_header)
     return response

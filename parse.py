@@ -22,7 +22,7 @@ def parse_header(header:list[str]):
                     slides = True
                     true_header["Slides"] = []
         else:
-            true_header["Slides"].append(line_split[0].strip())
+            true_header["Slides"].append(line.strip())
     return true_header
 
 def parse_script(script:list[str]):
