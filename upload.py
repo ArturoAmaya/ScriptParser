@@ -1,3 +1,4 @@
+import requests
 # cut up a script and put it into the format of a V2 HeyGen video
 
 def upload_script(script: tuple[dict, list]):
@@ -17,7 +18,7 @@ def upload_script(script: tuple[dict, list]):
         clip["character"] = dict()
         clip["character"]["type"] = "avatar"
         clip["character"]["avatar_id"] = script_header["Avatar ID"]
-        clip["character"]["avatar_style"] = script_header["normal"]
+        clip["character"]["avatar_style"] = "normal"
         clip["character"]["scale"] = 0.5
         clip["character"]["offset"] = {"x": 0.25, "y": 0.25}
 
@@ -34,3 +35,6 @@ def upload_script(script: tuple[dict, list]):
     post_json["test"] = True
     post_json["caption"] = True
     post_json["dimension"] = {"width": 1280, "height": 720}
+
+    response = requests.post("https://api.heygen.com/v2/video/generate", json = post_json, headers=post_header)
+    return response

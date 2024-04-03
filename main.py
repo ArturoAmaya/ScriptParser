@@ -6,6 +6,7 @@ filepath = sys.argv[1]
 
 parsed = parse_from_file(filepath)
 if parsed:
-    upload_script(parsed)
+    response = upload_script(parsed)
+    print(response)
 else:
     print(parsed)
