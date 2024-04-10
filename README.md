@@ -24,3 +24,5 @@ There are a few things I still have to consider. The new HeyGen API seems to be 
 ```
 
 Sample available at ([![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArturoAmaya/ScriptParser.git/HEAD))
+
+Note to self for the future: use the clock emoji to introduce 0.5 second pauses to the video through the API. might be necessary for handling transitions.
