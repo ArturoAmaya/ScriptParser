@@ -14,7 +14,7 @@ Slides:
     https://drive.google.com/file/d/1Mc0xorooDDiMyeSOf6k0j8ttes3n02Sp/view?usp=share_link 
 --
 
-Welcome to a script made for UCSD's online master's classes. Every snippet here represents something that will be said by the avatar. Whenever you want to change slides simply use two backslashes together like so.  That will change the slides. You can also hit the enter button to make a new line. Slides are provided in the header individually, for now.  Please make sure the number of slides is the number of backslashes plus one.
+Welcome to a script made for UCSD's online master's classes. Every snippet here represents something that will be said by the avatar. Whenever you want to change slides simply use two backslashes together like so. \\ That will change the slides. You can also hit the enter button to make a new line. Slides are provided in the header individually, for now.  Please make sure the number of slides is the number of backslashes plus one.
 
 The contents of the slides are, for now, not dynamic. I don't know how to parse things yet. I am still trying to learn more on the subject. I can however use the basic Python string manipulation functions to streamline my process. It has become too annoying to do in Postman.
 

@@ -4,16 +4,17 @@ import requests
 def upload_script(script: tuple[dict, list]):
     # unpack the script
     (script_header, script_body) = script
-    # compose the JSON first
-    ## header
-    post_header = dict()
-    post_header["Content-Type"] = "application/json"
-    post_header["x-api-key"] = script_header["HeyGen API key"]
-
-    ## json body
-    post_json = dict()
-    post_json["video_inputs"] = []
+    responses = []
     for line in script_body:
+        # compose the JSON first
+        ## header
+        post_header = dict()
+        post_header["Content-Type"] = "application/json"
+        post_header["x-api-key"] = script_header["HeyGen API key"]
+
+        ## json body
+        post_json = dict()
+        post_json["video_inputs"] = []
         clip = dict()
         clip["character"] = dict()
         clip["character"]["type"] = "avatar"
@@ -32,10 +33,11 @@ def upload_script(script: tuple[dict, list]):
         clip["background"]["url"] = script_header["Slides"][script_body.index(line)] if script_body.index(line) < len(script_header["Slides"]) else script_header["Slides"][-1]
 
         post_json["video_inputs"].append(clip)
-    post_json["test"] = True
-    post_json["caption"] = True
-    post_json["dimension"] = {"width": 1280, "height": 720}
+        post_json["test"] = True
+        post_json["caption"] = True
+        post_json["dimension"] = {"width": 1280, "height": 720}
 
-    print(post_json)
-    response = requests.post("https://api.heygen.com/v2/video/generate", json = post_json, headers=post_header)
-    return response
+        print(post_json)
+        response = requests.post("https://api.heygen.com/v2/video/generate", json = post_json, headers=post_header)
+        responses.append(response)
+    return responses

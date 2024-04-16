@@ -7,6 +7,8 @@ filepath = sys.argv[1]
 parsed = parse_from_file(filepath)
 if parsed:
     response = upload_script(parsed)
+
+    # TODO combine the videos
     print(response)
 else:
     print(parsed)
