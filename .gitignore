@@ -1,6 +1,7 @@
 # videos
 *.mp4
 *.mov
+.ass
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
