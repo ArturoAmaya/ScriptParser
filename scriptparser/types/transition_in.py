@@ -8,10 +8,8 @@ class transition(Enum):
 @dataclass
 class transition_in:
     t_type: transition
-    slide_url: str
-    slide_img: object
+    duration: float
 
     def __init__(self):
         self.t_type = None
-        self.slide_url = None
-        self.slide_img = None
+        self.duration = 0.0
