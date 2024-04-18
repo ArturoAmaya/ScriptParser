@@ -1,0 +1,5 @@
+- [ ] Edit upload script to get the video id
+- [ ] Get all the slides
+- [ ] Get the video clips and probe them
+- [ ] Compose scenes
+- [ ] Transitions

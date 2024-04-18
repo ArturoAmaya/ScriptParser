@@ -77,6 +77,7 @@ parsed = parse_from_file(filepath)
 if parsed:
     response = upload_script(parsed)
 
+    
     # TODO combine the videos
     # presumably response has the URL of the pending video. for each of the clips get the url. for each one, download it.
     # can't do this section without higher API limit yet
