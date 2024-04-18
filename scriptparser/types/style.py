@@ -12,8 +12,8 @@ class style:
     style: style_type
     avatar_scale: float
     slides_scale: float
-    avatar_position: tuple[float,float]
-    slides_position: tuple[float,float]
+    avatar_position: tuple[float,float] # where the top left point of the avatar should be wrt to the canvas. 0-1 as a percentage of size
+    slides_position: tuple[float,float] # same as above
 
     def __init__(self):
         self.style = None
