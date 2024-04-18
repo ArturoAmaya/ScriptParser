@@ -14,3 +14,10 @@ class style:
     slides_scale: float
     avatar_position: tuple[float,float]
     slides_position: tuple[float,float]
+
+    def __init__(self):
+        self.style = None
+        self.avatar_scale = None
+        self.slides_scale = None
+        self.avatar_position = None
+        self.slides_position = None
