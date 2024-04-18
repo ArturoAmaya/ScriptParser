@@ -1,3 +1,4 @@
+from scriptparser import scene
 
 def parse_header(header:list[str]):
     true_header = dict()
