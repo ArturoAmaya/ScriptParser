@@ -50,6 +50,10 @@ import urllib.request
 #   - caption_filename: caption filename
 #   - parsed_caption: the caption info (start stamp, end stamp, text)
 
+# scripting markup: 
+# - \n means new clip
+# - \\ mid-clip change
+
 # the order of operations will be: 
 # - parse script
 # - post to heygen and get the slides assets
