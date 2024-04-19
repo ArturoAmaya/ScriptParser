@@ -1,5 +1,6 @@
 from parse import parse_from_file
-from upload import upload_script
+from upload import upload_script, parse_upload_response, get_slides, get_avatar_clips
+from compose import compose_scenes
 import sys
 import urllib.request
 
@@ -73,14 +74,29 @@ import urllib.request
 # V
 filepath = sys.argv[1]
 
-parsed = parse_from_file(filepath)
-if parsed:
-    response = upload_script(parsed)
+script = parse_from_file(filepath)
+if script:
+    responses = upload_script(script)
 
+    # parse the response content into the scenes - literally just the avatar video ids
+    script = parse_upload_response(responses, script)
+
+    # get the slides 
+    script = get_slides(script)
+
+    # then go get the links from the videos and download the clips. hopefully they've rendered by now
+    script = get_avatar_clips(script)
+    print(script)
+
+    # compose the scenes
+    script = compose_scenes(script)
+    # transitions
     
+    # output video
+
     # TODO combine the videos
     # presumably response has the URL of the pending video. for each of the clips get the url. for each one, download it.
     # can't do this section without higher API limit yet
-    print(response)
+    print(responses)
 else:
-    print(parsed)
+    print(script)
