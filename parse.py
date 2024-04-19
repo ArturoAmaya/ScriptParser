@@ -38,9 +38,9 @@ def parse_script(script:list[scene], header:dict):
         
 
         # assign the text, the background type, the slides url, the style
-        s.text = line.replace('\\\\', '')
+        s.text = line.replace('\\\\', '') # TODO return to this when we add in mid-clip cuts
         s.slide.slide_source_type = slide_source.URL
-        s.slide.slide_url = header['Slides'][count]
+        s.slide.slide_url = header['Slides'][count] if count < len(header["Slides"]) else header["Slides"][-1]
 
         # default here is pip so no background to be set
         # assign style per default for v0.01 using ffmpeg notation
