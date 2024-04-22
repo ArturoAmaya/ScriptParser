@@ -1,4 +1,4 @@
-from scriptparser import scene, slide_source, style, style_type, transition, transition_in
+from scriptparser import scene, slide_source, style, style_type, transition_type, transition_in
 
 def parse_header(header:list[str]):
     true_header = dict()
@@ -53,7 +53,7 @@ def parse_script(script:list[scene], header:dict):
 
         # transition infor
         if (count != 0):
-            s.transition_in.t_type = transition.FADE
+            s.transition_in.t_type = transition_type.FADE
             s.transition_in.duration = 1.0
         
         # at this point, the only things in scene with no value are

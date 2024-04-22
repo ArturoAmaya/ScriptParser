@@ -1,13 +1,13 @@
 from dataclasses import dataclass
 from enum import Enum
 
-class transition(Enum):
+class transition_type(Enum):
     FADE = "fade"
 
 
 @dataclass
 class transition_in:
-    t_type: transition
+    t_type: transition_type
     duration: float
 
     def __init__(self):
