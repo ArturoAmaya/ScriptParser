@@ -24,7 +24,7 @@ def upload_script(script: tuple[dict, list[scene]]):
         clip["character"]["avatar_id"] = script_header["Avatar ID"]
         clip["character"]["avatar_style"] = "normal"
         clip["character"]["scale"] = scene.style.avatar_scale
-        clip["character"]["offset"] = {"x": scene.style.avatar_position[0], "y": scene.style.avatar_position[1]} # TODO revisit I believe hey gen's implementation is different to ffmpeg's
+        clip["character"]["offset"] = {"x": 1-scene.style.avatar_position[0], "y": 1-scene.style.avatar_position[1]} # TODO revisit I believe hey gen's implementation is different to ffmpeg's. believe they do bottom right indexing or smth idk
 
         clip["voice"] = dict()
         clip["voice"]["type"] = "text"
