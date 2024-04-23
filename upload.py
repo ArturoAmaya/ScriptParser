@@ -67,6 +67,12 @@ def get_slides(script:list[scene])->list[scene]:
             count = count + 1
     return script
 
+def get_avatar_clip(scene:scene, apikey:str, count:int, wait:int):
+    post_header = dict()
+    post_header['Content-Type'] = "application/json"
+    pass
+
+
 def get_avatar_clips(script:tuple[dict,list[scene]])->list[scene]:
     count = 0
     script_header, script_body = script
