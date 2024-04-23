@@ -4,7 +4,7 @@ from compose import compose_scenes
 import sys
 import urllib.request
 from transition import transitions
-
+import ffmpeg
 import time
 
 #filepath = sys.argv[1]
@@ -88,19 +88,19 @@ if script:
     script = get_slides(script)
 
     # then go get the links from the videos and download the clips. hopefully they've rendered by now
-    time.sleep(50)
+    time.sleep(1500)
     script = get_avatar_clips(script)
     print(script)
 
     # compose the scenes
     script = compose_scenes(script)
     # transitions
-    script = transitions(script)
+    (script, v, a, v_d, a_d) = transitions(script)
     # output video
-    script = outputs(script)
-    # TODO combine the videos
+    ffmpeg.output(v,a, script[0]["Lecture Name"]+".mp4", pix_fmt='yuv420p').run()
+    
     # presumably response has the URL of the pending video. for each of the clips get the url. for each one, download it.
     # can't do this section without higher API limit yet
-    print(responses)
+    #print(responses)
 else:
     print(script)
