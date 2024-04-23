@@ -34,3 +34,11 @@ ffmpeg.output(clip,audio,'output.mp4', pix_fmt='yuv420p').run()
                                          vid2.audio,transition_type.FADE,1.0,
                                          float(vid1_vid_stream['duration']), float(vid2_vid_stream['duration']), float(vid1_audio_stream['duration']), float(vid2_audio_stream['duration']))
 ffmpeg.output(v,a,'output2.mp4',pix_fmt='yuv420p').run()
+
+vid3 = ffmpeg.input('avatar2.mp4')
+probe3 = ffmpeg.probe('avatar2.mp4')
+vid3_vid_stream = next((stream for stream in probe3['streams'] if stream['codec_type'] == 'video'), None)
+vid3_audio_stream = next((stream for stream in probe3['streams'] if stream['codec_type'] == 'audio'), None)
+
+(v,a,v_d,a_d) = transition.transition(v,vid3,a,vid3.audio,transition_type.FADE, 1.0, v_d, float(vid3_vid_stream['duration']), a_d, float(vid3_audio_stream['duration']))
+ffmpeg.output(v,a,'output3.mp4', pix_fmt='yuv420p').run()
