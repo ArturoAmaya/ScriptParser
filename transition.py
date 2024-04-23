@@ -17,4 +17,21 @@ def transition(v0: ffmpeg.nodes.FilterableStream, v1: ffmpeg.nodes.FilterableStr
 
 def transitions(script: tuple[dict,list[scene]]):
 
-    pass
+    # the first clip has no transition in
+    header, scenes = script
+
+    temp = scenes[0]
+
+    temp_v = temp.clip
+    temp_a = temp.clip.audio
+    temp_v_d = float(next((stream for stream in temp.avatar_video.metadata['streams'] if stream['codec_type'] == 'video'), None)['duration'])
+    temp_a_d = float(next((stream for stream in temp.avatar_video.metadata['streams'] if stream['codec_type'] == 'audio'), None)['duration'])
+
+    for scene in scenes[1:]:
+
+        scene_v_d = float(next((stream for stream in scene.avatar_video.metadata['streams'] if stream['codec_type'] == 'video'), None)['duration'])
+        scene_a_d = float(next((stream for stream in scene.avatar_video.metadata['streams'] if stream['codec_type'] == 'audio'), None)['duration'])
+
+        (temp_v, temp_a, temp_v_d, temp_a_d) = transition(temp_v, scene.clip, temp_a, scene.clip.audio, scene.transition_in.t_type, scene.transition_in.duration, temp_v_d, scene_v_d, temp_a_d, scene_a_d)
+
+    return (script, temp_v, temp_a, temp_v_d, temp_a_d)
