@@ -85,6 +85,7 @@ def parse_from_file(filepath: str):
             elif line.strip() == "--":
                 head = False
             else:
+                # note that new line is any new line, and repeated newlines are treated the same as only one new line
                 if (str(line.strip())!=''):
                     script.append(str(line.strip()))
         header = parse_header(header)
