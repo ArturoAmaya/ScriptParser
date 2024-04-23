@@ -2,6 +2,7 @@
 *.mp4
 *.mov
 *.ass
+*.jpg
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
