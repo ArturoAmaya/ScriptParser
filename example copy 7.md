@@ -1,6 +1,6 @@
 Name: Arturo Amaya
 Lecture Name: Lecture 10
-HeyGen API key: ZDdhMWM5NjMzM2RkNGMwOTkzYzY5MDdmOGE3NjQzZTctMTcxMzU2NDE5OQ==
+HeyGen API key: ZGZiNmNlNDhhODkyNGUwNGFlNWViOTk5NTcxNWRhZjctMTcxMzkwODUwNQ==
 Creatomate API key: *key*
 Avatar ID: Luke_public_3_20240306
 Voice ID: 5dddee02307b4f49a17c123c120a60ca
