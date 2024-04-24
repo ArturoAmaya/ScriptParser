@@ -88,7 +88,7 @@ if script:
     script = get_slides(script)
 
     # then go get the links from the videos and download the clips. hopefully they've rendered by now
-    time.sleep(1500)
+    #time.sleep(1500)
     script = get_avatar_clips(script)
     print(script)
 

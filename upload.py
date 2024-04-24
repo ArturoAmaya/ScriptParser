@@ -2,6 +2,7 @@ import requests
 from scriptparser import scene
 import json
 from urllib.request import urlretrieve
+import time
 # cut up a script and put it into the format of a V2 HeyGen video
 
 def upload_script(script: tuple[dict, list[scene]]):
@@ -52,9 +53,9 @@ def parse_upload_response(responses:list[requests.models.Response], script: tupl
         if response.status_code == 200:
             body = json.loads(response.text)
             script_body[count].avatar_video.id = body["data"]["video_id"]
-            count = count + 1
         else:
             print("Yo, error with video number ", count)
+        count = count + 1
     return script
 
 def get_slides(script:list[scene])->list[scene]:
@@ -68,34 +69,36 @@ def get_slides(script:list[scene])->list[scene]:
     return script
 
 def get_avatar_clip(scene:scene, apikey:str, count:int, wait:int):
+    time.sleep(wait)
     post_header = dict()
     post_header['Content-Type'] = "application/json"
+    post_header["x-api-key"] = apikey #script_header["HeyGen API key"]
+    response = requests.get("https://api.heygen.com/v1/video_status.get?video_id="+scene.avatar_video.id, headers=post_header)
+    if response.status_code == 200:
+        body = json.loads(response.text)
+        if body["data"]["status"] == "completed":
+
+            # get the url to the video and download it
+            scene.avatar_video.url = body["data"]["video_url"]
+            path, headers = urlretrieve(scene.avatar_video.url, f"avatar{count}.mp4")
+            scene.avatar_video.filename = path
+
+            # get the url to the caption and download it
+            scene.caption.caption_url = body["data"]["caption_url"]
+            path, headers = urlretrieve(scene.caption.caption_url, f"caption{count}.ass")
+            scene.caption.caption_filename = path
+            return scene
+        else:
+            print("trying again with video " + str(scene.number) + " waiting " + str(wait*2))
+            return get_avatar_clip(scene, apikey, count, wait*2)
     pass
 
 
 def get_avatar_clips(script:tuple[dict,list[scene]])->list[scene]:
     count = 0
     script_header, script_body = script
+    apikey = script_header["HeyGen API key"]
     for scene in script_body:
-        post_header = dict()
-        post_header["Content-Type"] = "application/json"
-        post_header["x-api-key"] = script_header["HeyGen API key"]
-        response = requests.get("https://api.heygen.com/v1/video_status.get?video_id="+scene.avatar_video.id, headers=post_header)
-        if response.status_code == 200:
-            body = json.loads(response.text)
-            if body["data"]["status"] == "completed":
-
-                # get the url to the video and download it
-                scene.avatar_video.url = body["data"]["video_url"]
-                path, headers = urlretrieve(scene.avatar_video.url, f"avatar{count}.mp4")
-                scene.avatar_video.filename = path
-
-                # get the url to the caption and download it
-                scene.caption.caption_url = body["data"]["caption_url"]
-                path, headers = urlretrieve(scene.caption.caption_url, f"caption{count}.ass")
-                scene.caption.caption_filename = path
-                count = count + 1
-        else:
-            print("problem retrieving avata video number " + count)
-
+        script_body[count] = get_avatar_clip(scene, apikey, count, 50)
+        count = count + 1
     return script

@@ -3,8 +3,9 @@
 - [x] Get the video clips and probe them
 - [x] Compose scenes
 - [x] Transitions
-- [ ] Chain transitions programatically
+- [x] Chain transitions programatically
 
+- [ ] Test the get avatar clip method
 - [ ] Exapnd to include avatar voice id and id in a scene. For demo purposes let's stick to one video-wide avatar and voice
 - [ ] Small extension to include composed clip probe data in a seperate space to the avatar video probe data. JIC we do more complicated operations
 - [ ] Come up with a neater way to handle transitions. Currently the method takes a buuuuunch of parameters because I'm not too familiar with the ffmpeg python wrapper and I haven't well defined my scope for the function. This is an important to-do
