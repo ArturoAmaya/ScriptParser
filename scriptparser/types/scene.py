@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 from .avatar_video import avatar_video as vid
 from .background import background as bkgnd
 from .caption import caption as cap
@@ -28,4 +28,7 @@ class scene:
         self.text = None
         self.clip = None
         self.caption = cap()
+
+    def to_dict(self):
+        return asdict(self)
 

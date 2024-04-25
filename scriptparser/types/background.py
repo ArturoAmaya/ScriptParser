@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 from enum import Enum
 
 class background_source(Enum):
@@ -15,3 +15,6 @@ class background:
         self.background_source_type = None
         self.background_url = None
         self.background_command = None
+
+    def to_dict(self):
+        return asdict(self)

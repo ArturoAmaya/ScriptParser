@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 from enum import Enum
 
 class style_type(Enum):
@@ -21,3 +21,6 @@ class style:
         self.slides_scale = None
         self.avatar_position = None
         self.slides_position = None
+    
+    def to_dict(self):
+        return asdict(self)

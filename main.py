@@ -2,23 +2,9 @@ from parse import parse_from_file
 from upload import upload_script, parse_upload_response, get_slides, get_avatar_clips
 from compose import compose_scenes
 import sys
-import urllib.request
 from transition import transitions
 import ffmpeg
-import time
-
-#filepath = sys.argv[1]
-
-#parsed = parse_from_file(filepath)
-#if parsed:
-#    response = upload_script(parsed)
-
-    # TODO combine the videos
-    # presumably response has the URL of the pending video. for each of the clips get the url. for each one, download it.
-    # can't do this section without higher API limit yet
-#    print(response)
-#else:
-#    print(parsed)
+import argparse
 
 
 ### OUTLINE:
@@ -75,32 +61,39 @@ import time
 
 
 # V
-filepath = sys.argv[1]
+#filepath = sys.argv[1]
+msg = "This tool is designd to take a correctly marked up text file (preferably .md but .txt works exactly the same) and produce a composed clip with HeyGen"
+# Initialize parser
+parser = argparse.ArgumentParser(description = msg)
+parser.add_argument("-i", "--Input", help = "name/location of the file")
+args = parser.parse_args()
 
-script = parse_from_file(filepath)
-if script:
-    responses = upload_script(script)
+if args.Input:
+    filepath = args.Input
+    script = parse_from_file(filepath)
+    if script:
+        responses = upload_script(script)
 
-    # parse the response content into the scenes - literally just the avatar video ids
-    script = parse_upload_response(responses, script)
+        # parse the response content into the scenes - literally just the avatar video ids
+        script = parse_upload_response(responses, script)
 
-    # get the slides 
-    script = get_slides(script)
+        # get the slides 
+        script = get_slides(script)
 
-    # then go get the links from the videos and download the clips. hopefully they've rendered by now
-    #time.sleep(1500)
-    script = get_avatar_clips(script)
-    print(script)
+        # then go get the links from the videos and download the clips. hopefully they've rendered by now
+        #time.sleep(1500)
+        script = get_avatar_clips(script)
+        print(script)
 
-    # compose the scenes
-    script = compose_scenes(script)
-    # transitions
-    (script, v, a, v_d, a_d) = transitions(script)
-    # output video
-    ffmpeg.output(v,a, script[0]["Lecture Name"]+".mp4", pix_fmt='yuv420p').run()
+        # compose the scenes
+        script = compose_scenes(script)
+        # transitions
+        (script, v, a, v_d, a_d) = transitions(script)
+        # output video
+        ffmpeg.output(v,a, script[0]["Lecture Name"]+".mp4", pix_fmt='yuv420p').run()
     
-    # presumably response has the URL of the pending video. for each of the clips get the url. for each one, download it.
-    # can't do this section without higher API limit yet
-    #print(responses)
-else:
-    print(script)
+        # presumably response has the URL of the pending video. for each of the clips get the url. for each one, download it.
+        # can't do this section without higher API limit yet
+        #print(responses)
+    else:
+        print(script)

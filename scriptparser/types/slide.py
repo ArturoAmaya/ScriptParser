@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 from enum import Enum
 
 class slide_source(Enum):
@@ -16,3 +16,6 @@ class slide:
         self.slide_url = None
         self.slide_img = None
         self.slide_filename = None
+    
+    def to_dict(self):
+        return asdict(self)

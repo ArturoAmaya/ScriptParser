@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 
 @dataclass
 class caption:
@@ -10,3 +10,6 @@ class caption:
         self.caption_url = None
         self.caption_filename = None
         self.parsed_caption = None
+
+    def to_dict(self):
+        return asdict(self)

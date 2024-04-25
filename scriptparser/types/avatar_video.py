@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 
 @dataclass
 class avatar_video:
@@ -14,3 +14,6 @@ class avatar_video:
         self.video = None
         self.metadata = None
         self.filename = None
+    
+    def to_dict(self):
+        return asdict(self)
