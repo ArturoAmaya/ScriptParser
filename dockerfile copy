@@ -1,0 +1,24 @@
+FROM python:bookworm
+SHELL ["/bin/bash", "-c"]
+
+WORKDIR /code
+COPY . /code/
+#./scriptparser/. ./requirements.txt ./*.ipynb ./*.md ./*.py /code/
+
+# get ffmpeg
+RUN apt-get -y update
+#RUN apt-get -y install ffmpeg 
+# NO DON'T DO THIS THE DEFAULT FFMPEG ON DEBIAN ISN'T UPDATED TO VERSION 7:6.1.1
+RUN curl -o ffmpeg.tar.xz https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-amd64-static.tar.xz
+RUN tar -xf ffmpeg.tar.xz && mv ffmpeg-git-20240301-amd64-static ffmpeg
+#RUN apt-get -y install ffprobe not necessary because ffmpeg downloaded probe as well
+ENV PATH="${PATH}:/code/ffmpeg"
+# set up python env
+RUN python -m venv venv
+RUN source ./venv/bin/activate
+RUN pip install -r requirements.txt
+#RUN pip freeze >> reqs.txt
+
+## 
+# build with docker docker build -t script_parser:v0.01 . -f "dockerfile copy"
+# run interactive image with docker run -it --entrypoint bash script_parser:[v#]
