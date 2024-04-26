@@ -1,11 +1,15 @@
-from parse import parse_from_file
+from parse import parse_from_file, restore_intermediate
 from upload import upload_script, parse_upload_response, get_slides, get_avatar_clips
 from compose import compose_scenes
 import sys
 from transition import transitions
 import ffmpeg
 import argparse
+import json
 
+def save_intermediate(script: tuple[dict,list[object]], filename:str):
+    with open(filename, 'w', encoding='utf-8') as f:
+            json.dump(dict(header=script[0],body=[i.to_dict() for i in script[1]]), f, ensure_ascii=False, indent=4)
 
 ### OUTLINE:
 
@@ -62,38 +66,227 @@ import argparse
 
 # V
 #filepath = sys.argv[1]
-msg = "This tool is designd to take a correctly marked up text file (preferably .md but .txt works exactly the same) and produce a composed clip with HeyGen"
+msg = "This tool is designed to take a correctly marked up text file (preferably .md but .txt works exactly the same) and produce a composed clip with HeyGen"
 # Initialize parser
 parser = argparse.ArgumentParser(description = msg)
-parser.add_argument("-i", "--Input", help = "name/location of the file")
+parser.add_argument("-is", "--Input-script", type=str, help="name/location of the input file")
+#subparsers = parser.add_subparsers(help="sub-command help")
+# make a save intermediate subparser
+#save_parser = subparsers.add_parser('--save-intermediate', default=False, action="store_true", help="Save intermediate versions of the script")
+
+parser.add_argument("--save-intermediate", default=False, action="store_true", help="Save intermediate versions of the script")
+parser.add_argument("-if", "--intermediate-filename", type=str, default="data.json", help="Name of the intermediate data file to be written")
+
+
+parser.add_argument("--load-intermediate", default=False, action="store_true", help="Load intermediate y/n")
+parser.add_argument("-s", "--intermediate-stage", default=0, type=int, help="stage of the intermediate file")
+parser.add_argument("-in", "--Input-intermediate", default="data.json", help="name/location of the intermediate file to be read")
+
+parser.add_argument("-d", "--Destination", default="./", type=str, help="base destination folder for downloads")
 args = parser.parse_args()
 
-if args.Input:
-    filepath = args.Input
+if args.Input_script and not args.load_intermediate:
+
+    # at stage 0 right now
+    filepath = args.Input_script
     script = parse_from_file(filepath)
+    if args.save_intermediate:
+        save_intermediate(script, args.Destination+args.intermediate_filename)
+
+    # stage 1 - after file parse
     if script:
         responses = upload_script(script)
-
+        if args.save_intermediate:
+            save_intermediate(script, args.Destination+args.intermediate_filename)
         # parse the response content into the scenes - literally just the avatar video ids
         script = parse_upload_response(responses, script)
+        if args.save_intermediate:
+            save_intermediate(script, args.Destination+args.intermediate_filename)
 
+        # stage 2 - after parsing upload response
         # get the slides 
-        script = get_slides(script)
+        script = get_slides(script, args.Destination)
+        if args.save_intermediate:
+            save_intermediate(script, args.Destination+args.intermediate_filename)
 
+        # stage 3 - after getting slides
         # then go get the links from the videos and download the clips. hopefully they've rendered by now
         #time.sleep(1500)
-        script = get_avatar_clips(script)
+        script = get_avatar_clips(script, args.Destination)
         print(script)
+        if args.save_intermediate:
+            save_intermediate(script, args.Destination+args.intermediate_filename)
 
+        # stage 4 - after getting all the assets. At this point there's no point splititng up stages since we can serialize an ffmpeg transition node or a video
         # compose the scenes
         script = compose_scenes(script)
         # transitions
         (script, v, a, v_d, a_d) = transitions(script)
         # output video
-        ffmpeg.output(v,a, script[0]["Lecture Name"]+".mp4", pix_fmt='yuv420p').run()
+        ffmpeg.output(v,a, args.Destination+script[0]["Lecture Name"]+".mp4", pix_fmt='yuv420p').run()
     
         # presumably response has the URL of the pending video. for each of the clips get the url. for each one, download it.
         # can't do this section without higher API limit yet
         #print(responses)
     else:
         print(script)
+else:
+    # choose the intermediate stage to start from:
+    if (args.intermediate_stage == 0):
+        print("start from the beginning you weirdo")
+        filepath = args.Input_script
+        script = parse_from_file(filepath)
+        if args.save_intermediate:
+            save_intermediate(script, args.Destination+args.intermediate_filename)
+
+        # stage 1 - after file parse
+        if script:
+            responses = upload_script(script)
+            if args.save_intermediate:
+                save_intermediate(script, args.Destination+args.intermediate_filename)
+            # parse the response content into the scenes - literally just the avatar video ids
+            script = parse_upload_response(responses, script)
+            if args.save_intermediate:
+                save_intermediate(script, args.Destination+args.intermediate_filename)
+
+            # stage 2 - after parsing upload response
+            # get the slides 
+            script = get_slides(script, args.Destination)
+            if args.save_intermediate:
+                save_intermediate(script, args.Destination+args.intermediate_filename)
+
+            # stage 3 - after getting slides
+            # then go get the links from the videos and download the clips. hopefully they've rendered by now
+            #time.sleep(1500)
+            script = get_avatar_clips(script, args.Destination)
+            print(script)
+            if args.save_intermediate:
+                save_intermediate(script, args.Destination+args.intermediate_filename)
+
+            # stage 4 - after getting all the assets. At this point there's no point splititng up stages since we can serialize an ffmpeg transition node or a video
+            # compose the scenes
+            script = compose_scenes(script)
+            # transitions
+            (script, v, a, v_d, a_d) = transitions(script)
+            # output video
+            ffmpeg.output(v,a, script[0]["Lecture Name"]+".mp4", pix_fmt='yuv420p').run()
+        
+            # presumably response has the URL of the pending video. for each of the clips get the url. for each one, download it.
+            # can't do this section without higher API limit yet
+            #print(responses)
+        else:
+            print(script)
+    elif (args.intermediate_stage == 1):
+        print("start from 1")
+        f = open(args.Input_intermediate)
+        script = restore_intermediate(json.load(f))
+        f.close()
+        # stage 1 - after file parse
+        if script:
+            responses = upload_script(script)
+            if args.save_intermediate:
+                save_intermediate(script, args.Destination+args.intermediate_filename)
+            # parse the response content into the scenes - literally just the avatar video ids
+            script = parse_upload_response(responses, script)
+            if args.save_intermediate:
+                save_intermediate(script, args.Destination+args.intermediate_filename)
+
+            # stage 2 - after parsing upload response
+            # get the slides 
+            script = get_slides(script, args.Destination)
+            if args.save_intermediate:
+                save_intermediate(script, args.Destination+args.intermediate_filename)
+
+            # stage 3 - after getting slides
+            # then go get the links from the videos and download the clips. hopefully they've rendered by now
+            #time.sleep(1500)
+            script = get_avatar_clips(script, args.Destination)
+            print(script)
+            if args.save_intermediate:
+                save_intermediate(script, args.Destination+args.intermediate_filename)
+
+            # stage 4 - after getting all the assets. At this point there's no point splititng up stages since we can serialize an ffmpeg transition node or a video
+            # compose the scenes
+            script = compose_scenes(script)
+            # transitions
+            (script, v, a, v_d, a_d) = transitions(script)
+            # output video
+            ffmpeg.output(v,a, script[0]["Lecture Name"]+".mp4", pix_fmt='yuv420p').run()
+        
+            # presumably response has the URL of the pending video. for each of the clips get the url. for each one, download it.
+            # can't do this section without higher API limit yet
+            #print(responses)
+        else:
+            print(script)
+    elif (args.intermediate_stage == 2):
+        print("start from 2")
+        f = open(args.Input_intermediate)
+        script = restore_intermediate(json.load(f))
+        f.close()
+        script = get_slides(script, args.Destination)
+        if args.save_intermediate:
+            save_intermediate(script, args.Destination+args.intermediate_filename)
+
+        # stage 3 - after getting slides
+        # then go get the links from the videos and download the clips. hopefully they've rendered by now
+        #time.sleep(1500)
+        script = get_avatar_clips(script, args.Destination)
+        print(script)
+        if args.save_intermediate:
+            save_intermediate(script, args.Destination+args.intermediate_filename)
+
+        # stage 4 - after getting all the assets. At this point there's no point splititng up stages since we can serialize an ffmpeg transition node or a video
+        # compose the scenes
+        script = compose_scenes(script)
+        # transitions
+        (script, v, a, v_d, a_d) = transitions(script)
+        # output video
+        ffmpeg.output(v,a, script[0]["Lecture Name"]+".mp4", pix_fmt='yuv420p').run()
+        
+        # presumably response has the URL of the pending video. for each of the clips get the url. for each one, download it.
+        # can't do this section without higher API limit yet
+        #print(responses)
+        
+    elif (args.intermediate_stage == 3):
+        print("start from 3")
+        f = open(args.Input_intermediate)
+        script = restore_intermediate(json.load(f))
+        f.close()
+        # stage 3 - after getting slides
+        # then go get the links from the videos and download the clips. hopefully they've rendered by now
+        #time.sleep(1500)
+        script = get_avatar_clips(script, args.Destination)
+        print(script)
+        if args.save_intermediate:
+            save_intermediate(script, args.Destination+args.intermediate_filename)
+
+        # stage 4 - after getting all the assets. At this point there's no point splititng up stages since we can serialize an ffmpeg transition node or a video
+        # compose the scenes
+        script = compose_scenes(script)
+        # transitions
+        (script, v, a, v_d, a_d) = transitions(script)
+        # output video
+        ffmpeg.output(v,a, script[0]["Lecture Name"]+".mp4", pix_fmt='yuv420p').run()
+        
+        # presumably response has the URL of the pending video. for each of the clips get the url. for each one, download it.
+        # can't do this section without higher API limit yet
+        #print(responses)
+    elif (args.intermediate_stage == 4):
+        print("start from 4")
+        f = open(args.Input_intermediate)
+        script = restore_intermediate(json.load(f))
+        f.close()
+        # stage 4 - after getting all the assets. At this point there's no point splititng up stages since we can serialize an ffmpeg transition node or a video
+        # compose the scenes
+        script = compose_scenes(script)
+        # transitions
+        (script, v, a, v_d, a_d) = transitions(script)
+        # output video
+        ffmpeg.output(v,a, script[0]["Lecture Name"]+".mp4", pix_fmt='yuv420p').run()
+        
+        # presumably response has the URL of the pending video. for each of the clips get the url. for each one, download it.
+        # can't do this section without higher API limit yet
+        #print(responses)
+    else:
+        print("invalid argument bruv")
+         
