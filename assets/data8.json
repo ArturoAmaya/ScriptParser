@@ -1,0 +1,246 @@
+{
+    "header": {
+        "Name": "Arturo Amaya",
+        "Lecture Name": "Lecture 10",
+        "HeyGen API key": "ODRkYzAxYzU3MjI5NDE5OWI4ODIwYThmYWJkYzc4YzAtMTcxMzkwOTc2NQ==",
+        "Creatomate API key": "*key*",
+        "Avatar ID": "Luke_public_3_20240306",
+        "Voice ID": "5dddee02307b4f49a17c123c120a60ca",
+        "Slides": [
+            "https://drive.google.com/file/d/1p5OyujCWBFxLogcAllLe_fPR_A72fyS2/view?usp=share_link",
+            "https://drive.google.com/file/d/1aCsa_WcVk4goJPBOKtSmZpIsKJNOWaw-/view?usp=share_link",
+            "https://drive.google.com/file/d/1y-ly8HI061xbp25DQ3mhUOEwrIxqIbbd/view?usp=share_link",
+            "https://drive.google.com/file/d/1xh1JPrktNOeri7bHAwu_kDc9SIt4_mjp/view?usp=share_link",
+            "https://drive.google.com/file/d/1az8Qxl913EG1jh2GJdlTmdCrK_FWHB-D/view?usp=share_link",
+            "https://drive.google.com/file/d/1dBosQvnt3V7eccNrVvJdRqyEIj7tHY9V/view?usp=share_link",
+            "https://drive.google.com/file/d/1Mc0xorooDDiMyeSOf6k0j8ttes3n02Sp/view?usp=share_link"
+        ]
+    },
+    "body": [
+        {
+            "number": 0,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1p5OyujCWBFxLogcAllLe_fPR_A72fyS2/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "./assets/slide0.jpg"
+            },
+            "background": {
+                "background_source_type": null,
+                "background_url": null,
+                "background_command": null
+            },
+            "transition_in": {
+                "t_type": null,
+                "duration": 0.0
+            },
+            "avatar_video": {
+                "id": "6ff4fce842f04bd086694543e893c330",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/a7ef2a17abe34dfdaee0bfe09763ce21/6ff4fce842f04bd086694543e893c330.mp4?Expires=1714775667&Signature=AqwJEP68xtIMt07MVpd~K4VZo565165p6Q3VKf1XQdX~kkZxfskKSjFVWolLo-Vj6W8SEDMpRhKnmXmXm6n82rSo7SbzHhGNfGigof-Z7BsgPRqeOHLVfe90sNX3fuFotyk9rAYLfIjy0htnM2Xp6W~9P2y-gQhMdVSw0Qr8dGq0yoYdMbV6PGpqOSu675OWgq05srDJGINpEOg7vgrnV1jpYsPdYBFhZOX13stNApDjP7fIGlZpnEw5EvupTwCkZiH~2WuZWM6vgesTh22NOebourWcUWtvBhkhdEwfP9SylcVMgA1Q3~JVMhiYUnnB45ES1mecV3f9qqLPLBA2Vg__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "./assets/avatar0.mp4"
+            },
+            "text": "Once upon a time, in the cozy village of Willowbrook, there lived a curious little squirrel named Sammy. Sammy had soft, brown fur and bright, shiny eyes that sparkled with wonder. He spent his days scurrying through the tall oak trees, leaping from branch to branch, and collecting acorns for his winter stash. But unlike other squirrels who were content with their routine, Sammy yearned for adventure. He dreamt of exploring far-off lands and discovering hidden treasures beyond the borders of Willowbrook.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/6ff4fce842f04bd086694543e893c330/caption.ass?Expires=1714775668&Signature=WWvYAzubAlBZDh06oJKlpOTUyH6npE9CUl2svReE23wUliy99qNyFr0NyZAqamN4hQdWz~ctFVB1Q9GWpZobd~VkI-8ypCJU5F5Ts-43dhjW9H5dvuanU~0ZpQkNVMMf4l3x4gJ7ZN3mkfCb9HEWyclgnCfOB7J6ztNm7FSUsARGYviN6IqUqx9AQ9l1mJn~GbLG74PMbHOsKtez6bSONAvhgpOr6cKXoi0v47WzeCvSp-GrnRv5WlOYMKHcjNGFg4I3fmpe4Bl7ayqMzf4W9FMTavwlMGz5fkP2x1XmLNkpGdmiD7EDa4ieJQXXQTOFdQ7HSYN~naCirprX0wcTkw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "./assets/caption0.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 1,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1aCsa_WcVk4goJPBOKtSmZpIsKJNOWaw-/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "./assets/slide1.jpg"
+            },
+            "background": {
+                "background_source_type": null,
+                "background_url": null,
+                "background_command": null
+            },
+            "transition_in": {
+                "t_type": "fade",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "3cdc430519dd47c283c08ca95ac7d8b3",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/a7ef2a17abe34dfdaee0bfe09763ce21/3cdc430519dd47c283c08ca95ac7d8b3.mp4?Expires=1714775806&Signature=gBtGOZZ7brnuyOUmz~cZamkYAhgpytKL0rBbEex7xgwui7XKqhsT79BfjxvXbGG1AmsHhk4HiE0HHr54F6JqKuqokdB3pWApCjcO2DLhxKgNp2r8oUvHmXaae-UFbZ0q9eQNyu665fjo~LxO2hEofDMQBkX70jD2LrjL1xkOQTKRyqFjiYNuEQh3ctKWR4bRwScTNw1zdXz60so987Ho9RZF2Voo7WsWf6SmhgtNVoxroix6B40h~3ZUgvbv0M~ta20A1iR0mZ6R0YjpWTxOipN3HAN1dG2DkMkvF2OwjV1mWOYjIZ9zvRhy6wnva~8vEs7HYxBifmHSRUzwxD7JTg__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "./assets/avatar1.mp4"
+            },
+            "text": "One sunny morning, while frolicking in the meadow, Sammy stumbled upon a mysterious map nestled among the wildflowers. The map was old and weathered, with faded markings that hinted at untold secrets. Sammy's heart raced with excitement as he studied the map, imagining the thrilling escapades that awaited him. With a determined flick of his tail, he decided to embark on a daring quest to follow the map's trail and uncover its mysteries.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/3cdc430519dd47c283c08ca95ac7d8b3/caption.ass?Expires=1714775806&Signature=K8iCc1GU4YPWO29gcrbIKSVzKBdI-7Jht1iPApopok~dRoj7lvpN~C25jsPpjiYyVgGggA4UJn~wDfyU43vE8jHny1WCP45h5A-T-GMNfacLRFGKgLpMLWNX0S4giX37JLxfVc2ZzigxjpgUI2C6DkV-w0xFckJgt5crdUjriB3znXczLQ3xQlrA4MhWmq8zeW1fEpftTIJ9IokAlsxuIoOBYDiNAii8zfDDli9luCSqVJCgun1LLJz6VHZmClDZjeBCciIuHH3u7OHCXR8Vqq6geprT2DArwRqvsdVlWJ-WTVHl250gXbRHOzxbuEkiuFXNwvIxH1MqqRDJ9a1Ndw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "./assets/caption1.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 2,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1y-ly8HI061xbp25DQ3mhUOEwrIxqIbbd/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "./assets/slide2.jpg"
+            },
+            "background": {
+                "background_source_type": null,
+                "background_url": null,
+                "background_command": null
+            },
+            "transition_in": {
+                "t_type": "fade",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "f4b41ffc7d224c8c8afe67d88e904620",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/a7ef2a17abe34dfdaee0bfe09763ce21/f4b41ffc7d224c8c8afe67d88e904620.mp4?Expires=1714775861&Signature=fQdMyCz-24QPnDKfDLS6VeHutXS5wZ3SC0vvPR7owBqe8n4QaXRi3OFB-gKlfAMNewZ8BQtfcDBR3eRfOV64JRdO0Z5Q5B9dW~1FBfKIymNYKBxL12cPlrLvpvmrvIzK7WKq2PqkH4QtmmG7YgApn9vOQhi6O0xmR60NbBKD~-Q61c7mAZqtvkZjHhLu3Fl6vnaMZFUmrZIgldnEFDrWgtiqX9cLodxbujGObV6aCiAG0Nf4R8LrVM~9uCpxJsjbhAdhQ8uS8fweuSNAtYSB2fTFmo5iwOVfeTLlHZIV4CjOIcjALmxbMYEtChQJ-7VLWZTAquG8wg93XdJUu4LiNQ__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "./assets/avatar2.mp4"
+            },
+            "text": "Gathering his courage and a handful of acorns for the journey, Sammy bid farewell to his friends and set off into the unknown. Through dense forests and across babbling brooks, he ventured, his tiny paws carrying him ever closer to his destination. Along the way, he encountered friendly woodland creatures who offered him guidance and companionship. Together, they braved the challenges of the wilderness, overcoming obstacles with teamwork and determination.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/f4b41ffc7d224c8c8afe67d88e904620/caption.ass?Expires=1714775861&Signature=gHJ3ityzYERF8XHYmeEK5~TxOF3~Nx~hOAmfoHG-P4H-SmRod8o1ZLumXIpxh1gpzdUBFhroMaqwpVZzzQwSv3UoIr3csFNcQeuCytnhAYpFhQzPcb3ISV4ygKCErTFtJCNq83a6~lrNCE7E-zvfLQ-FObV82NtxFBWx2xDRm7cUib0k3XFqTgWKroogx7dfKMWGydcPAHJxgR427tB2JoDdMzxRiXOUVZP1Tqlxuh61HysyYUDBWd2lJWi81uVLzhBI1J8OnfSndtvcwbPUkU3yIgAgZDvS58ZWnLptGzPxJ7l7GKD5NHF3-8coW0OI6WGlbYeitHaSlI~fK00WDA__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "./assets/caption2.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 3,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1xh1JPrktNOeri7bHAwu_kDc9SIt4_mjp/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "./assets/slide3.jpg"
+            },
+            "background": {
+                "background_source_type": null,
+                "background_url": null,
+                "background_command": null
+            },
+            "transition_in": {
+                "t_type": "fade",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "a8597eda16824e6187524034ceb46492",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/a7ef2a17abe34dfdaee0bfe09763ce21/a8597eda16824e6187524034ceb46492.mp4?Expires=1714775915&Signature=HXDoYPLOPWW8EpvPO2kKWAieP3yzytt6eR2xGWi0oaP7NTpw1Lhdzq9wN-B-2VBPsdzEumFQAKcUgoDvoGZoCO4cpxJNLbfXgR8jE13gcR2x9o0Vn51xTBdooozO~Jxiy4mMbhgs6cBlejIAs6tu7lZniZV6WZjCrWuXyKw9Blvy2dR3JFppnw4g-4jzT1n1t9BglzdbchkarPFxA-0Z8S5LrVk1hrdUgWGCEQUc3sM2Qv~CWbc2ecNyGuFp4j~gg37783ekiNTg6mGcYP6Q8FFcLUmq3LEKtAu0NmmKa7~a8U1vxgyDZJlMZShdt1REuDuuxxc6IFHbijos9KhTpw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "./assets/avatar3.mp4"
+            },
+            "text": "As the sun dipped below the horizon, casting a warm glow over the land, Sammy finally reached the end of his journey. Standing atop a grassy hill, he gazed out at the breathtaking sight before him: a shimmering lake surrounded by towering mountains. At the water's edge, nestled among the reeds, lay a gleaming treasure chest adorned with intricate carvings. With trembling excitement, Sammy approached the chest and slowly lifted its lid, revealing the treasures hidden within. Gold coins, sparkling gems, and precious artifacts sparkled in the moonlight, filling Sammy's heart with joy.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/a8597eda16824e6187524034ceb46492/caption.ass?Expires=1714775915&Signature=GwFxK3eS0NRLOTHBVoBviWm0KOSB7vfU2a8t3~MFNBGglb0udiohwoHZUjg20a45DIoazTt~u~rRm44Yq-6mpG41Z0kfF~1T3Ak~kxG6bmT-oUhM8WoqyybSmIaST3nBee8~2EU6ZOax~t4hLVhGhKSfND7rh2umewiSyk8aVZoXen2Ojn9PvyY~6zuZJtjleT92a9CN2P3~tye8lZCMQdA4WFxhOhMp1NHhfqbdL9iW2aelQeW4loOrf8B2kl6SGA57ihfIVRJqfzyx-zagoSosBY4mcaCAJ52ix7wLWo30lQjHmGbeq9cRmZipCe6CRHwFHxbSM6GewJc2ItneHw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "./assets/caption3.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 4,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1az8Qxl913EG1jh2GJdlTmdCrK_FWHB-D/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "./assets/slide4.jpg"
+            },
+            "background": {
+                "background_source_type": null,
+                "background_url": null,
+                "background_command": null
+            },
+            "transition_in": {
+                "t_type": "fade",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "4deed8a9a26b4b06a676e05c42779dc6",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/a7ef2a17abe34dfdaee0bfe09763ce21/4deed8a9a26b4b06a676e05c42779dc6.mp4?Expires=1714775990&Signature=R2~dyb76ytKCIL~BqOqE~8xx6gnU7V5FOC5kkkTQDbG6oR~IkPY3B0QIlgR1C5rEG4uViBjgTCqsgkiafNVDFit8DR73vAnbg0i7k8NLO7br5V-7-Lf5jiwq3HfWlYgkzRFeer8pO3em60zDTdRBKNmiMzBFsr8GKhe~v2O1QGO4m1dCEfcQnFWWzW6OnrtoEwdkLQg~Fkk6qMhSLHsh2fbKxLdlHTaZJHbBtJrQ~CdNC6Yw9jgJzdX6J77m8inO35~pflow7-IAQN0~2SE3TBqEzQ1prjAT14egmY4S5Bcxaf3378VZoluWSoYNTIY-ST3cBooOms2YOBSjnZhUkw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "./assets/avatar4.mp4"
+            },
+            "text": "With his newfound treasures safely tucked away, Sammy bid farewell to the enchanted lake and began his journey back home to Willowbrook. As he scampered through the forest, the memories of his adventure danced in his mind, filling him with a sense of pride and accomplishment. And though he had returned with riches beyond his wildest dreams, Sammy knew that the greatest treasure of all was the memories he had made and the friendships he had forged along the way. And so, with a contented sigh, he continued on his way, eager to share his tales of adventure with his friends in Willowbrook.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/4deed8a9a26b4b06a676e05c42779dc6/caption.ass?Expires=1714775990&Signature=KTc2qvFiUYm2QBppRtUv3S8U7jm6MJF0II6vze1lDyy1M8LcODm4DYz~lNriI9Mf--uAKEENmqlMOqFAWXUKrYB9t8rPnTRZKyYQuKU~HjfG3O-DHfkVsJX5pIunCuQYlPOoDgXIrz8RnYEUMQ7le5JhLt7O-glrOGqMFS~sGLm~GdXKUt8VlG3unvNzuCJgdVcmj4L8ZCkE9PqJWMr8Ioeb6i8VvZHNAY-Oz1u6TCnLgsNGJ4Z7rd4CJ2GO5j08oCFY8kWtyLBnFv~Gt0vxFW~-IyIv7GK~Ogznp2s3Z8no6bxwgnldP3nT8S4tl0v~cnieOCYzGTJ3OEznCVW8Ig__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "./assets/caption4.ass",
+                "parsed_caption": null
+            }
+        }
+    ]
+}
