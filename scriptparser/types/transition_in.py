@@ -1,7 +1,7 @@
 from dataclasses import dataclass, asdict
 from enum import Enum
 
-class transition_type(Enum):
+class transition_type(str, Enum):
     FADE = "fade"
 
 
@@ -16,3 +16,10 @@ class transition_in:
 
     def to_dict(self):
         return asdict(self)
+    
+    @classmethod
+    def from_dict(cls,data):
+        c = cls()
+        c.t_type = transition_type(data["t_type"]) if data["t_type"] != None else None
+        c.duration = data["duration"]
+        return c

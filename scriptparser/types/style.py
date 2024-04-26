@@ -1,7 +1,7 @@
 from dataclasses import dataclass, asdict
 from enum import Enum
 
-class style_type(Enum):
+class style_type(str,Enum):
     PIP = "pip"
     AVATAR = "avatar-only"
     SBS = "side-by-side"
@@ -24,3 +24,13 @@ class style:
     
     def to_dict(self):
         return asdict(self)
+    
+    @classmethod
+    def from_dict(cls,data):
+        c = cls()
+        c.style = style_type(data["style"])
+        c.avatar_scale = data["avatar_scale"]
+        c.slides_scale = data["slides_scale"]
+        c.avatar_position= (data["avatar_position"][0], data["avatar_position"][1])
+        c.slides_position = (data["slides_position"][0], data["slides_position"][1])
+        return c

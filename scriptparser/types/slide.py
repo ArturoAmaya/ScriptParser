@@ -1,7 +1,7 @@
 from dataclasses import dataclass, asdict
 from enum import Enum
 
-class slide_source(Enum):
+class slide_source(str, Enum):
     URL = "url"
 
 @dataclass
@@ -19,3 +19,12 @@ class slide:
     
     def to_dict(self):
         return asdict(self)
+    
+    @classmethod
+    def from_dict(cls,data):
+        c = cls()
+        c.slide_source_type = slide_source(data["slide_source_type"])
+        c.slide_url = data["slide_url"]
+        c.slide_img = data["slide_img"]
+        c.slide_filename = data["slide_filename"]
+        return c

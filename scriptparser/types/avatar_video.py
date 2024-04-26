@@ -17,3 +17,13 @@ class avatar_video:
     
     def to_dict(self):
         return asdict(self)
+    
+    @classmethod
+    def from_dict(cls,data):
+        c =cls()
+        c.id = data["id"]
+        c.url = data["url"]
+        c.video = data["video"]
+        c.metadata = data["metadata"]
+        c.filename = data["filename"]
+        return c

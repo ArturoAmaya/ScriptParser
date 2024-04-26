@@ -18,3 +18,11 @@ class background:
 
     def to_dict(self):
         return asdict(self)
+    
+    @classmethod
+    def from_dict(cls,data):
+        #c = cls()
+        #c.background_source_type = background_source(data["background_source_type"])
+        #c.background_url = data["background_url"]
+        #c.background_command = data["background_command"]
+        pass

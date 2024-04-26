@@ -13,3 +13,12 @@ class caption:
 
     def to_dict(self):
         return asdict(self)
+
+    @classmethod
+    def from_dict(cls,data):
+        c = cls()
+        c.caption_url = data["caption_url"]
+        c.caption_filename = data["caption_filename"]
+        c.parsed_caption = data["parsed_caption"]
+        #
+        return c
