@@ -54,7 +54,10 @@ def parse_upload_response(responses:list[requests.models.Response], script: tupl
             body = json.loads(response.text)
             script_body[count].avatar_video.id = body["data"]["video_id"]
         else:
-            print("Yo, error with video number ", count)
+            body = json.loads(response.text)
+            body['error']
+            print("Error with video number " + str(count))
+            print(body['error']['message'])
         count = count + 1
     return script
 
@@ -84,7 +87,7 @@ def get_avatar_clip(scene:scene, apikey:str, count:int, wait:int):
             scene.avatar_video.filename = path
 
             # get the url to the caption and download it
-            scene.caption.caption_url = body["data"]["caption_url"]
+            scene.caption.caption_url = body["data"]["caption_url"] if body["data"]["caption_url"] != None else None
             path, headers = urlretrieve(scene.caption.caption_url, f"caption{count}.ass")
             scene.caption.caption_filename = path
             return scene
