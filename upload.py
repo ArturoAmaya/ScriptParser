@@ -61,17 +61,17 @@ def parse_upload_response(responses:list[requests.models.Response], script: tupl
         count = count + 1
     return script
 
-def get_slides(script:list[scene])->list[scene]:
+def get_slides(script:list[scene], dir:str)->list[scene]:
     count  = 0
     script_header, script_body = script
     for scene in script_body:
         if scene.slide.slide_url != None or scene.slide.slide_url != '':
-            path, headers = urlretrieve(scene.slide.slide_url, f"slide{count}.jpg") # todo return and decide how to import the file format. don't think this thing cares tho
+            path, headers = urlretrieve(scene.slide.slide_url, dir+f"slide{count}.jpg") # todo return and decide how to import the file format. don't think this thing cares tho
             scene.slide.slide_filename = path
             count = count + 1
     return script
 
-def get_avatar_clip(scene:scene, apikey:str, count:int, wait:int):
+def get_avatar_clip(scene:scene, apikey:str, count:int, wait:int, dir:str="./"):
     time.sleep(wait)
     post_header = dict()
     post_header['Content-Type'] = "application/json"
@@ -83,12 +83,12 @@ def get_avatar_clip(scene:scene, apikey:str, count:int, wait:int):
 
             # get the url to the video and download it
             scene.avatar_video.url = body["data"]["video_url"]
-            path, headers = urlretrieve(scene.avatar_video.url, f"avatar{count}.mp4")
+            path, headers = urlretrieve(scene.avatar_video.url, dir+f"avatar{count}.mp4")
             scene.avatar_video.filename = path
 
             # get the url to the caption and download it
             scene.caption.caption_url = body["data"]["caption_url"] if body["data"]["caption_url"] != None else None
-            path, headers = urlretrieve(scene.caption.caption_url, f"caption{count}.ass")
+            path, headers = urlretrieve(scene.caption.caption_url, dir+f"caption{count}.ass")
             scene.caption.caption_filename = path
             return scene
         else:
@@ -97,11 +97,11 @@ def get_avatar_clip(scene:scene, apikey:str, count:int, wait:int):
     pass
 
 
-def get_avatar_clips(script:tuple[dict,list[scene]])->list[scene]:
+def get_avatar_clips(script:tuple[dict,list[scene]], dir:str="./")->list[scene]:
     count = 0
     script_header, script_body = script
     apikey = script_header["HeyGen API key"]
     for scene in script_body:
-        script_body[count] = get_avatar_clip(scene, apikey, count, 50)
+        script_body[count] = get_avatar_clip(scene, apikey, count, 50, dir)
         count = count + 1
     return script
