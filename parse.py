@@ -1,4 +1,4 @@
-from scriptparser import scene, slide_source, style, style_type, transition_type, transition_in
+from scriptparser import scene, caption, avatar_video, background, slide, slide_source, style, style_type, transition_type, transition_in
 
 def parse_header(header:list[str]):
     true_header = dict()
@@ -93,3 +93,22 @@ def parse_from_file(filepath: str):
         return (header, script)
     except:
         return False
+    
+
+def restore_intermediate(script: dict)->tuple[dict, list[scene]]:
+    scenes = []
+    for item in script["body"]:
+        s = scene()
+
+        s.number = item["number"]
+        s.style = style.from_dict(item["style"])
+        s.slide = slide.from_dict(item["slide"])
+        s.background = background.from_dict(item["background"]) # NO BACKGROUND INFO YET
+        s.transition_in = transition_in.from_dict(item["transition_in"])
+        s.avatar_video = avatar_video.from_dict(item["avatar_video"])
+        s.text = item["text"]
+        s.clip = None
+        s.caption = caption.from_dict(item["caption"])
+
+        scenes.append(s)
+    return (script["header"], scenes)
