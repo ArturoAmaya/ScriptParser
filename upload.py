@@ -61,7 +61,7 @@ def parse_upload_response(responses:list[requests.models.Response], script: tupl
         count = count + 1
     return script
 
-def get_slides(script:list[scene], dir:str)->list[scene]:
+def get_slides(script:list[scene], dir:str="./")->list[scene]:
     count  = 0
     script_header, script_body = script
     for scene in script_body:
