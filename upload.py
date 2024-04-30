@@ -58,6 +58,10 @@ def parse_upload_response(responses:list[requests.models.Response], script: tupl
             body['error']
             print("Error with video number " + str(count))
             print(body['error']['message'])
+            if response.status_code == 429:
+                raise Exception("You've used up the available requests on this API key in the last 24 hours. Please wait or try a different key.")
+            else:
+                raise Exception(f"Uknown error ocurred: {body['error']['message']}")
         count = count + 1
     return script
 
