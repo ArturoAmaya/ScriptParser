@@ -17,12 +17,16 @@ v0.01a
 - [ ] v0.03     Support side by side compositions
 - [ ] v0.04     Support avatar only compositions
 - [ ] v0.05     Support media only compositions
-- [ ] v0.05a    Support external video compositions (HARD)
+- [ ] v0.05a    Support external video compositions (HARD) (scrap this for now (I've forgotten what it meant))
 - [ ] v0.06     Support non-xfade transitions
 - [ ] v0.07     Support mid-clip transitions
 - [ ] v0.07LTS  (Very randomly) this seems like a good place to stop and reassess, and add validation to the script. Why flood HeyGen with incorrect or unsupported API calls. Plus, if I can get to this stage the software will support a ton of stuff already, it may be time to open beta it or start thinking about a VSCode syntax extension-type thing
 
 Misc:
-- [ ] Expand to include avatar voice id and id in a scene. For demo purposes let's stick to one video-wide avatar and voice
+- [ ] Expand to include avatar voice id and id in a scene. For demo purposes let's stick to one video-wide avatar and voice.
 - [ ] Small extension to include composed clip probe data in a seperate space to the avatar video probe data. JIC we do more complicated operations.
-- [ ] Come up with a neater way to handle transitions. Currently the method takes a buuuuunch of parameters because I'm not too familiar with the ffmpeg python wrapper and I haven't well defined my scope for the function. This is an important to-do
+- [ ] Come up with a neater way to handle transitions. Currently the method takes a buuuuunch of parameters because I'm not too familiar with the ffmpeg python wrapper and I haven't well defined my scope for the function. This is an important to-do.
+- [ ] Support slide transitions without transitioning the avatar, particularly for side by side clips.
+- [ ] Support PDF slides
+- [ ] Support file slides
+- [ ] Support non slide-type media for background (heygen has a video background format, and I know I could do it too)
