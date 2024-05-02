@@ -91,8 +91,7 @@ class transition_type(str, Enum):
     REVEALDOWN = "revealdown"
     # special ones
     CUSTOM = "custom" # this is a surprise tool that will help us later
-    CONCAT = "concat"
-    ERROR = "concat" # unsupported, error-type
+    CONCAT = "concat" # concatenation AND unsupported, error-type
 
 @dataclass
 class transition_in:
