@@ -3,10 +3,20 @@ import ffmpeg
 
 def transition(v0: ffmpeg.nodes.FilterableStream, v1: ffmpeg.nodes.FilterableStream, a0: ffmpeg.nodes.FilterableStream, a1: ffmpeg.nodes.FilterableStream, transition_type: transition_type, duration: float, v0_d: float, v1_d: float, a0_d: float, a1_d:float)->tuple[ffmpeg.nodes.FilterableStream, ffmpeg.nodes.FilterableStream, float, float]:
     
-    if transition_type == transition_type.FADE:
-        temp_clip_v = ffmpeg.filter([v0, v1], 'xfade', transition='fade', duration=duration, offset=(v0_d-duration-(v0_d-a0_d)))
-    else: 
-        print("unsupported transition type")
+    # if it's not custom, not concat and not error
+    if (transition_type != transition_type.CUSTOM) and (transition_type !=transition_type.CONCAT) and (transition_type != transition_type.ERROR):
+        temp_clip_v = ffmpeg.filter([v0, v1], 'xfade', transition=transition_type.value, duration=duration, offset=(v0_d-duration-(v0_d-a0_d)))
+    elif transition_type == transition_type.CUSTOM:
+        print("custom transition requested but not yet supported, I'll give you a fade instead")
+        temp_clip_v = ffmpeg.filter([v0, v1], 'xfade', transition=transition_type.FADE.value, duration=duration, offset=(v0_d-duration-(v0_d-a0_d)))
+    elif transition_type == transition_type.CONCAT or transition_type == transition_type.ERROR:
+        # TODO concatenation filter
+        print("concatenation requested")
+
+        if transition_type == transition_type.ERROR:
+            print("because of an error, mind you")
+    else:
+        print("error bro")
 
     temp_clip_a = ffmpeg.filter([a0,a1], 'acrossfade', duration=duration)
 

@@ -81,7 +81,7 @@
             },
             "background": null,
             "transition_in": {
-                "t_type": "fade",
+                "t_type": "revealup",
                 "duration": 1.0
             },
             "avatar_video": {
@@ -122,7 +122,7 @@
             },
             "background": null,
             "transition_in": {
-                "t_type": "fade",
+                "t_type": "hrwind",
                 "duration": 1.0
             },
             "avatar_video": {
@@ -163,7 +163,7 @@
             },
             "background": null,
             "transition_in": {
-                "t_type": "fade",
+                "t_type": "dissolve",
                 "duration": 1.0
             },
             "avatar_video": {
