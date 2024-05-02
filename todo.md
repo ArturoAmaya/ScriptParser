@@ -12,7 +12,11 @@ v0.01a
 - [x] v0.01b Write script object in intermediate point to .json and read it back so we can pick up at any point in the process. Change downloaded asset destination folder. Basic error flagging (stop it with the "yo error with", actually print the response text) Fri Apr 26
 - [x] v0.01b0 Add tester API keys. 5 of them. Mon Apr 29 /touch up Tue Apr 30
 - [x] v0.01b1 Error out when there's an api trial limit excption instead of waiting. (small change) Tue Apr 30
-- [ ] v0.01c Decide on markup syntax and supported interactions, as well as complexity levels
+- [x] Decide on markup syntax and supported interactions, as well as complexity levels Wed May 1
+- [ ] v0.02 Non-fade transitions and different durations.
+
+
+####### Old roadmap
 - [ ] v0.02     Support non-heygen picture-in-picture
 - [ ] v0.03     Support side by side compositions
 - [ ] v0.04     Support avatar only compositions
