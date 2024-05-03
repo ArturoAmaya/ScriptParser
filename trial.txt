@@ -1,0 +1,34 @@
+ffmpeg -i avatar0.mp4 -i avatar1.mp4 -i avatar2.mp4 -i avatar3.mp4 -i avatar4.mp4 -filter_complex "[0:v][1:v]concat=a=0:n=1:v=2[s0];[s0][2]xfade=duration=1.0:offset=64.97395800000001:transition=hrwind[s1];[s1][3]xfade=duration=1.0:offset=99.168937:transition=dissolve[s2];[s2][4]xfade=duration=1.0:offset=127.93991600000001:transition=fade[s3];[0:a][1:a]concat=a=2:n=1:v=0[s4];[s4][2:a]acrossfade=duration=1.0[s5];[s5][3:a]acrossfade=duration=1.0[s6];[s6][4:a]acrossfade=duration=1.0[s7]" -pix_fmt 'yuv420p' -map "[s3]" -map "[s7]" buh.mp4
+
+
+ffmpeg -i avatar0.mp4 -i avatar1.mp4 -i avatar2.mp4 -i avatar3.mp4 -i avatar4.mp4 -filter_complex 
+"[0:v][1:v]concat=a=0:n=1:v=2[s0];
+[s0][2]xfade=duration=1.0:offset=64.97395800000001:transition=hrwind[s1];
+[s1][3]xfade=duration=1.0:offset=99.168937:transition=dissolve[s2];
+[s2][4]xfade=duration=1.0:offset=127.93991600000001:transition=fade[s3];
+[0:a][1:a]concat=a=2:n=1:v=0[s4];[s4][2:a]acrossfade=duration=1.0[s5];
+[s5][3:a]acrossfade=duration=1.0[s6];
+[s6][4:a]acrossfade=duration=1.0[s7]" -pix_fmt 'yuv420p' -map "[s3]" -map "[s7]" buh.mp4
+
+
+ffmpeg -i avatar0.mp4 -i avatar1.mp4 -i avatar2.mp4 -filter_complex 
+"[0:v][1:v]concat=a=0:n=1:v=2[s0];
+[s0]settb=1/12800[s0_1];
+[s0_1][2]xfade=duration=1.0:offset=64.973958:transition=hrwind[s1];
+[0:a][1:a]concat=a=1:n=2:v=1[s4];[s4][2:a]acrossfade=duration=1.0[s5]" -map "[s1]" -map "[s5]" oooo.mp4
+
+# THIS WORKS AS A FIRST PASS
+ffmpeg -i avatar0.mp4 -i avatar1.mp4 -filter_complex 
+"[0:v]trim=start=0.0:end=30.994979[v0];
+[0][1]concat=a=1:n=2:v=0[a1];
+[v0][1]concat=a=0:n=2:v=1[v1]" -map "[v1]" -map "[a1]" -pix_fmt 'yuv420p' o.mp4
+
+# try to chain with multiple clips
+# IT WORKSSSSS
+ffmpeg -i avatar0.mp4 -i avatar1.mp4 -i avatar2.mp4 -filter_complex 
+"[0:v]trim=start=0.0:end=30.994979[v0];
+[v0][1]concat=a=0:n=2:v=1[v1];
+[v1]settb=1/12800[v1_1];
+[v1_1][2]xfade=duration=1.0:offset=64.973958:transition=dissolve[v2];
+[0][1]concat=a=1:n=2:v=0[a1];
+[a1][2]acrossfade=duration=1.0[a2]" -map "[v2]" -map "[a2]" oooo.mp4
