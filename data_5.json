@@ -1,0 +1,250 @@
+{
+    "header": {
+        "Name": "Arturo Amaya",
+        "Lecture Name": "Lecture 10",
+        "HeyGen API key": "MjdjNWRiYTFlYTA1NDkzOGE0ZDRhMjM0NWMzYzgzZmQtMTcxMzU2MzI3OQ==",
+        "Default Avatar ID": "Luke_public_3_20240306",
+        "Default Voice ID": "5dddee02307b4f49a17c123c120a60ca",
+        "Default Composition": null,
+        "Default Transition": {
+            "t_type": "fade",
+            "duration": 1.0
+        },
+        "Slides": [
+            "https://drive.google.com/file/d/1p5OyujCWBFxLogcAllLe_fPR_A72fyS2/view?usp=share_link",
+            "https://drive.google.com/file/d/1aCsa_WcVk4goJPBOKtSmZpIsKJNOWaw-/view?usp=share_link",
+            "https://drive.google.com/file/d/1y-ly8HI061xbp25DQ3mhUOEwrIxqIbbd/view?usp=share_link",
+            "https://drive.google.com/file/d/1xh1JPrktNOeri7bHAwu_kDc9SIt4_mjp/view?usp=share_link",
+            "https://drive.google.com/file/d/1az8Qxl913EG1jh2GJdlTmdCrK_FWHB-D/view?usp=share_link",
+            "https://drive.google.com/file/d/1dBosQvnt3V7eccNrVvJdRqyEIj7tHY9V/view?usp=share_link",
+            "https://drive.google.com/file/d/1Mc0xorooDDiMyeSOf6k0j8ttes3n02Sp/view?usp=share_link"
+        ]
+    },
+    "body": [
+        {
+            "number": 0,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1p5OyujCWBFxLogcAllLe_fPR_A72fyS2/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "./slide0.jpg"
+            },
+            "background": {
+                "background_source_type": null,
+                "background_url": null,
+                "background_command": null
+            },
+            "transition_in": {
+                "t_type": null,
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "d4f83cd3452c49a08b38c0b4ca389b9f",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/77b7ff4ba8f74f9da5c6da54fcf7ff34/d4f83cd3452c49a08b38c0b4ca389b9f.mp4?Expires=1715383768&Signature=GxKyD6NjCVGffx7ChuPEB2Ek3ecOCF5hO6FUPdCZ859v5by6hQEYHr1uz~XsOfLRFYvm1QWAay8wcv5Xx4dKiqiZdeDvL4Z4fJXTEmiZOzlNBDHWIJah2PnPJF5JZayKIjbzvJg25by9ddT1LZhGSeZEBisQzDmcO1M6j7jxuapQPOPwVQcZcB43W1KCN9SxgtZsQCbjQI969KamqM200IePKSOKTQkHUj4~ygDrqGqk2aquVl25sIBOepEiVTA1-4trcjMSReStCRbfvzeA0r67OZodJA6cR~QmUVzFsLO-wTQbiqs2shxOpyz5g7K47FTgVKL92wIEc7V7JqM~ZA__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "./avatar0.mp4"
+            },
+            "text": "Welcome to an alpha version of UCSD's markdown to lecture pipeline. This early version only supports basic concatenation of videos and has little to no input verification, so please use with caution.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/d4f83cd3452c49a08b38c0b4ca389b9f/caption.ass?Expires=1715383768&Signature=QBTklsoWbLf9S4ZAaDXrADlgtcSpKKe8zVP2l3bbOrIJ-yh5O11Xj5FzXZrDbPTx-bE4R-VvfUqeEnIeqsyzI9VI6OqdATYrGJ9EGeHdREY84pZzGY1M7qPrE8pAamjht-KAc-pWfCjZvnjlssjHMlRDQXmQpDlfC1V~1P53u4PcADf0x-g3O9UM5T99wbzVE-qUsmd68MytkFUzcTQoCSxXI6Vw0lQdOrCgp2i1dK6RtLqgFhUCNWgfqaB5GH10VCeuSZWfWfpqW5wcZCgkNY4zYATY3Wt6CWmY26GMNXEIO~-YqYU6TUU6CNDPAn9P8dMhjEjMG3-tdRaOBRpOOg__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "./caption0.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 1,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1aCsa_WcVk4goJPBOKtSmZpIsKJNOWaw-/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "./slide1.jpg"
+            },
+            "background": {
+                "background_source_type": null,
+                "background_url": null,
+                "background_command": null
+            },
+            "transition_in": {
+                "t_type": "fade",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "14b1ed00787645abbe0ef0c845d919d5",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/77b7ff4ba8f74f9da5c6da54fcf7ff34/14b1ed00787645abbe0ef0c845d919d5.mp4?Expires=1715383921&Signature=fk3UD84eZpy2dB7KmOGfX4GUfswYRVllNdH-N2ugpXDbYTL1jS97IS2SOPf9UykBwsYwpn9tojKAl6GiWeQspJ2iIjBuwVxz4~ScQlXuuuYWf9HvIV8zoWHEfr7sQaHnL1zdjCetFQPxJBul-Z8SLPEWS-D-i8Z~gcOaGQvLD5cta8OGc8EW0AV-ZmQCwUiHBu2VRbIGGbbz2y6j2~Bv4J5XYG8ihHmZGXlMFDwlhU3nJzPlMm1onc-2418jcXJkPGXY0JZGm0YETi1H8Q-FcNLx2e0KUCDGJCnvniSl6~y6owTNm3-fmirAlYgr8nDRDkG24VVrdELacX07TEZwiQ__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "./avatar1.mp4"
+            },
+            "text": "Also make sure each paragraph has less than 2000 characters. The only interesting thing it does is fade in between videos. To indicate you want a different clip to begin, simply introduce a newline like this 🕓🕓🕓🕓🕓🕓🕓🕓🕓🕓🕓🕓",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/14b1ed00787645abbe0ef0c845d919d5/caption.ass?Expires=1715383921&Signature=a2aTSY88682IwYxNiH2K4icL62hsyXT86XxeFeOtHg7bg2SzghIax1IMLzqIvYtYMA0cfrob64eut-2hMOXRa862B6Ol1TnNcTq5n9rvCEnPAZAkrNXhzXskz1p-baIfWo3P-uYQmCFH91diU2mQePeCsvb7sgwiwVn7q~jl2qJjFby1Ca~p76u1BBmL7sI9ITNTSQ-MqmpMK3ULT9XyTssipwVfx68imZ46r1LUKu7TuJWMWi~IvhSZDtS~8-oSbkcMz4ROg9QkMuia7zMR8AkQXnQ-h2LjlzyTtGaPS~nMp5LV8B8ahyaDLQCDHGYXE2jUC6Cp~O6Jvbrsf-rzVA__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "./caption1.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 2,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1y-ly8HI061xbp25DQ3mhUOEwrIxqIbbd/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "./slide2.jpg"
+            },
+            "background": {
+                "background_source_type": null,
+                "background_url": null,
+                "background_command": null
+            },
+            "transition_in": {
+                "t_type": "dissolve",
+                "duration": 5.0
+            },
+            "avatar_video": {
+                "id": "d3126da6f3844c529dcc659bc5967539",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/77b7ff4ba8f74f9da5c6da54fcf7ff34/d3126da6f3844c529dcc659bc5967539.mp4?Expires=1715383972&Signature=JRxN4SBLgDaNdTVrU3y0LEMGbHqH~mL36NzlE5517zXrXKfZYP3wLaNgOIWrKCOgWQINjq1LRp3zwKjgPUTBmMfDYlv8WruXeoWBkNRD1YMJolntCThnuqvscyGKEBKvz6qXlyYreY2mIgPdiX7Z2WDFY27wlN~6dV4o8SowpYkLfDlhOMwe1fCnVd-no5IwUS-cu3w9mN0pA~4Yx-KbaPAGf1Vit5F14UDGGtT2H8hb7LsTAJdM4oQEXJJmb0EhafO0cagOXR7-CiUqfH8NZFXaIjPid4dc3F0V7iV9Qe-v9qjyQrRvAqG3HhvnvI0-cDsGQpuR-qmv5hKvfw6caQ__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "./avatar2.mp4"
+            },
+            "text": "This is a different video. If everything worked, it's been stitched together with the previous video with a visual and audio cross fade. The only clip composition that is currently supported is the picture in picture made by heygen with default a setting of placing the avatar at half scale in the bottom right of the slide. Slides advance in order with the each paragraph.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/d3126da6f3844c529dcc659bc5967539/caption.ass?Expires=1715383972&Signature=LRKth~F13idsZeJ6XmnM~kR2vsr8P7ZwSOXRqnHvUEgoq7A-oIGfurcAijpnCaDxnxKbARn5rlGaoyFZSHtJ-N-KPq6W7trxk5r2x3AFWqAQF0RYS-V2tMQdSXsKR1PuLgMwCxDlX6ac9c7xMYcJRZ2HU4uHyrPHZ8D-eRg1rwpNILu9e~~oTnM-qLbVtLYBUlqs8Yyy9QNlEmWOnMKZ3b-OrD9wABJHn-s9e2mTQ6WbejjHuOmtZ9KQN6StEtGGpoWDFnPSwwhGEtJzPx8CwQYIBZ7iD8QM6v2N6~t9b~YMmGbHDH02DID7FLrSlLSwElrbnGBoU2qCQne~nFeSGQ__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "./caption2.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 3,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1xh1JPrktNOeri7bHAwu_kDc9SIt4_mjp/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "./slide3.jpg"
+            },
+            "background": {
+                "background_source_type": null,
+                "background_url": null,
+                "background_command": null
+            },
+            "transition_in": {
+                "t_type": "circlecrop",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "0217a1984fbd48cabf4e70f8ff04c762",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/77b7ff4ba8f74f9da5c6da54fcf7ff34/0217a1984fbd48cabf4e70f8ff04c762.mp4?Expires=1715384024&Signature=bR4CQuTj-c5sW0p6CxX4BuydPLKhDE7TSsxyVKYIj7fYfQ-nFnNv7smECj1x88RO6Am~zlYVlU70Z2~AnC3D9g56k2h17teZPZoe8I9uRqAMQ1GX6nmOGXdgd-pR8H~45PiWtZzkPU834zjqVyTM7TKZWdmuTplB-VW2NzSkFfPkDZtvnnptzsqhBuRG4v6P2bdjVbU4iEaoIWt7ERE4vRSktJbtrazViAeveyuIxMjUyHRPTVDLankxUdWR0lnC59BtJspbr9XYcog1EafDVgbrF-qXqOyfCOISN-YiD73oJJqwWN31Ug4fVGN1VjmWbCoh3oDXp2ALaFILhjdlLA__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "./avatar3.mp4"
+            },
+            "text": "Future versions of this program will expand on these functionalities. I will figure out how to import a PDF instead of a series of images. I will support more complex clip compositions such as side by side, avatar-only, slide-only and imported media as well as more advanced transitions like sudden changes mid-sentence or wipes and slides or cross dissolves. The markdown syntax will obviously evolve concurrently.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/0217a1984fbd48cabf4e70f8ff04c762/caption.ass?Expires=1715384024&Signature=LsP2uSeTV3VQZJHuehdLn63h2Ga73tNdR~UJWq5c9Xcf0m1DbeUyiFJ0JzxA4bIAxHiLqZsyBlV9aeHeEMxaBjQeegf4AAQdNc9nUG2x5ZJm31BvXgaKYqk8EH4WHfmoND6rgsG1rDj1JPhIcHZP0RuMlC1h6zYQYdi4aJnkuN2aA3bjzuoQ5eY9vrD9e63xTIF06rMThcDnuBQ0kQTWT8uD6e1yYAy0tlYI0JD7UUogv~V1agvgmiADWUtV4ju0-VP~MHV1cpNpJ49-nP8kVJM1XfyDzNQrkWaogP6KW72UUGLnZGLhrgd-h7e5ByvfXyyumkPuQzkOBJo46z4rsw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "./caption3.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 4,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1az8Qxl913EG1jh2GJdlTmdCrK_FWHB-D/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "./slide4.jpg"
+            },
+            "background": {
+                "background_source_type": null,
+                "background_url": null,
+                "background_command": null
+            },
+            "transition_in": {
+                "t_type": "zoomin",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "992760a42b3f4a6e843696f2d9af6f88",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/77b7ff4ba8f74f9da5c6da54fcf7ff34/992760a42b3f4a6e843696f2d9af6f88.mp4?Expires=1715384076&Signature=ozDRnQDlowPf7xzqA~b3Z0UYdRXMdB97vU1-A64B8U4yJdluFO~00k~Oor~NtiPLknpaCzljerSKiAzQ8uRwqkCRYif3zwHfX2IXkM7sMNUF-PWhhJkTOvrNFN7GX9iuVNA1mqb89C1sCneVbZXuf2JOz0OGL~8M3pyALSGSF0UoiaA5EZYH724WxdCcVbH9bKNGDbEne~g0MW5soOoZtB9fMPBct4oBQMrUPxO6vHxL54m5T-PV6lAvWYGLCH3-vawKfIX8fbBCryFuME4ZXx6K6IJS0PNoHyg5t774YRdcr5Zoxdt1pe8XzulHglpC1D66Go4FCb2dugboZGNFhQ__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "./avatar4.mp4"
+            },
+            "text": "This also counts as a new line in this version. Make sure that you don't use more than 5 paragraphs because each API key only has 5 POST requests available per day. Have fun with it.To supply your own slides make sure they are in jpg format and are publicly accessible. You can use these sample slides if you wish as well.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/992760a42b3f4a6e843696f2d9af6f88/caption.ass?Expires=1715384076&Signature=H51aFWr8sxaoSJX~Aceyqpen6vg6xRTze8UmGhts1a1DS1ad26yYu6Gyod-RXSWdKZO6Ynoay7keOiOkJDQP3dkjC-ra~~kqZT0C1a5VAQuyBDIEfj2MWbf8iM6~KdzoeTqHeGv0fLYIPMcmyduy1J3xHGNrqepnm89X6vL5A0GZTue6HwJYxdo7fiAI9g5lKrxOKhhdXm1bvWq7gLRHOnccrkrCxfMnepl9z5EIrBothCL~US9SdB2IEWz2MigNWKXOcKHxBKGFkKillA8MTVmAcooLRd2dY9dyiQ5gIm9L9aHZ1lzHi5D9w-0vM71YjrlIYOk92TQyv6teG5NjNQ__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "./caption4.ass",
+                "parsed_caption": null
+            }
+        }
+    ]
+}
