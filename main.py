@@ -83,6 +83,8 @@ parser.add_argument("-s", "--intermediate-stage", default=0, type=int, help="sta
 parser.add_argument("-in", "--Input-intermediate", default="data.json", help="name/location of the intermediate file to be read")
 
 parser.add_argument("-d", "--Destination", default="./", type=str, help="base destination folder for downloads")
+
+parser.add_argument("-f", "--force", default=False, action="store_true", help="Force overwrite a file with matching name")
 args = parser.parse_args()
 
 if args.Input_script and not args.load_intermediate:
@@ -123,7 +125,7 @@ if args.Input_script and not args.load_intermediate:
         # transitions
         (script, v, a, v_d, a_d) = transitions(script)
         # output video
-        ffmpeg.output(v,a, args.Destination+script[0]["Lecture Name"]+".mp4", pix_fmt='yuv420p').run()
+        ffmpeg.output(v,a, args.Destination+script[0]["Lecture Name"]+".mp4", pix_fmt='yuv420p').run(overwrite_output=args.force)
     
         # presumably response has the URL of the pending video. for each of the clips get the url. for each one, download it.
         # can't do this section without higher API limit yet
@@ -169,7 +171,7 @@ else:
             # transitions
             (script, v, a, v_d, a_d) = transitions(script)
             # output video
-            ffmpeg.output(v,a, script[0]["Lecture Name"]+".mp4", pix_fmt='yuv420p').run()
+            ffmpeg.output(v,a, script[0]["Lecture Name"]+".mp4", pix_fmt='yuv420p').run(overwrite_output=args.force)
         
             # presumably response has the URL of the pending video. for each of the clips get the url. for each one, download it.
             # can't do this section without higher API limit yet
@@ -211,7 +213,7 @@ else:
             # transitions
             (script, v, a, v_d, a_d) = transitions(script)
             # output video
-            ffmpeg.output(v,a, script[0]["Lecture Name"]+".mp4", pix_fmt='yuv420p').run()
+            ffmpeg.output(v,a, script[0]["Lecture Name"]+".mp4", pix_fmt='yuv420p').run(overwrite_output=args.force)
         
             # presumably response has the URL of the pending video. for each of the clips get the url. for each one, download it.
             # can't do this section without higher API limit yet
@@ -241,7 +243,7 @@ else:
         # transitions
         (script, v, a, v_d, a_d) = transitions(script)
         # output video
-        ffmpeg.output(v,a, script[0]["Lecture Name"]+".mp4", pix_fmt='yuv420p').run()
+        ffmpeg.output(v,a, script[0]["Lecture Name"]+".mp4", pix_fmt='yuv420p').run(overwrite_output=args.force)
         
         # presumably response has the URL of the pending video. for each of the clips get the url. for each one, download it.
         # can't do this section without higher API limit yet
@@ -266,7 +268,7 @@ else:
         # transitions
         (script, v, a, v_d, a_d) = transitions(script)
         # output video
-        ffmpeg.output(v,a, script[0]["Lecture Name"]+".mp4", pix_fmt='yuv420p').run()
+        ffmpeg.output(v,a, script[0]["Lecture Name"]+".mp4", pix_fmt='yuv420p').run(overwrite_output=args.force)
         
         # presumably response has the URL of the pending video. for each of the clips get the url. for each one, download it.
         # can't do this section without higher API limit yet
@@ -282,7 +284,7 @@ else:
         # transitions
         (script, v, a, v_d, a_d) = transitions(script)
         # output video
-        ffmpeg.output(v,a, script[0]["Lecture Name"]+".mp4", pix_fmt='yuv420p').run()
+        ffmpeg.output(v,a, script[0]["Lecture Name"]+".mp4", pix_fmt='yuv420p', vcodec="h264", crf=18, preset="veryslow").run(overwrite_output=args.force)
         
         # presumably response has the URL of the pending video. for each of the clips get the url. for each one, download it.
         # can't do this section without higher API limit yet
