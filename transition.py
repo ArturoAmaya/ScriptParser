@@ -61,10 +61,13 @@ def transitions(script: tuple[dict,list[scene]]):
         # apparently you also lose a ton of audio quality if you leave default settings so I'm making it lossless and really slow to see what happens
         count = count + 1
         if count%4 == 0:
-            ffmpeg.output(temp_v,temp_a, f"temp{count//4}.mp4", vcodec="h264", pix_fmt='yuv420p', crf=18, preset="veryslow").run(overwrite_output=True)
+            ffmpeg.output(temp_v,temp_a, f"temp{count//4}.mp4", vcodec="h264", pix_fmt='yuv420p', crf=18, preset="veryslow", **{'b:a': '192k'}).run(overwrite_output=True)
             temp = ffmpeg.input(f"temp{count//4}.mp4")
             temp_v = temp.video
             temp_a = temp.audio
+            # does re-writing make a different a and v stream length? in calculations temp1 has a_d 155.534895 and v_d 158.12 but the file has 155.573 and 156.08 respectively.
+            # what if we don't read the new ones?
+            # what if we only read the video number but keep the calculated audio
             temp_probe = ffmpeg.probe(f"temp{count//4}.mp4")
             temp_v_d = float(next((stream for stream in temp_probe['streams'] if stream['codec_type'] == 'video'), None)['duration'])
             temp_a_d = float(next((stream for stream in temp_probe['streams'] if stream['codec_type'] == 'audio'), None)['duration'])
