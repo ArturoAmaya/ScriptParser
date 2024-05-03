@@ -81,7 +81,7 @@
             },
             "background": null,
             "transition_in": {
-                "t_type": "revealup",
+                "t_type": "fade",
                 "duration": 1.0
             },
             "avatar_video": {
@@ -219,6 +219,1482 @@
             "caption": {
                 "caption_url": "https://files.heygen.ai/movio/video/88f2d486773541e58d4b6b81ad2bd7ad/caption.ass?Expires=1714774347&Signature=KL6Yecku2PeeFUw5-4O2lqbByO~g7RxICuWj4RChPRd6AJO3SLCAWtcHrf8gZsdVlKiBLs2x42b1px8HD5Z5-fqD9ijwo-TyM-vzHCu9rWY~opPwcRBAhaGrDTobwje9NPpEzsH2vbKeCvTFQfaF--XdMBoQg-4febvz-YDz5xpA5~NTIvc-Dzl1WuY1eqoNyuVfluthyy~L6Wd9SzU3mCAxPeZwB6mRYogOJwh9hTv8c6Ol4wBzXz55bB6I07Mh0RhYnDRqbnx2FCPCd9diWlYUis3n5RZ3X6IhORbdaIuLEAEOP4OrmN-0Ac4Fb--O2nAxlJqQB92zbg~5oufNcg__&Key-Pair-Id=K49TZTO9GZI6K",
                 "caption_filename": "caption4.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 0,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1p5OyujCWBFxLogcAllLe_fPR_A72fyS2/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide0.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "fade",
+                "duration": 0.0
+            },
+            "avatar_video": {
+                "id": "1b176f98d8404ff99937c6a1d82a2448",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/1b176f98d8404ff99937c6a1d82a2448.mp4?Expires=1714774111&Signature=S42~gFzf-ugiSUJnH-dX9FJcZiS-AE7W~cDGP6Qm16tVAb4h1DB5hqISQHfBlkhq7bNKO8hdAw~QqeoxsPJzRmWqma9klf-4T4hhPQMCZ6ByCcmxxC8gCz54S~DL-deE8~Rp8nmC7wl1fGErJeK6l6MdO6l~ZLY-2Ha5dbUVDLNtXo161lmLxz8M1THgcrK2DwnflyLVsBws2eJzVRBt4Ay-BWTCtt69zjGaUpMQaF27rtz47AfMhm-fN1eOoLMoLPVEcuBlOjVYVs6V1mK~8jzV~cVmS2-j68PAZBDPlGmS442GLjZYMGZCwqHSdZmxqmxZlmZYcKHnddgxQc~5FQ__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar0.mp4"
+            },
+            "text": "Hello, my name is Ahrtuhroh. This is really silly but I really like unicycles. Not the regular unicycles, special unicycles that you ride like a skateboard. I ride them all them time. They are called one wheels. I hope I don't sound kind of silly saying this but they are so cool.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/1b176f98d8404ff99937c6a1d82a2448/caption.ass?Expires=1714774112&Signature=n1-Wkv9NFLcNX~rO5pidM84Xd69uQhU5wQshkbAmWQX-imMVZ0xwiSpti90SvGfHXqjc5x4Rb1jXuYM8~k-LZf2qJrwEnWOEYUAffbkjM916TRYJdxHUzm4DmnKRDYaVGc5vbY~xdXVnaWWu49deCRp46zqTsv1gC9oLQXnqVglxjd5WzMVI1GW~t5IyHPLQVeiipbx4oFYZLbu-udiMAjPOgE8~ZOkIw-hewuai7Nq9UTpTBvOqRvm2NEpOWnsDIO22EwGB1Zf7BTkaFwHiqFOz2lJakgu-rTyJRRn9DeCGFtBW7ip-pSxLZ4Wli4DuW1gbs49G5bWjiqZ0c9F33g__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption0.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 1,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1aCsa_WcVk4goJPBOKtSmZpIsKJNOWaw-/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide1.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "fade",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "dfd878ecbc6842e9b8a308777ad3ab52",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/dfd878ecbc6842e9b8a308777ad3ab52.mp4?Expires=1714774168&Signature=d2Yz8-wg1NYIJ2rSuY-SlcTlCjz3O8UcHypr14koN-eYT0ZUw20VXkcm5PCU~JqLDrateDzJ0Ta-029uE7685A6m78hvtUnVKCHb6AEgaATch674KVnF81cbkAfpjss1YHYwRE1SGTMpRDU2MPnTlMx76iCh2cPWrtTQDqfQnPEQewC0UhGpEsup43gsZ3XNWLDb6Bk0sUjFAtNUTgaQcxH9je86vlxOhCdie0NCLkZLE0H6CFs-0yxmNTznLmBFMhEJqULbrrqC0C2bS4rxt4E6~K2BrmViyh4JbgG6KSUeYrEys1EZuUzUjzaxwvoTR2tchF2f0~Sg6ob1Hp~8OA__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar1.mp4"
+            },
+            "text": "I wish chatgpt could give me script but I am opposed in principle. That is ironic given that I am doing work to aid a generative AI company. This work is pretty cool. I like making videos dynamically, and I have an idea for a random video generator.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/dfd878ecbc6842e9b8a308777ad3ab52/caption.ass?Expires=1714774168&Signature=SOtOpJwGHE1UXYZsBq7NOIQy-0PZprrPOyCjoMLgoAWKuBC-M4iKmZ4W4cYfdcTOA-E3T7B~kxXGc6zHsatyJhDBNzzf~wK3GuWI5j~A6GmBZHz0-qQt47Kp58PQJ4z4pJ6yrFZD1cuG9JqUPoDQXhFLV~nMJpbdgFWZyxjOhVtjFdLWFfVbwB5590kXWwMORM9dWRPDfchzqDJYwf3ysJ99c-k8BFv~wYWUYz2jsSoYKYr~Dx7kbwoV4SXan89LZX3S9usMjhEQtvQyAtD-oy52mR5gDzoa-PJcNU9pAIDbXX2B8SUxI9d4zlKGoGY81fFC2d3yTzal6MwgW63Ftw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption1.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 2,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1y-ly8HI061xbp25DQ3mhUOEwrIxqIbbd/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide2.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "hrwind",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "011bb34ffda846b7bcb23340e220c416",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/011bb34ffda846b7bcb23340e220c416.mp4?Expires=1714774224&Signature=MGrVNTxvaA65i6jtjDwGm24MrEMEVqGOqHCt-Ryek6QsitdCdL-w9FYiHx8svt1LE7jDVvm21h8YXLzA6C2hiFoeM8OD11Zkg2PHIaCje0eWlvKGWdtGJozjVPMXPsykWb~B1nEHQ-mOdVX8XIKUUJcRb0JPMZF~CDep7K~8sqyVfgVdaZCV0vd6V6msssoMkJqAFFgffoUIANOfwfed-3Ya5ZOgyplw8xqcigW4tH3pQke4MR3JDhWuieL6t7d6lMceryNVIWnReOArUtg6GkmXDmQ8UdGW--QpkGJVeIPfBfjazipDlmZGLQ1HayEAnRARjv4ZENWm2AR6XTnLdw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar2.mp4"
+            },
+            "text": "In the meantime, I do this. They're just dedicated like that. I'm not dedicated like that. I'm just kidding. Laura says that Chancellor Khosla is pretty cool. I'm pretty sure this slide includes his head. Maybe. Darren agrees!",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/011bb34ffda846b7bcb23340e220c416/caption.ass?Expires=1714774224&Signature=lmHAjvu2padY-xmFpPkXcMlvKzexOb2MoiIubR3D5oUJt-aFDK9pjoCEXTED1w9s5-jhxReKHaS7aWY1sV7Sti4AIFU6z4hXXITI3G3o3CSk6CnS36sUE88VjeHWVI1j7K3ESt9~K0IxUnxhh45q2ahUO6EtsYXrA84qr9ahkDqbaVQZ~CW3bW7lRCofLaKOQRQFsVm8x3jYcmNJK9axrKysxHJf~o-lmhRlySK9YaghF5UEPCC5HPHWOs387iRlCYOWRHplLfnknIOkVesB1tneYLF2bqwo74hkck99~ObGgFbgii5pSzb2Y~LLiDtOdVgihaCXCbFdAnquz5-agA__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption2.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 3,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1xh1JPrktNOeri7bHAwu_kDc9SIt4_mjp/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide3.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "dissolve",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "01308c69c443458bbf30f5bdcf44c17e",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/01308c69c443458bbf30f5bdcf44c17e.mp4?Expires=1714774286&Signature=kU1Igul0Hh7YuoiRhIQ1J~KBX4JNu82RE1ThxNBpdHGkWkd7dpBbMiX0dmybLYX3nkio80KeOWmm5pBgPowDIp5wOTQvHRi6tWHEp4b9ldkM--KV0TwmyYzTUc5PokEShAbkEUsHN~65hGB86yJL2EkNQQzDOb8ldkTqCFgJ5kIvlWMXXSd0KAp1p147GzzLFA~9i5R4ajHs-Ag-UOM9dPoihMg2-80uCkFNXod8VOEsF2at8a6x2hk0q9~tjHwXdYlAgNYWm8U1j8T42NXuXBB7zHzmIn5HfNq4u0tfvu8dlli3ny6tT2Mu6lI4YDBYQw~TUOEN-2hbYQnXAnTbLw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar3.mp4"
+            },
+            "text": "I really like powerberries. I did this in French this morning and I don't think it went particularly well. Sad face. She is so strict. But she did bring in meringues. Because it was her birthday. Happy days, madame.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/01308c69c443458bbf30f5bdcf44c17e/caption.ass?Expires=1714774286&Signature=cAPV1vgBqOpKJ~g-p86omObXz9GajAVXxqi8sg5zwJ48dMCwW33kFC~yDCyWjjfizlHNIMGE4z5Trjs17hjQBovOMBKGDM7KrHFXoJy~0nKPvKz1FN5SH4Qy5Wo8lwRYuBrVdtMmfC2YvJedSs-HWu0EFQN-Bjy35leddbUxcPb4j7A6Ni8QknQEiO3D4xUH6O3Gzw6a9rnhVq9~yAPuXugLAVPs7TwVEDPlU1LnTftc-~WliKK0YQUdpL7uzKUnT7~BLRRal5rcLqsSLKH6bnArBKgCzWEqK6xnF~qbNwvZ3oTUtArkb1x1tsO6Ayullj1Iie0XQty~gq3uuGRvLw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption3.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 4,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1az8Qxl913EG1jh2GJdlTmdCrK_FWHB-D/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide4.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "fade",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "88f2d486773541e58d4b6b81ad2bd7ad",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/88f2d486773541e58d4b6b81ad2bd7ad.mp4?Expires=1714774346&Signature=ifOKSayjxNhZr5ravoaZ-apvO4xKqVxkB8JC0C1Xqcg6oy7Q4g0Y~XrDhRBUD9oSFn8THpuO66wXCqlaknqmA8UGtkKL2FL2OEsHFB0E4fIwKf5UeBalnOkoPalx9~mLZzK70m7ESz8w7NAE2S9GHPx6J2oKjSz5YEwa3slrSIopSHdFVcC8xjml3EjRk4fW1m31rzD-dyoOj-Sq35X3JuMplvIG2Z8JSBAyXW3vwfRD~WiXJ9XnaOXoGJ2Dd4V6yXlWduliB14DroM~oQAzzJzRob1gRA4w~we7pMf-0BLqoN8~cT3DRMIsyO3nWMwuTac6kAPp1F4B~5Qy7jQx1g__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar4.mp4"
+            },
+            "text": "This next slide is about quantum mechanics. Quantum means quantumania, like Ant Man. Mechanics means they build cars. In sum, quantum mechanics is about shrinking cars. I can't believe that writing stuff like this counts as productive time. It is wonderful. Thank you so much for coming to my fake email-funded API testing. Now you can show yourself out. Angry face.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/88f2d486773541e58d4b6b81ad2bd7ad/caption.ass?Expires=1714774347&Signature=KL6Yecku2PeeFUw5-4O2lqbByO~g7RxICuWj4RChPRd6AJO3SLCAWtcHrf8gZsdVlKiBLs2x42b1px8HD5Z5-fqD9ijwo-TyM-vzHCu9rWY~opPwcRBAhaGrDTobwje9NPpEzsH2vbKeCvTFQfaF--XdMBoQg-4febvz-YDz5xpA5~NTIvc-Dzl1WuY1eqoNyuVfluthyy~L6Wd9SzU3mCAxPeZwB6mRYogOJwh9hTv8c6Ol4wBzXz55bB6I07Mh0RhYnDRqbnx2FCPCd9diWlYUis3n5RZ3X6IhORbdaIuLEAEOP4OrmN-0Ac4Fb--O2nAxlJqQB92zbg~5oufNcg__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption4.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 0,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1p5OyujCWBFxLogcAllLe_fPR_A72fyS2/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide0.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "dissolve",
+                "duration": 0.0
+            },
+            "avatar_video": {
+                "id": "1b176f98d8404ff99937c6a1d82a2448",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/1b176f98d8404ff99937c6a1d82a2448.mp4?Expires=1714774111&Signature=S42~gFzf-ugiSUJnH-dX9FJcZiS-AE7W~cDGP6Qm16tVAb4h1DB5hqISQHfBlkhq7bNKO8hdAw~QqeoxsPJzRmWqma9klf-4T4hhPQMCZ6ByCcmxxC8gCz54S~DL-deE8~Rp8nmC7wl1fGErJeK6l6MdO6l~ZLY-2Ha5dbUVDLNtXo161lmLxz8M1THgcrK2DwnflyLVsBws2eJzVRBt4Ay-BWTCtt69zjGaUpMQaF27rtz47AfMhm-fN1eOoLMoLPVEcuBlOjVYVs6V1mK~8jzV~cVmS2-j68PAZBDPlGmS442GLjZYMGZCwqHSdZmxqmxZlmZYcKHnddgxQc~5FQ__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar0.mp4"
+            },
+            "text": "Hello, my name is Ahrtuhroh. This is really silly but I really like unicycles. Not the regular unicycles, special unicycles that you ride like a skateboard. I ride them all them time. They are called one wheels. I hope I don't sound kind of silly saying this but they are so cool.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/1b176f98d8404ff99937c6a1d82a2448/caption.ass?Expires=1714774112&Signature=n1-Wkv9NFLcNX~rO5pidM84Xd69uQhU5wQshkbAmWQX-imMVZ0xwiSpti90SvGfHXqjc5x4Rb1jXuYM8~k-LZf2qJrwEnWOEYUAffbkjM916TRYJdxHUzm4DmnKRDYaVGc5vbY~xdXVnaWWu49deCRp46zqTsv1gC9oLQXnqVglxjd5WzMVI1GW~t5IyHPLQVeiipbx4oFYZLbu-udiMAjPOgE8~ZOkIw-hewuai7Nq9UTpTBvOqRvm2NEpOWnsDIO22EwGB1Zf7BTkaFwHiqFOz2lJakgu-rTyJRRn9DeCGFtBW7ip-pSxLZ4Wli4DuW1gbs49G5bWjiqZ0c9F33g__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption0.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 1,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1aCsa_WcVk4goJPBOKtSmZpIsKJNOWaw-/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide1.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "fade",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "dfd878ecbc6842e9b8a308777ad3ab52",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/dfd878ecbc6842e9b8a308777ad3ab52.mp4?Expires=1714774168&Signature=d2Yz8-wg1NYIJ2rSuY-SlcTlCjz3O8UcHypr14koN-eYT0ZUw20VXkcm5PCU~JqLDrateDzJ0Ta-029uE7685A6m78hvtUnVKCHb6AEgaATch674KVnF81cbkAfpjss1YHYwRE1SGTMpRDU2MPnTlMx76iCh2cPWrtTQDqfQnPEQewC0UhGpEsup43gsZ3XNWLDb6Bk0sUjFAtNUTgaQcxH9je86vlxOhCdie0NCLkZLE0H6CFs-0yxmNTznLmBFMhEJqULbrrqC0C2bS4rxt4E6~K2BrmViyh4JbgG6KSUeYrEys1EZuUzUjzaxwvoTR2tchF2f0~Sg6ob1Hp~8OA__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar1.mp4"
+            },
+            "text": "I wish chatgpt could give me script but I am opposed in principle. That is ironic given that I am doing work to aid a generative AI company. This work is pretty cool. I like making videos dynamically, and I have an idea for a random video generator.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/dfd878ecbc6842e9b8a308777ad3ab52/caption.ass?Expires=1714774168&Signature=SOtOpJwGHE1UXYZsBq7NOIQy-0PZprrPOyCjoMLgoAWKuBC-M4iKmZ4W4cYfdcTOA-E3T7B~kxXGc6zHsatyJhDBNzzf~wK3GuWI5j~A6GmBZHz0-qQt47Kp58PQJ4z4pJ6yrFZD1cuG9JqUPoDQXhFLV~nMJpbdgFWZyxjOhVtjFdLWFfVbwB5590kXWwMORM9dWRPDfchzqDJYwf3ysJ99c-k8BFv~wYWUYz2jsSoYKYr~Dx7kbwoV4SXan89LZX3S9usMjhEQtvQyAtD-oy52mR5gDzoa-PJcNU9pAIDbXX2B8SUxI9d4zlKGoGY81fFC2d3yTzal6MwgW63Ftw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption1.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 2,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1y-ly8HI061xbp25DQ3mhUOEwrIxqIbbd/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide2.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "hrwind",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "011bb34ffda846b7bcb23340e220c416",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/011bb34ffda846b7bcb23340e220c416.mp4?Expires=1714774224&Signature=MGrVNTxvaA65i6jtjDwGm24MrEMEVqGOqHCt-Ryek6QsitdCdL-w9FYiHx8svt1LE7jDVvm21h8YXLzA6C2hiFoeM8OD11Zkg2PHIaCje0eWlvKGWdtGJozjVPMXPsykWb~B1nEHQ-mOdVX8XIKUUJcRb0JPMZF~CDep7K~8sqyVfgVdaZCV0vd6V6msssoMkJqAFFgffoUIANOfwfed-3Ya5ZOgyplw8xqcigW4tH3pQke4MR3JDhWuieL6t7d6lMceryNVIWnReOArUtg6GkmXDmQ8UdGW--QpkGJVeIPfBfjazipDlmZGLQ1HayEAnRARjv4ZENWm2AR6XTnLdw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar2.mp4"
+            },
+            "text": "In the meantime, I do this. They're just dedicated like that. I'm not dedicated like that. I'm just kidding. Laura says that Chancellor Khosla is pretty cool. I'm pretty sure this slide includes his head. Maybe. Darren agrees!",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/011bb34ffda846b7bcb23340e220c416/caption.ass?Expires=1714774224&Signature=lmHAjvu2padY-xmFpPkXcMlvKzexOb2MoiIubR3D5oUJt-aFDK9pjoCEXTED1w9s5-jhxReKHaS7aWY1sV7Sti4AIFU6z4hXXITI3G3o3CSk6CnS36sUE88VjeHWVI1j7K3ESt9~K0IxUnxhh45q2ahUO6EtsYXrA84qr9ahkDqbaVQZ~CW3bW7lRCofLaKOQRQFsVm8x3jYcmNJK9axrKysxHJf~o-lmhRlySK9YaghF5UEPCC5HPHWOs387iRlCYOWRHplLfnknIOkVesB1tneYLF2bqwo74hkck99~ObGgFbgii5pSzb2Y~LLiDtOdVgihaCXCbFdAnquz5-agA__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption2.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 2,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1y-ly8HI061xbp25DQ3mhUOEwrIxqIbbd/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide2.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "hrwind",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "011bb34ffda846b7bcb23340e220c416",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/011bb34ffda846b7bcb23340e220c416.mp4?Expires=1714774224&Signature=MGrVNTxvaA65i6jtjDwGm24MrEMEVqGOqHCt-Ryek6QsitdCdL-w9FYiHx8svt1LE7jDVvm21h8YXLzA6C2hiFoeM8OD11Zkg2PHIaCje0eWlvKGWdtGJozjVPMXPsykWb~B1nEHQ-mOdVX8XIKUUJcRb0JPMZF~CDep7K~8sqyVfgVdaZCV0vd6V6msssoMkJqAFFgffoUIANOfwfed-3Ya5ZOgyplw8xqcigW4tH3pQke4MR3JDhWuieL6t7d6lMceryNVIWnReOArUtg6GkmXDmQ8UdGW--QpkGJVeIPfBfjazipDlmZGLQ1HayEAnRARjv4ZENWm2AR6XTnLdw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar2.mp4"
+            },
+            "text": "In the meantime, I do this. They're just dedicated like that. I'm not dedicated like that. I'm just kidding. Laura says that Chancellor Khosla is pretty cool. I'm pretty sure this slide includes his head. Maybe. Darren agrees!",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/011bb34ffda846b7bcb23340e220c416/caption.ass?Expires=1714774224&Signature=lmHAjvu2padY-xmFpPkXcMlvKzexOb2MoiIubR3D5oUJt-aFDK9pjoCEXTED1w9s5-jhxReKHaS7aWY1sV7Sti4AIFU6z4hXXITI3G3o3CSk6CnS36sUE88VjeHWVI1j7K3ESt9~K0IxUnxhh45q2ahUO6EtsYXrA84qr9ahkDqbaVQZ~CW3bW7lRCofLaKOQRQFsVm8x3jYcmNJK9axrKysxHJf~o-lmhRlySK9YaghF5UEPCC5HPHWOs387iRlCYOWRHplLfnknIOkVesB1tneYLF2bqwo74hkck99~ObGgFbgii5pSzb2Y~LLiDtOdVgihaCXCbFdAnquz5-agA__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption2.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 3,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1xh1JPrktNOeri7bHAwu_kDc9SIt4_mjp/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide3.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "dissolve",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "01308c69c443458bbf30f5bdcf44c17e",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/01308c69c443458bbf30f5bdcf44c17e.mp4?Expires=1714774286&Signature=kU1Igul0Hh7YuoiRhIQ1J~KBX4JNu82RE1ThxNBpdHGkWkd7dpBbMiX0dmybLYX3nkio80KeOWmm5pBgPowDIp5wOTQvHRi6tWHEp4b9ldkM--KV0TwmyYzTUc5PokEShAbkEUsHN~65hGB86yJL2EkNQQzDOb8ldkTqCFgJ5kIvlWMXXSd0KAp1p147GzzLFA~9i5R4ajHs-Ag-UOM9dPoihMg2-80uCkFNXod8VOEsF2at8a6x2hk0q9~tjHwXdYlAgNYWm8U1j8T42NXuXBB7zHzmIn5HfNq4u0tfvu8dlli3ny6tT2Mu6lI4YDBYQw~TUOEN-2hbYQnXAnTbLw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar3.mp4"
+            },
+            "text": "I really like powerberries. I did this in French this morning and I don't think it went particularly well. Sad face. She is so strict. But she did bring in meringues. Because it was her birthday. Happy days, madame.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/01308c69c443458bbf30f5bdcf44c17e/caption.ass?Expires=1714774286&Signature=cAPV1vgBqOpKJ~g-p86omObXz9GajAVXxqi8sg5zwJ48dMCwW33kFC~yDCyWjjfizlHNIMGE4z5Trjs17hjQBovOMBKGDM7KrHFXoJy~0nKPvKz1FN5SH4Qy5Wo8lwRYuBrVdtMmfC2YvJedSs-HWu0EFQN-Bjy35leddbUxcPb4j7A6Ni8QknQEiO3D4xUH6O3Gzw6a9rnhVq9~yAPuXugLAVPs7TwVEDPlU1LnTftc-~WliKK0YQUdpL7uzKUnT7~BLRRal5rcLqsSLKH6bnArBKgCzWEqK6xnF~qbNwvZ3oTUtArkb1x1tsO6Ayullj1Iie0XQty~gq3uuGRvLw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption3.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 4,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1az8Qxl913EG1jh2GJdlTmdCrK_FWHB-D/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide4.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "fade",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "88f2d486773541e58d4b6b81ad2bd7ad",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/88f2d486773541e58d4b6b81ad2bd7ad.mp4?Expires=1714774346&Signature=ifOKSayjxNhZr5ravoaZ-apvO4xKqVxkB8JC0C1Xqcg6oy7Q4g0Y~XrDhRBUD9oSFn8THpuO66wXCqlaknqmA8UGtkKL2FL2OEsHFB0E4fIwKf5UeBalnOkoPalx9~mLZzK70m7ESz8w7NAE2S9GHPx6J2oKjSz5YEwa3slrSIopSHdFVcC8xjml3EjRk4fW1m31rzD-dyoOj-Sq35X3JuMplvIG2Z8JSBAyXW3vwfRD~WiXJ9XnaOXoGJ2Dd4V6yXlWduliB14DroM~oQAzzJzRob1gRA4w~we7pMf-0BLqoN8~cT3DRMIsyO3nWMwuTac6kAPp1F4B~5Qy7jQx1g__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar4.mp4"
+            },
+            "text": "This next slide is about quantum mechanics. Quantum means quantumania, like Ant Man. Mechanics means they build cars. In sum, quantum mechanics is about shrinking cars. I can't believe that writing stuff like this counts as productive time. It is wonderful. Thank you so much for coming to my fake email-funded API testing. Now you can show yourself out. Angry face.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/88f2d486773541e58d4b6b81ad2bd7ad/caption.ass?Expires=1714774347&Signature=KL6Yecku2PeeFUw5-4O2lqbByO~g7RxICuWj4RChPRd6AJO3SLCAWtcHrf8gZsdVlKiBLs2x42b1px8HD5Z5-fqD9ijwo-TyM-vzHCu9rWY~opPwcRBAhaGrDTobwje9NPpEzsH2vbKeCvTFQfaF--XdMBoQg-4febvz-YDz5xpA5~NTIvc-Dzl1WuY1eqoNyuVfluthyy~L6Wd9SzU3mCAxPeZwB6mRYogOJwh9hTv8c6Ol4wBzXz55bB6I07Mh0RhYnDRqbnx2FCPCd9diWlYUis3n5RZ3X6IhORbdaIuLEAEOP4OrmN-0Ac4Fb--O2nAxlJqQB92zbg~5oufNcg__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption4.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 0,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1p5OyujCWBFxLogcAllLe_fPR_A72fyS2/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide0.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "dissolve",
+                "duration": 0.0
+            },
+            "avatar_video": {
+                "id": "1b176f98d8404ff99937c6a1d82a2448",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/1b176f98d8404ff99937c6a1d82a2448.mp4?Expires=1714774111&Signature=S42~gFzf-ugiSUJnH-dX9FJcZiS-AE7W~cDGP6Qm16tVAb4h1DB5hqISQHfBlkhq7bNKO8hdAw~QqeoxsPJzRmWqma9klf-4T4hhPQMCZ6ByCcmxxC8gCz54S~DL-deE8~Rp8nmC7wl1fGErJeK6l6MdO6l~ZLY-2Ha5dbUVDLNtXo161lmLxz8M1THgcrK2DwnflyLVsBws2eJzVRBt4Ay-BWTCtt69zjGaUpMQaF27rtz47AfMhm-fN1eOoLMoLPVEcuBlOjVYVs6V1mK~8jzV~cVmS2-j68PAZBDPlGmS442GLjZYMGZCwqHSdZmxqmxZlmZYcKHnddgxQc~5FQ__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar0.mp4"
+            },
+            "text": "Hello, my name is Ahrtuhroh. This is really silly but I really like unicycles. Not the regular unicycles, special unicycles that you ride like a skateboard. I ride them all them time. They are called one wheels. I hope I don't sound kind of silly saying this but they are so cool.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/1b176f98d8404ff99937c6a1d82a2448/caption.ass?Expires=1714774112&Signature=n1-Wkv9NFLcNX~rO5pidM84Xd69uQhU5wQshkbAmWQX-imMVZ0xwiSpti90SvGfHXqjc5x4Rb1jXuYM8~k-LZf2qJrwEnWOEYUAffbkjM916TRYJdxHUzm4DmnKRDYaVGc5vbY~xdXVnaWWu49deCRp46zqTsv1gC9oLQXnqVglxjd5WzMVI1GW~t5IyHPLQVeiipbx4oFYZLbu-udiMAjPOgE8~ZOkIw-hewuai7Nq9UTpTBvOqRvm2NEpOWnsDIO22EwGB1Zf7BTkaFwHiqFOz2lJakgu-rTyJRRn9DeCGFtBW7ip-pSxLZ4Wli4DuW1gbs49G5bWjiqZ0c9F33g__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption0.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 1,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1aCsa_WcVk4goJPBOKtSmZpIsKJNOWaw-/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide1.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "fade",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "dfd878ecbc6842e9b8a308777ad3ab52",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/dfd878ecbc6842e9b8a308777ad3ab52.mp4?Expires=1714774168&Signature=d2Yz8-wg1NYIJ2rSuY-SlcTlCjz3O8UcHypr14koN-eYT0ZUw20VXkcm5PCU~JqLDrateDzJ0Ta-029uE7685A6m78hvtUnVKCHb6AEgaATch674KVnF81cbkAfpjss1YHYwRE1SGTMpRDU2MPnTlMx76iCh2cPWrtTQDqfQnPEQewC0UhGpEsup43gsZ3XNWLDb6Bk0sUjFAtNUTgaQcxH9je86vlxOhCdie0NCLkZLE0H6CFs-0yxmNTznLmBFMhEJqULbrrqC0C2bS4rxt4E6~K2BrmViyh4JbgG6KSUeYrEys1EZuUzUjzaxwvoTR2tchF2f0~Sg6ob1Hp~8OA__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar1.mp4"
+            },
+            "text": "I wish chatgpt could give me script but I am opposed in principle. That is ironic given that I am doing work to aid a generative AI company. This work is pretty cool. I like making videos dynamically, and I have an idea for a random video generator.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/dfd878ecbc6842e9b8a308777ad3ab52/caption.ass?Expires=1714774168&Signature=SOtOpJwGHE1UXYZsBq7NOIQy-0PZprrPOyCjoMLgoAWKuBC-M4iKmZ4W4cYfdcTOA-E3T7B~kxXGc6zHsatyJhDBNzzf~wK3GuWI5j~A6GmBZHz0-qQt47Kp58PQJ4z4pJ6yrFZD1cuG9JqUPoDQXhFLV~nMJpbdgFWZyxjOhVtjFdLWFfVbwB5590kXWwMORM9dWRPDfchzqDJYwf3ysJ99c-k8BFv~wYWUYz2jsSoYKYr~Dx7kbwoV4SXan89LZX3S9usMjhEQtvQyAtD-oy52mR5gDzoa-PJcNU9pAIDbXX2B8SUxI9d4zlKGoGY81fFC2d3yTzal6MwgW63Ftw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption1.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 2,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1y-ly8HI061xbp25DQ3mhUOEwrIxqIbbd/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide2.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "hrwind",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "011bb34ffda846b7bcb23340e220c416",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/011bb34ffda846b7bcb23340e220c416.mp4?Expires=1714774224&Signature=MGrVNTxvaA65i6jtjDwGm24MrEMEVqGOqHCt-Ryek6QsitdCdL-w9FYiHx8svt1LE7jDVvm21h8YXLzA6C2hiFoeM8OD11Zkg2PHIaCje0eWlvKGWdtGJozjVPMXPsykWb~B1nEHQ-mOdVX8XIKUUJcRb0JPMZF~CDep7K~8sqyVfgVdaZCV0vd6V6msssoMkJqAFFgffoUIANOfwfed-3Ya5ZOgyplw8xqcigW4tH3pQke4MR3JDhWuieL6t7d6lMceryNVIWnReOArUtg6GkmXDmQ8UdGW--QpkGJVeIPfBfjazipDlmZGLQ1HayEAnRARjv4ZENWm2AR6XTnLdw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar2.mp4"
+            },
+            "text": "In the meantime, I do this. They're just dedicated like that. I'm not dedicated like that. I'm just kidding. Laura says that Chancellor Khosla is pretty cool. I'm pretty sure this slide includes his head. Maybe. Darren agrees!",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/011bb34ffda846b7bcb23340e220c416/caption.ass?Expires=1714774224&Signature=lmHAjvu2padY-xmFpPkXcMlvKzexOb2MoiIubR3D5oUJt-aFDK9pjoCEXTED1w9s5-jhxReKHaS7aWY1sV7Sti4AIFU6z4hXXITI3G3o3CSk6CnS36sUE88VjeHWVI1j7K3ESt9~K0IxUnxhh45q2ahUO6EtsYXrA84qr9ahkDqbaVQZ~CW3bW7lRCofLaKOQRQFsVm8x3jYcmNJK9axrKysxHJf~o-lmhRlySK9YaghF5UEPCC5HPHWOs387iRlCYOWRHplLfnknIOkVesB1tneYLF2bqwo74hkck99~ObGgFbgii5pSzb2Y~LLiDtOdVgihaCXCbFdAnquz5-agA__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption2.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 3,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1xh1JPrktNOeri7bHAwu_kDc9SIt4_mjp/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide3.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "dissolve",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "01308c69c443458bbf30f5bdcf44c17e",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/01308c69c443458bbf30f5bdcf44c17e.mp4?Expires=1714774286&Signature=kU1Igul0Hh7YuoiRhIQ1J~KBX4JNu82RE1ThxNBpdHGkWkd7dpBbMiX0dmybLYX3nkio80KeOWmm5pBgPowDIp5wOTQvHRi6tWHEp4b9ldkM--KV0TwmyYzTUc5PokEShAbkEUsHN~65hGB86yJL2EkNQQzDOb8ldkTqCFgJ5kIvlWMXXSd0KAp1p147GzzLFA~9i5R4ajHs-Ag-UOM9dPoihMg2-80uCkFNXod8VOEsF2at8a6x2hk0q9~tjHwXdYlAgNYWm8U1j8T42NXuXBB7zHzmIn5HfNq4u0tfvu8dlli3ny6tT2Mu6lI4YDBYQw~TUOEN-2hbYQnXAnTbLw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar3.mp4"
+            },
+            "text": "I really like powerberries. I did this in French this morning and I don't think it went particularly well. Sad face. She is so strict. But she did bring in meringues. Because it was her birthday. Happy days, madame.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/01308c69c443458bbf30f5bdcf44c17e/caption.ass?Expires=1714774286&Signature=cAPV1vgBqOpKJ~g-p86omObXz9GajAVXxqi8sg5zwJ48dMCwW33kFC~yDCyWjjfizlHNIMGE4z5Trjs17hjQBovOMBKGDM7KrHFXoJy~0nKPvKz1FN5SH4Qy5Wo8lwRYuBrVdtMmfC2YvJedSs-HWu0EFQN-Bjy35leddbUxcPb4j7A6Ni8QknQEiO3D4xUH6O3Gzw6a9rnhVq9~yAPuXugLAVPs7TwVEDPlU1LnTftc-~WliKK0YQUdpL7uzKUnT7~BLRRal5rcLqsSLKH6bnArBKgCzWEqK6xnF~qbNwvZ3oTUtArkb1x1tsO6Ayullj1Iie0XQty~gq3uuGRvLw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption3.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 4,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1az8Qxl913EG1jh2GJdlTmdCrK_FWHB-D/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide4.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "fade",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "88f2d486773541e58d4b6b81ad2bd7ad",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/88f2d486773541e58d4b6b81ad2bd7ad.mp4?Expires=1714774346&Signature=ifOKSayjxNhZr5ravoaZ-apvO4xKqVxkB8JC0C1Xqcg6oy7Q4g0Y~XrDhRBUD9oSFn8THpuO66wXCqlaknqmA8UGtkKL2FL2OEsHFB0E4fIwKf5UeBalnOkoPalx9~mLZzK70m7ESz8w7NAE2S9GHPx6J2oKjSz5YEwa3slrSIopSHdFVcC8xjml3EjRk4fW1m31rzD-dyoOj-Sq35X3JuMplvIG2Z8JSBAyXW3vwfRD~WiXJ9XnaOXoGJ2Dd4V6yXlWduliB14DroM~oQAzzJzRob1gRA4w~we7pMf-0BLqoN8~cT3DRMIsyO3nWMwuTac6kAPp1F4B~5Qy7jQx1g__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar4.mp4"
+            },
+            "text": "This next slide is about quantum mechanics. Quantum means quantumania, like Ant Man. Mechanics means they build cars. In sum, quantum mechanics is about shrinking cars. I can't believe that writing stuff like this counts as productive time. It is wonderful. Thank you so much for coming to my fake email-funded API testing. Now you can show yourself out. Angry face.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/88f2d486773541e58d4b6b81ad2bd7ad/caption.ass?Expires=1714774347&Signature=KL6Yecku2PeeFUw5-4O2lqbByO~g7RxICuWj4RChPRd6AJO3SLCAWtcHrf8gZsdVlKiBLs2x42b1px8HD5Z5-fqD9ijwo-TyM-vzHCu9rWY~opPwcRBAhaGrDTobwje9NPpEzsH2vbKeCvTFQfaF--XdMBoQg-4febvz-YDz5xpA5~NTIvc-Dzl1WuY1eqoNyuVfluthyy~L6Wd9SzU3mCAxPeZwB6mRYogOJwh9hTv8c6Ol4wBzXz55bB6I07Mh0RhYnDRqbnx2FCPCd9diWlYUis3n5RZ3X6IhORbdaIuLEAEOP4OrmN-0Ac4Fb--O2nAxlJqQB92zbg~5oufNcg__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption4.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 0,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1p5OyujCWBFxLogcAllLe_fPR_A72fyS2/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide0.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "dissolve",
+                "duration": 0.0
+            },
+            "avatar_video": {
+                "id": "1b176f98d8404ff99937c6a1d82a2448",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/1b176f98d8404ff99937c6a1d82a2448.mp4?Expires=1714774111&Signature=S42~gFzf-ugiSUJnH-dX9FJcZiS-AE7W~cDGP6Qm16tVAb4h1DB5hqISQHfBlkhq7bNKO8hdAw~QqeoxsPJzRmWqma9klf-4T4hhPQMCZ6ByCcmxxC8gCz54S~DL-deE8~Rp8nmC7wl1fGErJeK6l6MdO6l~ZLY-2Ha5dbUVDLNtXo161lmLxz8M1THgcrK2DwnflyLVsBws2eJzVRBt4Ay-BWTCtt69zjGaUpMQaF27rtz47AfMhm-fN1eOoLMoLPVEcuBlOjVYVs6V1mK~8jzV~cVmS2-j68PAZBDPlGmS442GLjZYMGZCwqHSdZmxqmxZlmZYcKHnddgxQc~5FQ__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar0.mp4"
+            },
+            "text": "Hello, my name is Ahrtuhroh. This is really silly but I really like unicycles. Not the regular unicycles, special unicycles that you ride like a skateboard. I ride them all them time. They are called one wheels. I hope I don't sound kind of silly saying this but they are so cool.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/1b176f98d8404ff99937c6a1d82a2448/caption.ass?Expires=1714774112&Signature=n1-Wkv9NFLcNX~rO5pidM84Xd69uQhU5wQshkbAmWQX-imMVZ0xwiSpti90SvGfHXqjc5x4Rb1jXuYM8~k-LZf2qJrwEnWOEYUAffbkjM916TRYJdxHUzm4DmnKRDYaVGc5vbY~xdXVnaWWu49deCRp46zqTsv1gC9oLQXnqVglxjd5WzMVI1GW~t5IyHPLQVeiipbx4oFYZLbu-udiMAjPOgE8~ZOkIw-hewuai7Nq9UTpTBvOqRvm2NEpOWnsDIO22EwGB1Zf7BTkaFwHiqFOz2lJakgu-rTyJRRn9DeCGFtBW7ip-pSxLZ4Wli4DuW1gbs49G5bWjiqZ0c9F33g__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption0.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 1,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1aCsa_WcVk4goJPBOKtSmZpIsKJNOWaw-/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide1.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "fade",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "dfd878ecbc6842e9b8a308777ad3ab52",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/dfd878ecbc6842e9b8a308777ad3ab52.mp4?Expires=1714774168&Signature=d2Yz8-wg1NYIJ2rSuY-SlcTlCjz3O8UcHypr14koN-eYT0ZUw20VXkcm5PCU~JqLDrateDzJ0Ta-029uE7685A6m78hvtUnVKCHb6AEgaATch674KVnF81cbkAfpjss1YHYwRE1SGTMpRDU2MPnTlMx76iCh2cPWrtTQDqfQnPEQewC0UhGpEsup43gsZ3XNWLDb6Bk0sUjFAtNUTgaQcxH9je86vlxOhCdie0NCLkZLE0H6CFs-0yxmNTznLmBFMhEJqULbrrqC0C2bS4rxt4E6~K2BrmViyh4JbgG6KSUeYrEys1EZuUzUjzaxwvoTR2tchF2f0~Sg6ob1Hp~8OA__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar1.mp4"
+            },
+            "text": "I wish chatgpt could give me script but I am opposed in principle. That is ironic given that I am doing work to aid a generative AI company. This work is pretty cool. I like making videos dynamically, and I have an idea for a random video generator.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/dfd878ecbc6842e9b8a308777ad3ab52/caption.ass?Expires=1714774168&Signature=SOtOpJwGHE1UXYZsBq7NOIQy-0PZprrPOyCjoMLgoAWKuBC-M4iKmZ4W4cYfdcTOA-E3T7B~kxXGc6zHsatyJhDBNzzf~wK3GuWI5j~A6GmBZHz0-qQt47Kp58PQJ4z4pJ6yrFZD1cuG9JqUPoDQXhFLV~nMJpbdgFWZyxjOhVtjFdLWFfVbwB5590kXWwMORM9dWRPDfchzqDJYwf3ysJ99c-k8BFv~wYWUYz2jsSoYKYr~Dx7kbwoV4SXan89LZX3S9usMjhEQtvQyAtD-oy52mR5gDzoa-PJcNU9pAIDbXX2B8SUxI9d4zlKGoGY81fFC2d3yTzal6MwgW63Ftw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption1.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 2,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1y-ly8HI061xbp25DQ3mhUOEwrIxqIbbd/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide2.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "hrwind",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "011bb34ffda846b7bcb23340e220c416",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/011bb34ffda846b7bcb23340e220c416.mp4?Expires=1714774224&Signature=MGrVNTxvaA65i6jtjDwGm24MrEMEVqGOqHCt-Ryek6QsitdCdL-w9FYiHx8svt1LE7jDVvm21h8YXLzA6C2hiFoeM8OD11Zkg2PHIaCje0eWlvKGWdtGJozjVPMXPsykWb~B1nEHQ-mOdVX8XIKUUJcRb0JPMZF~CDep7K~8sqyVfgVdaZCV0vd6V6msssoMkJqAFFgffoUIANOfwfed-3Ya5ZOgyplw8xqcigW4tH3pQke4MR3JDhWuieL6t7d6lMceryNVIWnReOArUtg6GkmXDmQ8UdGW--QpkGJVeIPfBfjazipDlmZGLQ1HayEAnRARjv4ZENWm2AR6XTnLdw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar2.mp4"
+            },
+            "text": "In the meantime, I do this. They're just dedicated like that. I'm not dedicated like that. I'm just kidding. Laura says that Chancellor Khosla is pretty cool. I'm pretty sure this slide includes his head. Maybe. Darren agrees!",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/011bb34ffda846b7bcb23340e220c416/caption.ass?Expires=1714774224&Signature=lmHAjvu2padY-xmFpPkXcMlvKzexOb2MoiIubR3D5oUJt-aFDK9pjoCEXTED1w9s5-jhxReKHaS7aWY1sV7Sti4AIFU6z4hXXITI3G3o3CSk6CnS36sUE88VjeHWVI1j7K3ESt9~K0IxUnxhh45q2ahUO6EtsYXrA84qr9ahkDqbaVQZ~CW3bW7lRCofLaKOQRQFsVm8x3jYcmNJK9axrKysxHJf~o-lmhRlySK9YaghF5UEPCC5HPHWOs387iRlCYOWRHplLfnknIOkVesB1tneYLF2bqwo74hkck99~ObGgFbgii5pSzb2Y~LLiDtOdVgihaCXCbFdAnquz5-agA__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption2.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 2,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1y-ly8HI061xbp25DQ3mhUOEwrIxqIbbd/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide2.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "hrwind",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "011bb34ffda846b7bcb23340e220c416",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/011bb34ffda846b7bcb23340e220c416.mp4?Expires=1714774224&Signature=MGrVNTxvaA65i6jtjDwGm24MrEMEVqGOqHCt-Ryek6QsitdCdL-w9FYiHx8svt1LE7jDVvm21h8YXLzA6C2hiFoeM8OD11Zkg2PHIaCje0eWlvKGWdtGJozjVPMXPsykWb~B1nEHQ-mOdVX8XIKUUJcRb0JPMZF~CDep7K~8sqyVfgVdaZCV0vd6V6msssoMkJqAFFgffoUIANOfwfed-3Ya5ZOgyplw8xqcigW4tH3pQke4MR3JDhWuieL6t7d6lMceryNVIWnReOArUtg6GkmXDmQ8UdGW--QpkGJVeIPfBfjazipDlmZGLQ1HayEAnRARjv4ZENWm2AR6XTnLdw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar2.mp4"
+            },
+            "text": "In the meantime, I do this. They're just dedicated like that. I'm not dedicated like that. I'm just kidding. Laura says that Chancellor Khosla is pretty cool. I'm pretty sure this slide includes his head. Maybe. Darren agrees!",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/011bb34ffda846b7bcb23340e220c416/caption.ass?Expires=1714774224&Signature=lmHAjvu2padY-xmFpPkXcMlvKzexOb2MoiIubR3D5oUJt-aFDK9pjoCEXTED1w9s5-jhxReKHaS7aWY1sV7Sti4AIFU6z4hXXITI3G3o3CSk6CnS36sUE88VjeHWVI1j7K3ESt9~K0IxUnxhh45q2ahUO6EtsYXrA84qr9ahkDqbaVQZ~CW3bW7lRCofLaKOQRQFsVm8x3jYcmNJK9axrKysxHJf~o-lmhRlySK9YaghF5UEPCC5HPHWOs387iRlCYOWRHplLfnknIOkVesB1tneYLF2bqwo74hkck99~ObGgFbgii5pSzb2Y~LLiDtOdVgihaCXCbFdAnquz5-agA__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption2.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 3,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1xh1JPrktNOeri7bHAwu_kDc9SIt4_mjp/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide3.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "dissolve",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "01308c69c443458bbf30f5bdcf44c17e",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/01308c69c443458bbf30f5bdcf44c17e.mp4?Expires=1714774286&Signature=kU1Igul0Hh7YuoiRhIQ1J~KBX4JNu82RE1ThxNBpdHGkWkd7dpBbMiX0dmybLYX3nkio80KeOWmm5pBgPowDIp5wOTQvHRi6tWHEp4b9ldkM--KV0TwmyYzTUc5PokEShAbkEUsHN~65hGB86yJL2EkNQQzDOb8ldkTqCFgJ5kIvlWMXXSd0KAp1p147GzzLFA~9i5R4ajHs-Ag-UOM9dPoihMg2-80uCkFNXod8VOEsF2at8a6x2hk0q9~tjHwXdYlAgNYWm8U1j8T42NXuXBB7zHzmIn5HfNq4u0tfvu8dlli3ny6tT2Mu6lI4YDBYQw~TUOEN-2hbYQnXAnTbLw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar3.mp4"
+            },
+            "text": "I really like powerberries. I did this in French this morning and I don't think it went particularly well. Sad face. She is so strict. But she did bring in meringues. Because it was her birthday. Happy days, madame.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/01308c69c443458bbf30f5bdcf44c17e/caption.ass?Expires=1714774286&Signature=cAPV1vgBqOpKJ~g-p86omObXz9GajAVXxqi8sg5zwJ48dMCwW33kFC~yDCyWjjfizlHNIMGE4z5Trjs17hjQBovOMBKGDM7KrHFXoJy~0nKPvKz1FN5SH4Qy5Wo8lwRYuBrVdtMmfC2YvJedSs-HWu0EFQN-Bjy35leddbUxcPb4j7A6Ni8QknQEiO3D4xUH6O3Gzw6a9rnhVq9~yAPuXugLAVPs7TwVEDPlU1LnTftc-~WliKK0YQUdpL7uzKUnT7~BLRRal5rcLqsSLKH6bnArBKgCzWEqK6xnF~qbNwvZ3oTUtArkb1x1tsO6Ayullj1Iie0XQty~gq3uuGRvLw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption3.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 4,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1az8Qxl913EG1jh2GJdlTmdCrK_FWHB-D/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide4.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "fade",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "88f2d486773541e58d4b6b81ad2bd7ad",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/88f2d486773541e58d4b6b81ad2bd7ad.mp4?Expires=1714774346&Signature=ifOKSayjxNhZr5ravoaZ-apvO4xKqVxkB8JC0C1Xqcg6oy7Q4g0Y~XrDhRBUD9oSFn8THpuO66wXCqlaknqmA8UGtkKL2FL2OEsHFB0E4fIwKf5UeBalnOkoPalx9~mLZzK70m7ESz8w7NAE2S9GHPx6J2oKjSz5YEwa3slrSIopSHdFVcC8xjml3EjRk4fW1m31rzD-dyoOj-Sq35X3JuMplvIG2Z8JSBAyXW3vwfRD~WiXJ9XnaOXoGJ2Dd4V6yXlWduliB14DroM~oQAzzJzRob1gRA4w~we7pMf-0BLqoN8~cT3DRMIsyO3nWMwuTac6kAPp1F4B~5Qy7jQx1g__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar4.mp4"
+            },
+            "text": "This next slide is about quantum mechanics. Quantum means quantumania, like Ant Man. Mechanics means they build cars. In sum, quantum mechanics is about shrinking cars. I can't believe that writing stuff like this counts as productive time. It is wonderful. Thank you so much for coming to my fake email-funded API testing. Now you can show yourself out. Angry face.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/88f2d486773541e58d4b6b81ad2bd7ad/caption.ass?Expires=1714774347&Signature=KL6Yecku2PeeFUw5-4O2lqbByO~g7RxICuWj4RChPRd6AJO3SLCAWtcHrf8gZsdVlKiBLs2x42b1px8HD5Z5-fqD9ijwo-TyM-vzHCu9rWY~opPwcRBAhaGrDTobwje9NPpEzsH2vbKeCvTFQfaF--XdMBoQg-4febvz-YDz5xpA5~NTIvc-Dzl1WuY1eqoNyuVfluthyy~L6Wd9SzU3mCAxPeZwB6mRYogOJwh9hTv8c6Ol4wBzXz55bB6I07Mh0RhYnDRqbnx2FCPCd9diWlYUis3n5RZ3X6IhORbdaIuLEAEOP4OrmN-0Ac4Fb--O2nAxlJqQB92zbg~5oufNcg__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption4.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 0,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1p5OyujCWBFxLogcAllLe_fPR_A72fyS2/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide0.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "dissolve",
+                "duration": 0.0
+            },
+            "avatar_video": {
+                "id": "1b176f98d8404ff99937c6a1d82a2448",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/1b176f98d8404ff99937c6a1d82a2448.mp4?Expires=1714774111&Signature=S42~gFzf-ugiSUJnH-dX9FJcZiS-AE7W~cDGP6Qm16tVAb4h1DB5hqISQHfBlkhq7bNKO8hdAw~QqeoxsPJzRmWqma9klf-4T4hhPQMCZ6ByCcmxxC8gCz54S~DL-deE8~Rp8nmC7wl1fGErJeK6l6MdO6l~ZLY-2Ha5dbUVDLNtXo161lmLxz8M1THgcrK2DwnflyLVsBws2eJzVRBt4Ay-BWTCtt69zjGaUpMQaF27rtz47AfMhm-fN1eOoLMoLPVEcuBlOjVYVs6V1mK~8jzV~cVmS2-j68PAZBDPlGmS442GLjZYMGZCwqHSdZmxqmxZlmZYcKHnddgxQc~5FQ__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar0.mp4"
+            },
+            "text": "Hello, my name is Ahrtuhroh. This is really silly but I really like unicycles. Not the regular unicycles, special unicycles that you ride like a skateboard. I ride them all them time. They are called one wheels. I hope I don't sound kind of silly saying this but they are so cool.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/1b176f98d8404ff99937c6a1d82a2448/caption.ass?Expires=1714774112&Signature=n1-Wkv9NFLcNX~rO5pidM84Xd69uQhU5wQshkbAmWQX-imMVZ0xwiSpti90SvGfHXqjc5x4Rb1jXuYM8~k-LZf2qJrwEnWOEYUAffbkjM916TRYJdxHUzm4DmnKRDYaVGc5vbY~xdXVnaWWu49deCRp46zqTsv1gC9oLQXnqVglxjd5WzMVI1GW~t5IyHPLQVeiipbx4oFYZLbu-udiMAjPOgE8~ZOkIw-hewuai7Nq9UTpTBvOqRvm2NEpOWnsDIO22EwGB1Zf7BTkaFwHiqFOz2lJakgu-rTyJRRn9DeCGFtBW7ip-pSxLZ4Wli4DuW1gbs49G5bWjiqZ0c9F33g__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption0.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 1,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1aCsa_WcVk4goJPBOKtSmZpIsKJNOWaw-/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide1.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "fade",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "dfd878ecbc6842e9b8a308777ad3ab52",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/dfd878ecbc6842e9b8a308777ad3ab52.mp4?Expires=1714774168&Signature=d2Yz8-wg1NYIJ2rSuY-SlcTlCjz3O8UcHypr14koN-eYT0ZUw20VXkcm5PCU~JqLDrateDzJ0Ta-029uE7685A6m78hvtUnVKCHb6AEgaATch674KVnF81cbkAfpjss1YHYwRE1SGTMpRDU2MPnTlMx76iCh2cPWrtTQDqfQnPEQewC0UhGpEsup43gsZ3XNWLDb6Bk0sUjFAtNUTgaQcxH9je86vlxOhCdie0NCLkZLE0H6CFs-0yxmNTznLmBFMhEJqULbrrqC0C2bS4rxt4E6~K2BrmViyh4JbgG6KSUeYrEys1EZuUzUjzaxwvoTR2tchF2f0~Sg6ob1Hp~8OA__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar1.mp4"
+            },
+            "text": "I wish chatgpt could give me script but I am opposed in principle. That is ironic given that I am doing work to aid a generative AI company. This work is pretty cool. I like making videos dynamically, and I have an idea for a random video generator.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/dfd878ecbc6842e9b8a308777ad3ab52/caption.ass?Expires=1714774168&Signature=SOtOpJwGHE1UXYZsBq7NOIQy-0PZprrPOyCjoMLgoAWKuBC-M4iKmZ4W4cYfdcTOA-E3T7B~kxXGc6zHsatyJhDBNzzf~wK3GuWI5j~A6GmBZHz0-qQt47Kp58PQJ4z4pJ6yrFZD1cuG9JqUPoDQXhFLV~nMJpbdgFWZyxjOhVtjFdLWFfVbwB5590kXWwMORM9dWRPDfchzqDJYwf3ysJ99c-k8BFv~wYWUYz2jsSoYKYr~Dx7kbwoV4SXan89LZX3S9usMjhEQtvQyAtD-oy52mR5gDzoa-PJcNU9pAIDbXX2B8SUxI9d4zlKGoGY81fFC2d3yTzal6MwgW63Ftw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption1.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 2,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1y-ly8HI061xbp25DQ3mhUOEwrIxqIbbd/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide2.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "hrwind",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "011bb34ffda846b7bcb23340e220c416",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/011bb34ffda846b7bcb23340e220c416.mp4?Expires=1714774224&Signature=MGrVNTxvaA65i6jtjDwGm24MrEMEVqGOqHCt-Ryek6QsitdCdL-w9FYiHx8svt1LE7jDVvm21h8YXLzA6C2hiFoeM8OD11Zkg2PHIaCje0eWlvKGWdtGJozjVPMXPsykWb~B1nEHQ-mOdVX8XIKUUJcRb0JPMZF~CDep7K~8sqyVfgVdaZCV0vd6V6msssoMkJqAFFgffoUIANOfwfed-3Ya5ZOgyplw8xqcigW4tH3pQke4MR3JDhWuieL6t7d6lMceryNVIWnReOArUtg6GkmXDmQ8UdGW--QpkGJVeIPfBfjazipDlmZGLQ1HayEAnRARjv4ZENWm2AR6XTnLdw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar2.mp4"
+            },
+            "text": "In the meantime, I do this. They're just dedicated like that. I'm not dedicated like that. I'm just kidding. Laura says that Chancellor Khosla is pretty cool. I'm pretty sure this slide includes his head. Maybe. Darren agrees!",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/011bb34ffda846b7bcb23340e220c416/caption.ass?Expires=1714774224&Signature=lmHAjvu2padY-xmFpPkXcMlvKzexOb2MoiIubR3D5oUJt-aFDK9pjoCEXTED1w9s5-jhxReKHaS7aWY1sV7Sti4AIFU6z4hXXITI3G3o3CSk6CnS36sUE88VjeHWVI1j7K3ESt9~K0IxUnxhh45q2ahUO6EtsYXrA84qr9ahkDqbaVQZ~CW3bW7lRCofLaKOQRQFsVm8x3jYcmNJK9axrKysxHJf~o-lmhRlySK9YaghF5UEPCC5HPHWOs387iRlCYOWRHplLfnknIOkVesB1tneYLF2bqwo74hkck99~ObGgFbgii5pSzb2Y~LLiDtOdVgihaCXCbFdAnquz5-agA__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption2.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 3,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1xh1JPrktNOeri7bHAwu_kDc9SIt4_mjp/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide3.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "dissolve",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "01308c69c443458bbf30f5bdcf44c17e",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/01308c69c443458bbf30f5bdcf44c17e.mp4?Expires=1714774286&Signature=kU1Igul0Hh7YuoiRhIQ1J~KBX4JNu82RE1ThxNBpdHGkWkd7dpBbMiX0dmybLYX3nkio80KeOWmm5pBgPowDIp5wOTQvHRi6tWHEp4b9ldkM--KV0TwmyYzTUc5PokEShAbkEUsHN~65hGB86yJL2EkNQQzDOb8ldkTqCFgJ5kIvlWMXXSd0KAp1p147GzzLFA~9i5R4ajHs-Ag-UOM9dPoihMg2-80uCkFNXod8VOEsF2at8a6x2hk0q9~tjHwXdYlAgNYWm8U1j8T42NXuXBB7zHzmIn5HfNq4u0tfvu8dlli3ny6tT2Mu6lI4YDBYQw~TUOEN-2hbYQnXAnTbLw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar3.mp4"
+            },
+            "text": "I really like powerberries. I did this in French this morning and I don't think it went particularly well. Sad face. She is so strict. But she did bring in meringues. Because it was her birthday. Happy days, madame.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/01308c69c443458bbf30f5bdcf44c17e/caption.ass?Expires=1714774286&Signature=cAPV1vgBqOpKJ~g-p86omObXz9GajAVXxqi8sg5zwJ48dMCwW33kFC~yDCyWjjfizlHNIMGE4z5Trjs17hjQBovOMBKGDM7KrHFXoJy~0nKPvKz1FN5SH4Qy5Wo8lwRYuBrVdtMmfC2YvJedSs-HWu0EFQN-Bjy35leddbUxcPb4j7A6Ni8QknQEiO3D4xUH6O3Gzw6a9rnhVq9~yAPuXugLAVPs7TwVEDPlU1LnTftc-~WliKK0YQUdpL7uzKUnT7~BLRRal5rcLqsSLKH6bnArBKgCzWEqK6xnF~qbNwvZ3oTUtArkb1x1tsO6Ayullj1Iie0XQty~gq3uuGRvLw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption3.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 4,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1az8Qxl913EG1jh2GJdlTmdCrK_FWHB-D/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide4.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "fade",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "88f2d486773541e58d4b6b81ad2bd7ad",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/88f2d486773541e58d4b6b81ad2bd7ad.mp4?Expires=1714774346&Signature=ifOKSayjxNhZr5ravoaZ-apvO4xKqVxkB8JC0C1Xqcg6oy7Q4g0Y~XrDhRBUD9oSFn8THpuO66wXCqlaknqmA8UGtkKL2FL2OEsHFB0E4fIwKf5UeBalnOkoPalx9~mLZzK70m7ESz8w7NAE2S9GHPx6J2oKjSz5YEwa3slrSIopSHdFVcC8xjml3EjRk4fW1m31rzD-dyoOj-Sq35X3JuMplvIG2Z8JSBAyXW3vwfRD~WiXJ9XnaOXoGJ2Dd4V6yXlWduliB14DroM~oQAzzJzRob1gRA4w~we7pMf-0BLqoN8~cT3DRMIsyO3nWMwuTac6kAPp1F4B~5Qy7jQx1g__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar4.mp4"
+            },
+            "text": "This next slide is about quantum mechanics. Quantum means quantumania, like Ant Man. Mechanics means they build cars. In sum, quantum mechanics is about shrinking cars. I can't believe that writing stuff like this counts as productive time. It is wonderful. Thank you so much for coming to my fake email-funded API testing. Now you can show yourself out. Angry face.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/88f2d486773541e58d4b6b81ad2bd7ad/caption.ass?Expires=1714774347&Signature=KL6Yecku2PeeFUw5-4O2lqbByO~g7RxICuWj4RChPRd6AJO3SLCAWtcHrf8gZsdVlKiBLs2x42b1px8HD5Z5-fqD9ijwo-TyM-vzHCu9rWY~opPwcRBAhaGrDTobwje9NPpEzsH2vbKeCvTFQfaF--XdMBoQg-4febvz-YDz5xpA5~NTIvc-Dzl1WuY1eqoNyuVfluthyy~L6Wd9SzU3mCAxPeZwB6mRYogOJwh9hTv8c6Ol4wBzXz55bB6I07Mh0RhYnDRqbnx2FCPCd9diWlYUis3n5RZ3X6IhORbdaIuLEAEOP4OrmN-0Ac4Fb--O2nAxlJqQB92zbg~5oufNcg__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption4.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 0,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1p5OyujCWBFxLogcAllLe_fPR_A72fyS2/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide0.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "dissolve",
+                "duration": 0.0
+            },
+            "avatar_video": {
+                "id": "1b176f98d8404ff99937c6a1d82a2448",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/1b176f98d8404ff99937c6a1d82a2448.mp4?Expires=1714774111&Signature=S42~gFzf-ugiSUJnH-dX9FJcZiS-AE7W~cDGP6Qm16tVAb4h1DB5hqISQHfBlkhq7bNKO8hdAw~QqeoxsPJzRmWqma9klf-4T4hhPQMCZ6ByCcmxxC8gCz54S~DL-deE8~Rp8nmC7wl1fGErJeK6l6MdO6l~ZLY-2Ha5dbUVDLNtXo161lmLxz8M1THgcrK2DwnflyLVsBws2eJzVRBt4Ay-BWTCtt69zjGaUpMQaF27rtz47AfMhm-fN1eOoLMoLPVEcuBlOjVYVs6V1mK~8jzV~cVmS2-j68PAZBDPlGmS442GLjZYMGZCwqHSdZmxqmxZlmZYcKHnddgxQc~5FQ__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar0.mp4"
+            },
+            "text": "Hello, my name is Ahrtuhroh. This is really silly but I really like unicycles. Not the regular unicycles, special unicycles that you ride like a skateboard. I ride them all them time. They are called one wheels. I hope I don't sound kind of silly saying this but they are so cool.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/1b176f98d8404ff99937c6a1d82a2448/caption.ass?Expires=1714774112&Signature=n1-Wkv9NFLcNX~rO5pidM84Xd69uQhU5wQshkbAmWQX-imMVZ0xwiSpti90SvGfHXqjc5x4Rb1jXuYM8~k-LZf2qJrwEnWOEYUAffbkjM916TRYJdxHUzm4DmnKRDYaVGc5vbY~xdXVnaWWu49deCRp46zqTsv1gC9oLQXnqVglxjd5WzMVI1GW~t5IyHPLQVeiipbx4oFYZLbu-udiMAjPOgE8~ZOkIw-hewuai7Nq9UTpTBvOqRvm2NEpOWnsDIO22EwGB1Zf7BTkaFwHiqFOz2lJakgu-rTyJRRn9DeCGFtBW7ip-pSxLZ4Wli4DuW1gbs49G5bWjiqZ0c9F33g__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption0.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 1,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1aCsa_WcVk4goJPBOKtSmZpIsKJNOWaw-/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide1.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "fade",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "dfd878ecbc6842e9b8a308777ad3ab52",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/dfd878ecbc6842e9b8a308777ad3ab52.mp4?Expires=1714774168&Signature=d2Yz8-wg1NYIJ2rSuY-SlcTlCjz3O8UcHypr14koN-eYT0ZUw20VXkcm5PCU~JqLDrateDzJ0Ta-029uE7685A6m78hvtUnVKCHb6AEgaATch674KVnF81cbkAfpjss1YHYwRE1SGTMpRDU2MPnTlMx76iCh2cPWrtTQDqfQnPEQewC0UhGpEsup43gsZ3XNWLDb6Bk0sUjFAtNUTgaQcxH9je86vlxOhCdie0NCLkZLE0H6CFs-0yxmNTznLmBFMhEJqULbrrqC0C2bS4rxt4E6~K2BrmViyh4JbgG6KSUeYrEys1EZuUzUjzaxwvoTR2tchF2f0~Sg6ob1Hp~8OA__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar1.mp4"
+            },
+            "text": "I wish chatgpt could give me script but I am opposed in principle. That is ironic given that I am doing work to aid a generative AI company. This work is pretty cool. I like making videos dynamically, and I have an idea for a random video generator.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/dfd878ecbc6842e9b8a308777ad3ab52/caption.ass?Expires=1714774168&Signature=SOtOpJwGHE1UXYZsBq7NOIQy-0PZprrPOyCjoMLgoAWKuBC-M4iKmZ4W4cYfdcTOA-E3T7B~kxXGc6zHsatyJhDBNzzf~wK3GuWI5j~A6GmBZHz0-qQt47Kp58PQJ4z4pJ6yrFZD1cuG9JqUPoDQXhFLV~nMJpbdgFWZyxjOhVtjFdLWFfVbwB5590kXWwMORM9dWRPDfchzqDJYwf3ysJ99c-k8BFv~wYWUYz2jsSoYKYr~Dx7kbwoV4SXan89LZX3S9usMjhEQtvQyAtD-oy52mR5gDzoa-PJcNU9pAIDbXX2B8SUxI9d4zlKGoGY81fFC2d3yTzal6MwgW63Ftw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption1.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 2,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1y-ly8HI061xbp25DQ3mhUOEwrIxqIbbd/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide2.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "hrwind",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "011bb34ffda846b7bcb23340e220c416",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/011bb34ffda846b7bcb23340e220c416.mp4?Expires=1714774224&Signature=MGrVNTxvaA65i6jtjDwGm24MrEMEVqGOqHCt-Ryek6QsitdCdL-w9FYiHx8svt1LE7jDVvm21h8YXLzA6C2hiFoeM8OD11Zkg2PHIaCje0eWlvKGWdtGJozjVPMXPsykWb~B1nEHQ-mOdVX8XIKUUJcRb0JPMZF~CDep7K~8sqyVfgVdaZCV0vd6V6msssoMkJqAFFgffoUIANOfwfed-3Ya5ZOgyplw8xqcigW4tH3pQke4MR3JDhWuieL6t7d6lMceryNVIWnReOArUtg6GkmXDmQ8UdGW--QpkGJVeIPfBfjazipDlmZGLQ1HayEAnRARjv4ZENWm2AR6XTnLdw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar2.mp4"
+            },
+            "text": "In the meantime, I do this. They're just dedicated like that. I'm not dedicated like that. I'm just kidding. Laura says that Chancellor Khosla is pretty cool. I'm pretty sure this slide includes his head. Maybe. Darren agrees!",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/011bb34ffda846b7bcb23340e220c416/caption.ass?Expires=1714774224&Signature=lmHAjvu2padY-xmFpPkXcMlvKzexOb2MoiIubR3D5oUJt-aFDK9pjoCEXTED1w9s5-jhxReKHaS7aWY1sV7Sti4AIFU6z4hXXITI3G3o3CSk6CnS36sUE88VjeHWVI1j7K3ESt9~K0IxUnxhh45q2ahUO6EtsYXrA84qr9ahkDqbaVQZ~CW3bW7lRCofLaKOQRQFsVm8x3jYcmNJK9axrKysxHJf~o-lmhRlySK9YaghF5UEPCC5HPHWOs387iRlCYOWRHplLfnknIOkVesB1tneYLF2bqwo74hkck99~ObGgFbgii5pSzb2Y~LLiDtOdVgihaCXCbFdAnquz5-agA__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption2.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 2,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1y-ly8HI061xbp25DQ3mhUOEwrIxqIbbd/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide2.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "hrwind",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "011bb34ffda846b7bcb23340e220c416",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/011bb34ffda846b7bcb23340e220c416.mp4?Expires=1714774224&Signature=MGrVNTxvaA65i6jtjDwGm24MrEMEVqGOqHCt-Ryek6QsitdCdL-w9FYiHx8svt1LE7jDVvm21h8YXLzA6C2hiFoeM8OD11Zkg2PHIaCje0eWlvKGWdtGJozjVPMXPsykWb~B1nEHQ-mOdVX8XIKUUJcRb0JPMZF~CDep7K~8sqyVfgVdaZCV0vd6V6msssoMkJqAFFgffoUIANOfwfed-3Ya5ZOgyplw8xqcigW4tH3pQke4MR3JDhWuieL6t7d6lMceryNVIWnReOArUtg6GkmXDmQ8UdGW--QpkGJVeIPfBfjazipDlmZGLQ1HayEAnRARjv4ZENWm2AR6XTnLdw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar2.mp4"
+            },
+            "text": "In the meantime, I do this. They're just dedicated like that. I'm not dedicated like that. I'm just kidding. Laura says that Chancellor Khosla is pretty cool. I'm pretty sure this slide includes his head. Maybe. Darren agrees!",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/011bb34ffda846b7bcb23340e220c416/caption.ass?Expires=1714774224&Signature=lmHAjvu2padY-xmFpPkXcMlvKzexOb2MoiIubR3D5oUJt-aFDK9pjoCEXTED1w9s5-jhxReKHaS7aWY1sV7Sti4AIFU6z4hXXITI3G3o3CSk6CnS36sUE88VjeHWVI1j7K3ESt9~K0IxUnxhh45q2ahUO6EtsYXrA84qr9ahkDqbaVQZ~CW3bW7lRCofLaKOQRQFsVm8x3jYcmNJK9axrKysxHJf~o-lmhRlySK9YaghF5UEPCC5HPHWOs387iRlCYOWRHplLfnknIOkVesB1tneYLF2bqwo74hkck99~ObGgFbgii5pSzb2Y~LLiDtOdVgihaCXCbFdAnquz5-agA__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption2.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 3,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1xh1JPrktNOeri7bHAwu_kDc9SIt4_mjp/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide3.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "dissolve",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "01308c69c443458bbf30f5bdcf44c17e",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/01308c69c443458bbf30f5bdcf44c17e.mp4?Expires=1714774286&Signature=kU1Igul0Hh7YuoiRhIQ1J~KBX4JNu82RE1ThxNBpdHGkWkd7dpBbMiX0dmybLYX3nkio80KeOWmm5pBgPowDIp5wOTQvHRi6tWHEp4b9ldkM--KV0TwmyYzTUc5PokEShAbkEUsHN~65hGB86yJL2EkNQQzDOb8ldkTqCFgJ5kIvlWMXXSd0KAp1p147GzzLFA~9i5R4ajHs-Ag-UOM9dPoihMg2-80uCkFNXod8VOEsF2at8a6x2hk0q9~tjHwXdYlAgNYWm8U1j8T42NXuXBB7zHzmIn5HfNq4u0tfvu8dlli3ny6tT2Mu6lI4YDBYQw~TUOEN-2hbYQnXAnTbLw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar3.mp4"
+            },
+            "text": "I really like powerberries. I did this in French this morning and I don't think it went particularly well. Sad face. She is so strict. But she did bring in meringues. Because it was her birthday. Happy days, madame.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/01308c69c443458bbf30f5bdcf44c17e/caption.ass?Expires=1714774286&Signature=cAPV1vgBqOpKJ~g-p86omObXz9GajAVXxqi8sg5zwJ48dMCwW33kFC~yDCyWjjfizlHNIMGE4z5Trjs17hjQBovOMBKGDM7KrHFXoJy~0nKPvKz1FN5SH4Qy5Wo8lwRYuBrVdtMmfC2YvJedSs-HWu0EFQN-Bjy35leddbUxcPb4j7A6Ni8QknQEiO3D4xUH6O3Gzw6a9rnhVq9~yAPuXugLAVPs7TwVEDPlU1LnTftc-~WliKK0YQUdpL7uzKUnT7~BLRRal5rcLqsSLKH6bnArBKgCzWEqK6xnF~qbNwvZ3oTUtArkb1x1tsO6Ayullj1Iie0XQty~gq3uuGRvLw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption3.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 4,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1az8Qxl913EG1jh2GJdlTmdCrK_FWHB-D/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide4.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "fade",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "88f2d486773541e58d4b6b81ad2bd7ad",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/88f2d486773541e58d4b6b81ad2bd7ad.mp4?Expires=1714774346&Signature=ifOKSayjxNhZr5ravoaZ-apvO4xKqVxkB8JC0C1Xqcg6oy7Q4g0Y~XrDhRBUD9oSFn8THpuO66wXCqlaknqmA8UGtkKL2FL2OEsHFB0E4fIwKf5UeBalnOkoPalx9~mLZzK70m7ESz8w7NAE2S9GHPx6J2oKjSz5YEwa3slrSIopSHdFVcC8xjml3EjRk4fW1m31rzD-dyoOj-Sq35X3JuMplvIG2Z8JSBAyXW3vwfRD~WiXJ9XnaOXoGJ2Dd4V6yXlWduliB14DroM~oQAzzJzRob1gRA4w~we7pMf-0BLqoN8~cT3DRMIsyO3nWMwuTac6kAPp1F4B~5Qy7jQx1g__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar4.mp4"
+            },
+            "text": "This next slide is about quantum mechanics. Quantum means quantumania, like Ant Man. Mechanics means they build cars. In sum, quantum mechanics is about shrinking cars. I can't believe that writing stuff like this counts as productive time. It is wonderful. Thank you so much for coming to my fake email-funded API testing. Now you can show yourself out. Angry face.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/88f2d486773541e58d4b6b81ad2bd7ad/caption.ass?Expires=1714774347&Signature=KL6Yecku2PeeFUw5-4O2lqbByO~g7RxICuWj4RChPRd6AJO3SLCAWtcHrf8gZsdVlKiBLs2x42b1px8HD5Z5-fqD9ijwo-TyM-vzHCu9rWY~opPwcRBAhaGrDTobwje9NPpEzsH2vbKeCvTFQfaF--XdMBoQg-4febvz-YDz5xpA5~NTIvc-Dzl1WuY1eqoNyuVfluthyy~L6Wd9SzU3mCAxPeZwB6mRYogOJwh9hTv8c6Ol4wBzXz55bB6I07Mh0RhYnDRqbnx2FCPCd9diWlYUis3n5RZ3X6IhORbdaIuLEAEOP4OrmN-0Ac4Fb--O2nAxlJqQB92zbg~5oufNcg__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption4.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 0,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1p5OyujCWBFxLogcAllLe_fPR_A72fyS2/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide0.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "dissolve",
+                "duration": 0.0
+            },
+            "avatar_video": {
+                "id": "1b176f98d8404ff99937c6a1d82a2448",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/1b176f98d8404ff99937c6a1d82a2448.mp4?Expires=1714774111&Signature=S42~gFzf-ugiSUJnH-dX9FJcZiS-AE7W~cDGP6Qm16tVAb4h1DB5hqISQHfBlkhq7bNKO8hdAw~QqeoxsPJzRmWqma9klf-4T4hhPQMCZ6ByCcmxxC8gCz54S~DL-deE8~Rp8nmC7wl1fGErJeK6l6MdO6l~ZLY-2Ha5dbUVDLNtXo161lmLxz8M1THgcrK2DwnflyLVsBws2eJzVRBt4Ay-BWTCtt69zjGaUpMQaF27rtz47AfMhm-fN1eOoLMoLPVEcuBlOjVYVs6V1mK~8jzV~cVmS2-j68PAZBDPlGmS442GLjZYMGZCwqHSdZmxqmxZlmZYcKHnddgxQc~5FQ__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar0.mp4"
+            },
+            "text": "Hello, my name is Ahrtuhroh. This is really silly but I really like unicycles. Not the regular unicycles, special unicycles that you ride like a skateboard. I ride them all them time. They are called one wheels. I hope I don't sound kind of silly saying this but they are so cool.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/1b176f98d8404ff99937c6a1d82a2448/caption.ass?Expires=1714774112&Signature=n1-Wkv9NFLcNX~rO5pidM84Xd69uQhU5wQshkbAmWQX-imMVZ0xwiSpti90SvGfHXqjc5x4Rb1jXuYM8~k-LZf2qJrwEnWOEYUAffbkjM916TRYJdxHUzm4DmnKRDYaVGc5vbY~xdXVnaWWu49deCRp46zqTsv1gC9oLQXnqVglxjd5WzMVI1GW~t5IyHPLQVeiipbx4oFYZLbu-udiMAjPOgE8~ZOkIw-hewuai7Nq9UTpTBvOqRvm2NEpOWnsDIO22EwGB1Zf7BTkaFwHiqFOz2lJakgu-rTyJRRn9DeCGFtBW7ip-pSxLZ4Wli4DuW1gbs49G5bWjiqZ0c9F33g__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption0.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 1,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1aCsa_WcVk4goJPBOKtSmZpIsKJNOWaw-/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide1.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "fade",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "dfd878ecbc6842e9b8a308777ad3ab52",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/dfd878ecbc6842e9b8a308777ad3ab52.mp4?Expires=1714774168&Signature=d2Yz8-wg1NYIJ2rSuY-SlcTlCjz3O8UcHypr14koN-eYT0ZUw20VXkcm5PCU~JqLDrateDzJ0Ta-029uE7685A6m78hvtUnVKCHb6AEgaATch674KVnF81cbkAfpjss1YHYwRE1SGTMpRDU2MPnTlMx76iCh2cPWrtTQDqfQnPEQewC0UhGpEsup43gsZ3XNWLDb6Bk0sUjFAtNUTgaQcxH9je86vlxOhCdie0NCLkZLE0H6CFs-0yxmNTznLmBFMhEJqULbrrqC0C2bS4rxt4E6~K2BrmViyh4JbgG6KSUeYrEys1EZuUzUjzaxwvoTR2tchF2f0~Sg6ob1Hp~8OA__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar1.mp4"
+            },
+            "text": "I wish chatgpt could give me script but I am opposed in principle. That is ironic given that I am doing work to aid a generative AI company. This work is pretty cool. I like making videos dynamically, and I have an idea for a random video generator.",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/dfd878ecbc6842e9b8a308777ad3ab52/caption.ass?Expires=1714774168&Signature=SOtOpJwGHE1UXYZsBq7NOIQy-0PZprrPOyCjoMLgoAWKuBC-M4iKmZ4W4cYfdcTOA-E3T7B~kxXGc6zHsatyJhDBNzzf~wK3GuWI5j~A6GmBZHz0-qQt47Kp58PQJ4z4pJ6yrFZD1cuG9JqUPoDQXhFLV~nMJpbdgFWZyxjOhVtjFdLWFfVbwB5590kXWwMORM9dWRPDfchzqDJYwf3ysJ99c-k8BFv~wYWUYz2jsSoYKYr~Dx7kbwoV4SXan89LZX3S9usMjhEQtvQyAtD-oy52mR5gDzoa-PJcNU9pAIDbXX2B8SUxI9d4zlKGoGY81fFC2d3yTzal6MwgW63Ftw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption1.ass",
+                "parsed_caption": null
+            }
+        },
+        {
+            "number": 2,
+            "style": {
+                "style": "pip",
+                "avatar_scale": 0.5,
+                "slides_scale": 1.0,
+                "avatar_position": [
+                    0.75,
+                    0.75
+                ],
+                "slides_position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "slide": {
+                "slide_source_type": "url",
+                "slide_url": "https://drive.google.com/file/d/1y-ly8HI061xbp25DQ3mhUOEwrIxqIbbd/view?usp=share_link",
+                "slide_img": null,
+                "slide_filename": "slide2.jpg"
+            },
+            "background": null,
+            "transition_in": {
+                "t_type": "hrwind",
+                "duration": 1.0
+            },
+            "avatar_video": {
+                "id": "011bb34ffda846b7bcb23340e220c416",
+                "url": "https://files.heygen.ai/aws_pacific/avatar_tmp/edafc9dc82ac4662b129f196ad38dfa8/011bb34ffda846b7bcb23340e220c416.mp4?Expires=1714774224&Signature=MGrVNTxvaA65i6jtjDwGm24MrEMEVqGOqHCt-Ryek6QsitdCdL-w9FYiHx8svt1LE7jDVvm21h8YXLzA6C2hiFoeM8OD11Zkg2PHIaCje0eWlvKGWdtGJozjVPMXPsykWb~B1nEHQ-mOdVX8XIKUUJcRb0JPMZF~CDep7K~8sqyVfgVdaZCV0vd6V6msssoMkJqAFFgffoUIANOfwfed-3Ya5ZOgyplw8xqcigW4tH3pQke4MR3JDhWuieL6t7d6lMceryNVIWnReOArUtg6GkmXDmQ8UdGW--QpkGJVeIPfBfjazipDlmZGLQ1HayEAnRARjv4ZENWm2AR6XTnLdw__&Key-Pair-Id=K49TZTO9GZI6K",
+                "video": null,
+                "metadata": null,
+                "filename": "avatar2.mp4"
+            },
+            "text": "In the meantime, I do this. They're just dedicated like that. I'm not dedicated like that. I'm just kidding. Laura says that Chancellor Khosla is pretty cool. I'm pretty sure this slide includes his head. Maybe. Darren agrees!",
+            "clip": null,
+            "caption": {
+                "caption_url": "https://files.heygen.ai/movio/video/011bb34ffda846b7bcb23340e220c416/caption.ass?Expires=1714774224&Signature=lmHAjvu2padY-xmFpPkXcMlvKzexOb2MoiIubR3D5oUJt-aFDK9pjoCEXTED1w9s5-jhxReKHaS7aWY1sV7Sti4AIFU6z4hXXITI3G3o3CSk6CnS36sUE88VjeHWVI1j7K3ESt9~K0IxUnxhh45q2ahUO6EtsYXrA84qr9ahkDqbaVQZ~CW3bW7lRCofLaKOQRQFsVm8x3jYcmNJK9axrKysxHJf~o-lmhRlySK9YaghF5UEPCC5HPHWOs387iRlCYOWRHplLfnknIOkVesB1tneYLF2bqwo74hkck99~ObGgFbgii5pSzb2Y~LLiDtOdVgihaCXCbFdAnquz5-agA__&Key-Pair-Id=K49TZTO9GZI6K",
+                "caption_filename": "caption2.ass",
                 "parsed_caption": null
             }
         }
