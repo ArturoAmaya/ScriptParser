@@ -15,7 +15,7 @@ v0.01a
 - [x] Decide on markup syntax and supported interactions, as well as complexity levels Wed May 1
 - [ ] v0.02 Non-fade transitions and different durations.
 
-TOMORROW: check the long concat video to see why the audio gets off and why it loses quality :cry
+Monday: Test concat and long videos using the new format and syntax
 ####### Old roadmap
 - [ ] v0.02     Support non-heygen picture-in-picture
 - [ ] v0.03     Support side by side compositions
