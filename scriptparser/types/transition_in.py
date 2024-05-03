@@ -100,7 +100,7 @@ class transition_in:
 
     def __init__(self):
         self.t_type = None
-        self.duration = 0.0
+        self.duration = 1.0
 
     def to_dict(self):
         return asdict(self)
