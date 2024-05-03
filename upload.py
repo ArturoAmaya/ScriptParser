@@ -22,7 +22,7 @@ def upload_script(script: tuple[dict, list[scene]]):
         clip = dict()
         clip["character"] = dict()
         clip["character"]["type"] = "avatar"
-        clip["character"]["avatar_id"] = script_header["Avatar ID"]
+        clip["character"]["avatar_id"] = script_header["Default Avatar ID"]
         clip["character"]["avatar_style"] = "normal"
         clip["character"]["scale"] = scene.style.avatar_scale
         clip["character"]["offset"] = {"x": 1-scene.style.avatar_position[0], "y": 1-scene.style.avatar_position[1]} # TODO revisit I believe hey gen's implementation is different to ffmpeg's. believe they do bottom right indexing or smth idk
@@ -30,7 +30,7 @@ def upload_script(script: tuple[dict, list[scene]]):
         clip["voice"] = dict()
         clip["voice"]["type"] = "text"
         clip["voice"]["input_text"] = scene.text
-        clip["voice"]["voice_id"] = script_header["Voice ID"]
+        clip["voice"]["voice_id"] = script_header["Default Voice ID"]
 
         clip["background"] = dict()
         clip["background"]["type"] = "image"
@@ -92,8 +92,9 @@ def get_avatar_clip(scene:scene, apikey:str, count:int, wait:int, dir:str="./"):
 
             # get the url to the caption and download it
             scene.caption.caption_url = body["data"]["caption_url"] if body["data"]["caption_url"] != None else None
-            path, headers = urlretrieve(scene.caption.caption_url, dir+f"caption{count}.ass")
-            scene.caption.caption_filename = path
+            if scene.caption.caption_url != None:
+                path, headers = urlretrieve(scene.caption.caption_url, dir+f"caption{count}.ass")
+                scene.caption.caption_filename = path
             return scene
         else:
             print("trying again with video " + str(scene.number) + " waiting " + str(wait*2))
