@@ -4,6 +4,9 @@
 *.ass
 *.jpg
 
+# artifacts
+*.json
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
