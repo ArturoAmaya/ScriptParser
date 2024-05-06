@@ -15,7 +15,9 @@ v0.01a
 - [x] Decide on markup syntax and supported interactions, as well as complexity levels Wed May 1
 - [ ] v0.02 Non-fade transitions and different durations.
 
-Monday: Test concat and long videos using the new format and syntax
+Monday: Test concat [tested] and long videos using the new format and syntax [tested]
+Let's make sure the notebook works and publish the versioning
+
 ####### Old roadmap
 - [ ] v0.02     Support non-heygen picture-in-picture
 - [ ] v0.03     Support side by side compositions
