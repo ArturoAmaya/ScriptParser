@@ -38,7 +38,7 @@ def parse_transition(command:str, default: dict=None):
     if "duration" not in transition:
         transition["duration"] = default["duration"] if default != None else 1.0
     if "t_type" not in transition:
-        transition["t_type"] = default["duration"] if default != None else transition_type.FADE
+        transition["t_type"] = default["t_type"] if default != None else transition_type.FADE
     return transition
 
 def parse_header(header:list[str]):
