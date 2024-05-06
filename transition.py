@@ -2,20 +2,22 @@ from scriptparser import scene, style_type, transition_type
 import ffmpeg
 import os
 
-def transition(v0: ffmpeg.nodes.FilterableStream, v1: ffmpeg.nodes.FilterableStream, a0: ffmpeg.nodes.FilterableStream, a1: ffmpeg.nodes.FilterableStream, transition_type: transition_type, duration: float, v0_d: float, v1_d: float, a0_d: float, a1_d:float)->tuple[ffmpeg.nodes.FilterableStream, ffmpeg.nodes.FilterableStream, float, float]:
+def transition(v0: ffmpeg.nodes.FilterableStream, v1: ffmpeg.nodes.FilterableStream, a0: ffmpeg.nodes.FilterableStream, a1: ffmpeg.nodes.FilterableStream, transition_t: transition_type, duration: float, v0_d: float, v1_d: float, a0_d: float, a1_d:float)->tuple[ffmpeg.nodes.FilterableStream, ffmpeg.nodes.FilterableStream, float, float]:
     
+    if (transition_t == None):
+        transition_t = transition_type.CONCAT
     # if it's not custom, not concat and not error
-    if (transition_type != transition_type.CUSTOM) and (transition_type !=transition_type.CONCAT) and duration != 0.0:
-        temp_clip_v = ffmpeg.filter([v0, v1], 'xfade', transition=transition_type.value, duration=duration, offset=(v0_d-duration-(v0_d-a0_d)))
+    if (transition_t != transition_type.CUSTOM) and (transition_t !=transition_type.CONCAT) and duration != 0.0:
+        temp_clip_v = ffmpeg.filter([v0, v1], 'xfade', transition=transition_t.value, duration=duration, offset=(v0_d-duration-(v0_d-a0_d)))
         temp_clip_a = ffmpeg.filter([a0,a1], 'acrossfade', duration=duration)
 
         # calculate the durations of the new clip
         temp_clip_v_d = v0_d + v1_d - duration # TODO check this
         temp_clip_a_d = a0_d + a1_d - duration
-    elif transition_type == transition_type.CUSTOM:
+    elif transition_t == transition_type.CUSTOM:
         print("custom transition requested but not yet supported, I'll give you a fade WITH NO AUDIO instead")
-        temp_clip_v = ffmpeg.filter([v0, v1], 'xfade', transition=transition_type.FADE.value, duration=duration, offset=(v0_d-duration-(v0_d-a0_d)))
-    elif transition_type == transition_type.CONCAT or duration==0:
+        temp_clip_v = ffmpeg.filter([v0, v1], 'xfade', transition=transition_t.FADE.value, duration=duration, offset=(v0_d-duration-(v0_d-a0_d)))
+    elif transition_t == transition_type.CONCAT or duration==0:
         print("concatenation requested or you gave me a 0")
 
         # NOTE: per https://github.com/kkroening/ffmpeg-python/issues/137 there is a slow concat and a fast concat. fast concat takes a file list and is executed at the moment of input, which is a problem for me. We will consider adding this later, but for now do slow concat
