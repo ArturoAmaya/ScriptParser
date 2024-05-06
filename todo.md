@@ -13,10 +13,10 @@ v0.01a
 - [x] v0.01b0 Add tester API keys. 5 of them. Mon Apr 29 /touch up Tue Apr 30
 - [x] v0.01b1 Error out when there's an api trial limit excption instead of waiting. (small change) Tue Apr 30
 - [x] Decide on markup syntax and supported interactions, as well as complexity levels Wed May 1
-- [ ] v0.02 Non-fade transitions and different durations.
-
+- [x] v0.02 Non-fade transitions and different durations. Mon May 6
 Monday: Test concat [tested] and long videos using the new format and syntax [tested]
-Let's make sure the notebook works and publish the versioning
+Let's make sure the notebook works and publish the versioning [done]
+
 
 ####### Old roadmap
 - [ ] v0.02     Support non-heygen picture-in-picture
