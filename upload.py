@@ -1,5 +1,5 @@
 import requests
-from scriptparser import scene
+from scriptparser import scene, style_type
 import json
 from urllib.request import urlretrieve
 import time
@@ -12,38 +12,41 @@ def upload_script(script: tuple[dict, list[scene]]):
     for scene in script_body:
         # compose the JSON first
         ## header
-        post_header = dict()
-        post_header["Content-Type"] = "application/json"
-        post_header["x-api-key"] = script_header["HeyGen API key"]
+        if scene.style.style == style_type.PIP:
+            post_header = dict()
+            post_header["Content-Type"] = "application/json"
+            post_header["x-api-key"] = script_header["HeyGen API key"]
 
-        ## json body
-        post_json = dict()
-        post_json["video_inputs"] = []
-        clip = dict()
-        clip["character"] = dict()
-        clip["character"]["type"] = "avatar"
-        clip["character"]["avatar_id"] = script_header["Default Avatar ID"]
-        clip["character"]["avatar_style"] = "normal"
-        clip["character"]["scale"] = scene.style.avatar_scale
-        clip["character"]["offset"] = {"x": 1-scene.style.avatar_position[0], "y": 1-scene.style.avatar_position[1]} # TODO revisit I believe hey gen's implementation is different to ffmpeg's. believe they do bottom right indexing or smth idk
+            ## json body
+            post_json = dict()
+            post_json["video_inputs"] = []
+            clip = dict()
+            clip["character"] = dict()
+            clip["character"]["type"] = "avatar"
+            clip["character"]["avatar_id"] = script_header["Default Avatar ID"]
+            clip["character"]["avatar_style"] = scene.avatar_video.style.value
+            clip["character"]["scale"] = scene.avatar_video.scale
+            clip["character"]["offset"] = {"x": 1-scene.avatar_video.position[0], "y": 1-scene.avatar_video.position[1]} # TODO revisit I believe hey gen's implementation is different to ffmpeg's. believe they do bottom right indexing or smth idk
 
-        clip["voice"] = dict()
-        clip["voice"]["type"] = "text"
-        clip["voice"]["input_text"] = scene.text
-        clip["voice"]["voice_id"] = script_header["Default Voice ID"]
+            clip["voice"] = dict()
+            clip["voice"]["type"] = "text"
+            clip["voice"]["input_text"] = scene.text
+            clip["voice"]["voice_id"] = script_header["Default Voice ID"]
 
-        clip["background"] = dict()
-        clip["background"]["type"] = "image"
-        clip["background"]["url"] = scene.slide.slide_url #script_header["Slides"][script_body.index(line)] if script_body.index(line) < len(script_header["Slides"]) else script_header["Slides"][-1]
+            clip["background"] = dict()
+            clip["background"]["type"] = "image"
+            clip["background"]["url"] = scene.slide.slide_url #script_header["Slides"][script_body.index(line)] if script_body.index(line) < len(script_header["Slides"]) else script_header["Slides"][-1]
 
-        post_json["video_inputs"].append(clip)
-        post_json["test"] = True
-        post_json["caption"] = True
-        post_json["dimension"] = {"width": 1280, "height": 720}
+            post_json["video_inputs"].append(clip)
+            post_json["test"] = True
+            post_json["caption"] = True
+            post_json["dimension"] = {"width": scene.style.output_dim[0], "height": scene.style.output_dim[1]}
 
-        print(post_json)
-        response = requests.post("https://api.heygen.com/v2/video/generate", json = post_json, headers=post_header)
-        responses.append(response)
+            print(post_json)
+            response = requests.post("https://api.heygen.com/v2/video/generate", json = post_json, headers=post_header)
+            responses.append(response)
+        else:
+            raise Exception("unsupported composition type for now")
     return responses
 
 def parse_upload_response(responses:list[requests.models.Response], script: tuple[dict,list[scene]])->list[scene]:
