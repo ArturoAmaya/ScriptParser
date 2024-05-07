@@ -9,5 +9,5 @@ def compose_scenes(script: tuple[dict,list[scene]]):
         if scene.style.style == style_type.PIP:
             scene.clip = scene.avatar_video.video # for now there's not much to do with a pip since we've generated it in heygen
         else:
-            print("error unsupported scene style: " + scene.style.style)
+            raise Exception("error unsupported scene style: " + scene.style.style)
     return (script_head, script_body)
