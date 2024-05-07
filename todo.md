@@ -16,7 +16,8 @@ v0.01a
 - [x] v0.02 Non-fade transitions and different durations. Mon May 6
 Monday: Test concat [tested] and long videos using the new format and syntax [tested]
 Let's make sure the notebook works and publish the versioning [done]
-- [ ] v0.02a We're gonna clean it up. Move the folders around and remove the .json files. 
+- [x] v0.02a We're gonna clean it up. Move the folders around and remove the .json files. Done Mon May 6, Uploaded Tues May 7
+- [ ] v0.03 Support correctly formatted hey gen pip
 
 ####### Old roadmap
 - [ ] v0.02     Support non-heygen picture-in-picture
