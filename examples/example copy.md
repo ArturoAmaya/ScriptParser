@@ -1,9 +1,10 @@
 Name: Arturo Amaya
 Lecture Name: Lecture 10
 HeyGen API key: M2M4YTQ2MTJlMTRjNDk0YWFiOTJhZjg1YzQyZDJmZTktMTcxMjEwNzE3Nw==
-Creatomate API key: *key*
-Avatar ID: Luke_public_3_20240306
-Voice ID: 5dddee02307b4f49a17c123c120a60ca
+Default Avatar ID: Luke_public_3_20240306
+Default Voice ID: 5dddee02307b4f49a17c123c120a60ca
+Default Composition: [hpip]
+Default Transition: {type: fade, duration: 1.0}
 Slides:
     https://drive.google.com/file/d/1p5OyujCWBFxLogcAllLe_fPR_A72fyS2/view?usp=share_link
     https://drive.google.com/file/d/1aCsa_WcVk4goJPBOKtSmZpIsKJNOWaw-/view?usp=share_link
