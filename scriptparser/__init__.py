@@ -1,4 +1,4 @@
-from .types.avatar_video import avatar_video
+from .types.avatar_video import avatar_video, avatar_style
 from .types.background import background
 from .types.caption import caption
 from .types.scene import scene
