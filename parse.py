@@ -19,7 +19,7 @@ def parse_composition(command:str, default: dict = None):
                 case 'position':
                     # positions will be ;-separated for now
                     p = v[1:-1].split(";")
-                    composition["avatar"]["position"] = (float(p[0], float(p[1])))
+                    composition["avatar"]["position"] = (float(p[0]), float(p[1]))
                 case 'scale':
                     composition["avatar"]["scale"] = float(v)
                 case 'style':
