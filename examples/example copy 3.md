@@ -15,7 +15,7 @@ Slides:
     https://drive.google.com/file/d/1Mc0xorooDDiMyeSOf6k0j8ttes3n02Sp/view?usp=share_link 
 --
 
-Welcome to an alpha version of UCSD's markdown to lecture pipeline. This early version only supports basic concatenation of videos and has little to no input verification, so please use with caution. {} Also make sure each paragraph has less than 2000 characters. The only interesting thing it does is fade in between videos. To indicate you want a different clip to begin, simply introduce a newline like this 🕒🕒🕒🕒🕒🕒🕒🕒🕒🕒
+Welcome to an alpha version of UCSD's markdown to lecture pipeline. This early version only supports basic concatenation of videos and has little to no input verification, so please use with caution. {} Also make sure each paragraph has less than 2000 characters. The only interesting thing it does is fade in between videos. To indicate you want a different clip to begin, simply introduce a newline like this 🕓🕓🕓🕓🕓🕓🕓🕓🕓🕓
 
 {dissolve, 5.0} This is a different video. If everything worked, it's been stitched together with the previous video with a visual and audio cross fade. The only clip composition that is currently supported is the picture in picture made by heygen with default a setting of placing the avatar at half scale in the bottom right of the slide. Slides advance in order with the each paragraph.
 

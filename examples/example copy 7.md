@@ -3,7 +3,7 @@ Lecture Name: Lecture 10
 HeyGen API key: ZGZiNmNlNDhhODkyNGUwNGFlNWViOTk5NTcxNWRhZjctMTcxMzkwODUwNQ==
 Default Avatar ID: Luke_public_3_20240306
 Default Voice ID: 5dddee02307b4f49a17c123c120a60ca
-Default Composition: [hpip]
+Default Composition: [type:pip, style:closeUp, position:(0.75;0.75)]
 Default Transition: {type: fade, duration: 1.0}
 Slides:
     https://drive.google.com/file/d/1p5OyujCWBFxLogcAllLe_fPR_A72fyS2/view?usp=share_link
