@@ -18,6 +18,7 @@ Monday: Test concat [tested] and long videos using the new format and syntax [te
 Let's make sure the notebook works and publish the versioning [done]
 - [x] v0.02a We're gonna clean it up. Move the folders around and remove the .json files. Done Mon May 6, Uploaded Tues May 7
 - [ ] v0.03 Support correctly formatted hey gen pip
+Wednesday May 8 Log - missing comprehensive testing and jupyter notebook compatibility test but I think it works
 
 ####### Old roadmap
 - [ ] v0.02     Support non-heygen picture-in-picture
