@@ -34,3 +34,8 @@ Supported syntax:
         Ex: {0.5, wipeleft} This will invoke a wipeleft transition that lasts 0.5 seconds
 
  A quirk of the current version is that it will regex search for any [] or {} in a line regardless of where it is in the line. This will change but in theory it means you could write blah blah balh blah [command] blah blah blah and it'll accept it. Do with that what you will, it will not last too long
+
+ -------------------------------------------
+ v0.04a binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArturoAmaya/ScriptParser/v0.04a?labpath=example.ipynb)
+
+ Please note that moreso than other versions this version is a little experimental. I wrote it, realized there's a a few potential bugs and such BUT under the right cirucmstances it works and it's a lot of added versatility so it deserves to be published here. Version B, or 0.05 or whatever the next version is called will address some if not all of issues or observations I logged in notes.md
