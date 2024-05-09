@@ -20,7 +20,11 @@ Let's make sure the notebook works and publish the versioning [done]
 - [ ] v0.03 Support correctly formatted hey gen pip
 Wednesday May 8 Log - missing comprehensive testing and jupyter notebook compatibility test but I think it works. Also need to figure out how the background strings work so I can test that and add it in
 
-- [ ] v0.04 Redesign key words and syntax definition. Particularly the distinction between avatar_position as in where the avatar clip goes in the larger composition and avatar's position as in where the avatar goes in its own clip. Same for scale and a few other parameters. I will consider using avatar as a sub-object of composition commands but then my parsing logic gets a little messy. Adding another type of command also gets messy because it's more stuff that the user has to keep track of and more stuff that I have to cross check.
+- [ ] v0.04 Support avatar-only compositions (just to have some variety) and add the mid clip composition change
+
+v0.05 Redesign key words and syntax definition. Particularly the distinction between avatar_position as in where the avatar clip goes in the larger composition and avatar's position as in where the avatar goes in its own clip. Same for scale and a few other parameters. I will consider using avatar as a sub-object of composition commands but then my parsing logic gets a little messy. Adding another type of command also gets messy because it's more stuff that the user has to keep track of and more stuff that I have to cross check.
+
+
 ####### Old roadmap
 - [ ] v0.02     Support non-heygen picture-in-picture
 - [ ] v0.03     Support side by side compositions
