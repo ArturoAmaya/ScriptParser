@@ -1,5 +1,6 @@
 # Script Syntax
 This document should serve to define the syntax that will b parsed by the script parser. It will a bit rambl-y while I get my thoughts down. 
+Note: use semi colons for all floats
 
 ## Header
 This section of the document will identify basic global parameters:
@@ -51,7 +52,7 @@ Avatar position, Avatar Scale, Slides position, Slide scale, true background, av
 - Media Only: media url
 
 The common attributes that are required are:
-- avatar position [tuple[float,float]]: position of the top left of the avatar video with respect to the whole scene and the dimensions. (0,0) means top left of the scene. Values are [0.0,1.0] (I believe, I should test that on heygen).
+- avatar position [tuple[float;float]]: for now it is position of the middle of the avatar in the video. Use 0,0 as top left, so 0.75,0.75 is bottom right and 0.5,0.5 is dead center
 - avatar scale [float]: scale of the avatar. [0.0,2.0]
 - avatar style [enum]: normal, closeUp or circle
 - output dimension [tuple[int, int]]: output dimension in pixels. Defaults to 1280,720 while I have a trial plan. 
