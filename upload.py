@@ -1,5 +1,5 @@
 import requests
-from scriptparser import scene, style_type
+from scriptparser import scene, style_type, avatar_style
 import json
 from urllib.request import urlretrieve
 import time
@@ -26,7 +26,13 @@ def upload_script(script: tuple[dict, list[scene]]):
             clip["character"]["avatar_id"] = script_header["Default Avatar ID"]
             clip["character"]["avatar_style"] = scene.avatar_video.style.value
             clip["character"]["scale"] = scene.avatar_video.scale
-            clip["character"]["offset"] = {"x": 1-scene.avatar_video.position[0], "y": 1-scene.avatar_video.position[1]} # TODO revisit I believe hey gen's implementation is different to ffmpeg's. believe they do bottom right indexing or smth idk
+            clip["character"]["offset"] = {"x": scene.avatar_video.position[0]-0.5, "y": scene.avatar_video.position[1]-0.5} 
+            # hey gen uses offset of of the middle of the canvas for the 
+            # middle of the avatar so middle middle is 0.0,0.0, bottom left is -0.25,0.25 etc . 
+            # I want to use top-left is 0.0 because I believe that is how ffmpeg does it
+            # my (0,0) (top-left) is heygen's -0.5,-0.5. We can tentatively use me-0.5
+            if scene.avatar_video.style == avatar_style.CIRCLE:
+                clip["character"]["circle_background_color"] = scene.avatar_video.background
 
             clip["voice"] = dict()
             clip["voice"]["type"] = "text"
