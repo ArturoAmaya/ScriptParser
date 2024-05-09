@@ -33,7 +33,8 @@ v0.02 binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.
 
 v0.02a binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArturoAmaya/ScriptParser/v0.02a?labpath=example.ipynb)
 
-v0.03 binder: 
+v0.03 binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArturoAmaya/ScriptParser/v0.03?labpath=example.ipynb)
+
 Supported syntax:
 
     - Composition: can set position, scale, style, output_dim and background parameters within PIP format. 
