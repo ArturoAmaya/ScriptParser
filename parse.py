@@ -27,6 +27,8 @@ def parse_composition(command:str, default: dict = None):
                 case 'outout_dim':
                     d = v[1:-1].split(";")
                     composition["output_dim"] = (float(d[0]), float(d[1]))
+                case 'background':
+                    composition["avatar"]["background"] = v
             
     # pass in defaults
     if not "type" in composition:
