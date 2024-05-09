@@ -29,6 +29,7 @@ def parse_composition(command:str, default: dict = None):
                     composition["output_dim"] = (float(d[0]), float(d[1]))
                 case 'background':
                     composition["avatar"]["background"] = v
+                    composition["true_background"] = v
             
     # pass in defaults
     if not "type" in composition:
@@ -38,7 +39,7 @@ def parse_composition(command:str, default: dict = None):
         composition["output_dim"] = composition["output_dim"] if "output_dim" in composition else default["output_dim"] if default!=None else (1280,720)
         composition["slides_scale"] = composition["slides_scale"] if "slides_scale" in composition else default["slides_scale"] if default!=None else None
         composition["slides_position"] = composition["slides_position"] if "slides_position" in composition else default["slides_position"] if default!=None else None
-        composition["true_background"] = composition["true_background"] if "true_background" in composition else default["true_background"] if default!=None else None
+        composition["true_background"] = composition["true_background"] if "true_background" in composition else default["true_background"] if default!=None else "#FFFFFF"
         composition["avatar_width"] = composition["avatar_width"] if "avatar_width" in composition else default["avatar_width"] if default!=None else None
         composition["avatar_side"] = composition["avatar_side"] if "avatar_side" in composition else default["avatar_side"] if default!=None else None
         composition["slide_side"] = composition["slide_side"] if "slide_side" in composition else default["slide_side"] if default!=None else None
@@ -56,7 +57,7 @@ def parse_composition(command:str, default: dict = None):
                 composition["output_dim"] = composition["output_dim"] if "output_dim" in composition else default["output_dim"] if default!=None else (1280,720)
                 composition["slides_scale"] = composition["slides_scale"] if "slides_scale" in composition else default["slides_scale"] if default!=None else None
                 composition["slides_position"] = composition["slides_position"] if "slides_position" in composition else default["slides_position"] if default!=None else None
-                composition["true_background"] = composition["true_background"] if "true_background" in composition else default["true_background"] if default!=None else None
+                composition["true_background"] = composition["true_background"] if "true_background" in composition else default["true_background"] if default!=None else "#FFFFFF"
                 composition["avatar_width"] = composition["avatar_width"] if "avatar_width" in composition else default["avatar_width"] if default!=None else None
                 composition["avatar_side"] = composition["avatar_side"] if "avatar_side" in composition else default["avatar_side"] if default!=None else None
                 composition["slide_side"] = composition["slide_side"] if "slide_side" in composition else default["slide_side"] if default!=None else None
@@ -67,6 +68,22 @@ def parse_composition(command:str, default: dict = None):
                 composition["avatar"]["background"] = composition["avatar"]["background"] if "background" in composition["avatar"] else default["avatar"]["background"] if default!=None else "#FFFFFF"
                 composition["avatar"]["scale"] = composition["avatar"]["scale"] if "scale" in composition["avatar"] else default["avatar"]["scale"] if default != None else 0.5
 
+            case style_type.AVATAR:
+                composition["avatar_position"] = composition["avatar_position"] if "avatar_position" in composition else default["avatar_position"] if default!=None else (0,0)
+                composition["avatar_scale"] = composition["avatar_scale"] if "avatar_scale" in composition else default["avatar_scale"] if default!=None else 1.0
+                composition["output_dim"] = composition["output_dim"] if "output_dim" in composition else default["output_dim"] if default!=None else (1280,720)
+                composition["slides_scale"] = composition["slides_scale"] if "slides_scale" in composition else default["slides_scale"] if default!=None else None
+                composition["slides_position"] = composition["slides_position"] if "slides_position" in composition else default["slides_position"] if default!=None else None
+                composition["true_background"] = composition["true_background"] if "true_background" in composition else default["true_background"] if default!=None else "#FFFFFF"
+                composition["avatar_width"] = composition["avatar_width"] if "avatar_width" in composition else default["avatar_width"] if default!=None else None
+                composition["avatar_side"] = composition["avatar_side"] if "avatar_side" in composition else default["avatar_side"] if default!=None else None
+                composition["slide_side"] = composition["slide_side"] if "slide_side" in composition else default["slide_side"] if default!=None else None
+
+                # then do the avatar defaults for hey gen PIP
+                composition["avatar"]["position"] = composition["avatar"]["position"] if "position" in composition["avatar"] else default["avatar"]["position"] if default!=None else (0.5, 0.5)
+                composition["avatar"]["style"] = composition["avatar"]["style"] if "style" in composition["avatar"] else default["avatar"]["style"] if default!=None else "normal"
+                composition["avatar"]["background"] = composition["avatar"]["background"] if "background" in composition["avatar"] else default["avatar"]["background"] if default!=None else "#FFFFFF"
+                composition["avatar"]["scale"] = composition["avatar"]["scale"] if "scale" in composition["avatar"] else default["avatar"]["scale"] if default != None else 1.0
             case default:
                 raise Exception("not pip wyd")
     
@@ -145,23 +162,16 @@ def parse_header(header:list[str]):
 def parse_script(script:list[scene], header:dict):
     true_script = []
     count = 0
+    slide_count = 0
     for line in script:
         # make a new scene
         s = scene()
 
         # assign the number
         s.number = count
-        
 
-        # assign the text, the background type, the slides url, the style
-        s.text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', line)) # line.replace('\\\\', '') # TODO return to this when we add in mid-clip cuts
-        s.slide.slide_source_type = slide_source.URL
-        s.slide.slide_url = header['Slides'][count] if count < len(header["Slides"]) else header["Slides"][-1]
-
-        # default here is pip so no background to be set
-        # assign style per default for v0.01 using ffmpeg notation
-        # TODO update to read default composition
-        comp_command = re.compile('(\[.*?\])').search(line)
+        # get the composition command and parse it
+        comp_command = re.compile('(\[.*?\])').search(line) # returns first instance with a span that is [start,end)
         if comp_command == None:
             comp = parse_composition(re.compile('(\[.*?\])').search("[]"+line).group(), header["Default Composition"])
         else:
@@ -180,6 +190,12 @@ def parse_script(script:list[scene], header:dict):
             # grab the {} command
             s.transition_in = transition_in.from_dict(parse_transition(re.compile('({.*?})').search(line).group(), header["Default Transition"]))
         
+        # assign the text, the background type, the slides url, the style
+        s.text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', line)) # line.replace('\\\\', '') # TODO return to this when we add in mid-clip cuts
+        if s.style.style == style_type.PIP:
+            s.slide.slide_source_type = slide_source.URL
+            s.slide.slide_url = header['Slides'][slide_count] if slide_count < len(header["Slides"]) else header["Slides"][-1]
+            slide_count = slide_count + 1
         # at this point, the only things in scene with no value are
         # avatar_video - id, metadata, url and video depend on uploading the clips
         # this is PIP only so no background needed
