@@ -51,7 +51,46 @@ def upload_script(script: tuple[dict, list[scene]]):
             print(post_json)
             response = requests.post("https://api.heygen.com/v2/video/generate", json = post_json, headers=post_header)
             responses.append(response)
-        else:
+        elif scene.style.style == style_type.AVATAR:
+            post_header = dict()
+            post_header["Content-Type"] = "application/json"
+            post_header["x-api-key"] = script_header["HeyGen API key"]
+
+            ## json body
+            post_json = dict()
+            post_json["video_inputs"] = []
+            clip = dict()
+            clip["character"] = dict()
+            clip["character"]["type"] = "avatar"
+            clip["character"]["avatar_id"] = script_header["Default Avatar ID"]
+            clip["character"]["avatar_style"] = scene.avatar_video.style.value
+            clip["character"]["scale"] = scene.avatar_video.scale
+            clip["character"]["offset"] = {"x": scene.avatar_video.position[0]-0.5, "y": scene.avatar_video.position[1]-0.5} 
+            # hey gen uses offset of of the middle of the canvas for the 
+            # middle of the avatar so middle middle is 0.0,0.0, bottom left is -0.25,0.25 etc . 
+            # I want to use top-left is 0.0 because I believe that is how ffmpeg does it
+            # my (0,0) (top-left) is heygen's -0.5,-0.5. We can tentatively use me-0.5
+            if scene.avatar_video.style == avatar_style.CIRCLE:
+                clip["character"]["circle_background_color"] = scene.avatar_video.background
+
+            clip["voice"] = dict()
+            clip["voice"]["type"] = "text"
+            clip["voice"]["input_text"] = scene.text
+            clip["voice"]["voice_id"] = script_header["Default Voice ID"]
+
+            clip["background"] = dict()
+            clip["background"]["type"] = "color"
+            clip["background"]["value"] = scene.style.true_background
+
+            post_json["video_inputs"].append(clip)
+            post_json["test"] = True
+            post_json["caption"] = True
+            post_json["dimension"] = {"width": scene.style.output_dim[0], "height": scene.style.output_dim[1]}
+
+            print(post_json)
+            response = requests.post("https://api.heygen.com/v2/video/generate", json = post_json, headers=post_header)
+            responses.append(response)
+        else: 
             raise Exception("unsupported composition type for now")
     return responses
 
@@ -78,7 +117,7 @@ def get_slides(script:list[scene], dir:str="./")->list[scene]:
     count  = 0
     script_header, script_body = script
     for scene in script_body:
-        if scene.slide.slide_url != None or scene.slide.slide_url != '':
+        if scene.slide.slide_url != None and scene.slide.slide_url != '':
             path, headers = urlretrieve(scene.slide.slide_url, dir+f"slide{count}.jpg") # todo return and decide how to import the file format. don't think this thing cares tho
             scene.slide.slide_filename = path
             count = count + 1
