@@ -17,8 +17,8 @@ v0.01a
 Monday: Test concat [tested] and long videos using the new format and syntax [tested]
 Let's make sure the notebook works and publish the versioning [done]
 - [x] v0.02a We're gonna clean it up. Move the folders around and remove the .json files. Done Mon May 6, Uploaded Tues May 7
-- [ ] v0.03 Support correctly formatted hey gen pip
-Wednesday May 8 Log - missing comprehensive testing and jupyter notebook compatibility test but I think it works. Also need to figure out how the background strings work so I can test that and add it in
+- [x] v0.03 Support correctly formatted hey gen pip
+Wednesday May 8 Log - missing comprehensive testing and jupyter notebook compatibility test but I think it works. Also need to figure out how the background strings work so I can test that and add it in. Finished Thu May 9
 
 - [ ] v0.04 Support avatar-only compositions (just to have some variety) and add the mid clip composition change
 
