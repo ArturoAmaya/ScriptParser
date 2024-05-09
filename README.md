@@ -32,3 +32,14 @@ v0.01b0 binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinde
 v0.02 binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArturoAmaya/ScriptParser/v0.02?labpath=example.ipynb)
 
 v0.02a binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArturoAmaya/ScriptParser/v0.02a?labpath=example.ipynb)
+
+v0.03 binder: 
+Supported syntax:
+
+    - Composition: can set position, scale, style, output_dim and background parameters within PIP format. 
+
+        Ex: [type: pip, scale:0.5, position:(0.25;0.5)] This command will place the middle of the avatar in 25% of the way along the x dimension from the left, and halfway down from the top. It will be at half scale. The other parameters: style, output_dim and background will be set to defaults (normal, 1280x720 and #FFFFF respectively)
+        
+    - Transition: any transition including concatenation, any duration
+
+        Ex: {0.5, wipeleft} This will invoke a wipeleft transition that lasts 0.5 seconds
