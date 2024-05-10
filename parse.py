@@ -225,26 +225,33 @@ def parse_from_file(filepath: str):
             elif line.strip() == "--":
                 head = False
             else:
-                # note that new line is any new line, and repeated newlines are treated the same as only one new line
-                if (str(line.strip())!=''):
-                    extra_lines = re.split(r'({.*?})', line.strip())
-                    
-                    if extra_lines[0] == '':
-                        extra_lines.pop(0)
-                    # if the array starts with a command, go two by two, combining strings and adding them to true script
-                    if extra_lines[0][0] == '{' and extra_lines[0][-1] == '}':
-                        while len(extra_lines) > 1:
-                            script.append(str(extra_lines[0].strip()) + str(extra_lines[1].strip()))
-                            extra_lines.pop(0)
-                            extra_lines.pop(0)
-                    else:
-                        # otherwise add the first in with an empty command and then continue as before
-                        script.append('{}' + str(extra_lines[0].strip()))
-                        extra_lines.pop(0)
-                        while len(extra_lines) > 1:
-                            script.append(str(extra_lines[0].strip()) + str(extra_lines[1].strip()))
-                            extra_lines.pop(0)
-                            extra_lines.pop(0)
+                # this currently finds {} commands and splits the line based on that, then pairs each {} with it's text line
+                # there are some exceptions/issues
+                # currently []{} commands get screwed, only {}[] commands work
+                # [] commands mid-line are ignored.
+                # i think this is the one: '((?: *[\[{].*?[\]}]){1,2}(?:[^\[{\n])*)'
+                # https://regex101.com/r/geWa9s/1
+                # proposed new flow would be:
+                # chop up the line based on the appearance of  *[\[{].*?[\]}], i.e. either {} or []
+                # remove all the ''s that that makes
+                if(str(line.strip())!=''):
+                    command_pairs = [s for s in re.split(r'((?: *[\[{].*?[\]}]){1,2}(?:[^\[{\n])*)', line) if s!='' and s!='\n'] # this produces all the command-script pairs
+                    # get the command pairs then decide what to do with them
+                    for pair in command_pairs:
+
+                        # if there's a good []{}/{}[] pair put that in the script
+                        if re.compile('( *[\[{].*?[\]}]){2}').search(pair)!=None:
+                            script.append(pair)
+                        elif re.compile('( *\[.*?\])').search(pair)!=None and re.compile('( *{.*?})').search(pair)==None:
+                        # if there's only a [] pair it with a concat and print an error for now
+                            script.append("{concat}"+pair)
+                        elif re.compile('( *{.*?})').search(pair):
+                        # if there's only a {} just put it in the script
+                            script.append(pair)
+                        else: 
+                            #ignore it lmao
+                            print("what is" + pair+"? I will treat it as a default default")
+                            script.append(pair)
         header = parse_header(header)
         script = parse_script(script, header)
         return (header, script)
