@@ -44,11 +44,11 @@ There are a few compositions that I wish to support. Currently I support picture
 Each of those has parameters that become important as they get picked. 
 
 - HeyGen Pip: 
-Avatar position, Avatar Scale, avatar style, Output Dimension
+Avatar position, Avatar Scale, avatar style, Output Dimension, avatar_circle_background (if using circle avatar style)
 - Non-Hey Gen Pip: 
-Avatar position, Avatar Scale, Slides position, Slide scale, true background, avatar background, output dimension.
-- Side-by-Side: avatar position, avatar scale, slides position, slide scale, true background, avatar background, output dimension [avatar width, avatar_side, slides_side]
-- Avatar Only: Avatar position, avatar scale, Avatar style, avatar background, true background.
+Avatar position, Avatar Scale, Slides position, Slide scale, true background, avatar background, output dimension. avatar_circle_background (if using circle avatar style)
+- Side-by-Side: avatar position, avatar scale, slides position, slide scale, true background, avatar background, output dimension [avatar width, avatar_side, slides_side], avatar_circle_background (if using circle avatar style)
+- Avatar Only: Avatar position, avatar scale, Avatar style, avatar background, true background, avatar_circle_background (if using circle avatar style)
 - Media Only: media url
 
 The common attributes that are required are:
