@@ -23,7 +23,7 @@ class slide:
     @classmethod
     def from_dict(cls,data):
         c = cls()
-        c.slide_source_type = slide_source(data["slide_source_type"])
+        c.slide_source_type = slide_source(data["slide_source_type"]) if data["slide_source_type"]!= None else None
         c.slide_url = data["slide_url"]
         c.slide_img = data["slide_img"]
         c.slide_filename = data["slide_filename"]
