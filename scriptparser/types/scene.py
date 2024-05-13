@@ -17,6 +17,9 @@ class scene:
     text: str
     clip: object
     caption: cap
+    # stuff to keep track of midline edits
+    midline_cut: bool
+    midline_text: str
 
     def __init__(self):
         self.number = None
@@ -28,6 +31,8 @@ class scene:
         self.text = None
         self.clip = None
         self.caption = cap()
+        self.midline_cut = None
+        self.midline_text = None
 
     def to_dict(self):
         return asdict(self)
@@ -44,4 +49,6 @@ class scene:
         s.text = data["text"]
         s.clip = None # really don't know what happnes if you save this while it has a value like a video
         s.caption = cap.from_dict(data["caption"])
+        s.midline_cut = data["midline_cut"]
+        s.midline_text = data["midline_text"]
  
