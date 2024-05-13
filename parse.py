@@ -159,14 +159,14 @@ def parse_header(header:list[str]):
     # TODO populate default composition and transition if needed
     return true_header
 
-def parse_script(script:list[scene], header:dict):
+def parse_script(script:list[tuple[scene,bool]], header:dict):
     true_script = []
     count = 0
     slide_count = 0
-    for line in script:
+    for (line,midline) in script:
         # make a new scene
         s = scene()
-
+        s.midline_cut = midline
         # assign the number
         s.number = count
 
@@ -191,7 +191,18 @@ def parse_script(script:list[scene], header:dict):
             s.transition_in = transition_in.from_dict(parse_transition(re.compile('({.*?})').search(line).group(), header["Default Transition"]))
         
         # assign the text, the background type, the slides url, the style
-        s.text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', line)) # line.replace('\\\\', '') # TODO return to this when we add in mid-clip cuts
+        
+
+        # if the next clip is a midline cut give this one the combined text
+        if script.index((line,midline))+1<len(script) and script[script.index((line,midline))+1][1] == True:
+            s.text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', line)) + re.sub('({.*?})', '', re.sub('(\[.*?\])','', script[script.index((line,midline))+1][0]))
+        elif s.midline_cut == True:
+            # if this one is midline get the previous combined text
+            s.text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', script[script.index((line,midline))-1][0])) + re.sub('({.*?})', '', re.sub('(\[.*?\])','', line))
+            s.midline_text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', line))
+        else:
+            s.text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', line)) # line.replace('\\\\', '') # TODO return to this when we add in mid-clip cuts
+        
         if s.style.style == style_type.PIP:
             s.slide.slide_source_type = slide_source.URL
             s.slide.slide_url = header['Slides'][slide_count] if slide_count < len(header["Slides"]) else header["Slides"][-1]
@@ -241,17 +252,17 @@ def parse_from_file(filepath: str):
 
                         # if there's a good []{}/{}[] pair put that in the script
                         if re.compile('( *[\[{].*?[\]}]){2}').search(pair)!=None:
-                            script.append(pair)
-                        elif re.compile('( *\[.*?\])').search(pair)!=None and re.compile('( *{.*?})').search(pair)==None:
-                        # if there's only a [] pair it with a concat and print an error for now
-                            script.append("{concat}"+pair)
+                            script.append((pair, False))
+                        elif re.compile('( *\[.*?\])').search(pair)!=None and re.compile('( *{.*?})').search(pair)==None and re.compile('(^ *\[.*?\])').search(line).group() != re.compile('(^ *\[.*?\])').search(pair).group(): #i.e. look for a midline cut, i.e. [] with no {} but not at the beginning of the line. isn't the last condition equivalent to just checking if it's not the first entry in the group of lines that comprise the paragraph?
+                        # if there's only a [] and it's midline pair it with a concat. True indicates this is a midline cut and we need to do something about it
+                            script.append(("{concat}"+pair, True))
                         elif re.compile('( *{.*?})').search(pair):
                         # if there's only a {} just put it in the script
-                            script.append(pair)
+                            script.append((pair,False))
                         else: 
-                            #ignore it lmao
+                            # this is now for defaults and for []-only commands that are at the beginning of a line
                             print("what is" + pair+"? I will treat it as a default default")
-                            script.append(pair)
+                            script.append((pair,False))
         header = parse_header(header)
         script = parse_script(script, header)
         return (header, script)
@@ -273,6 +284,8 @@ def restore_intermediate(script: dict)->tuple[dict, list[scene]]:
         s.text = item["text"]
         s.clip = None
         s.caption = caption.from_dict(item["caption"])
+        s.midline_cut = item["midline_cut"]
+        s.midline_text = item["midline_text"]
 
         scenes.append(s)
     return (script["header"], scenes)
