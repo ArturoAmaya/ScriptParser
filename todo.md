@@ -24,6 +24,7 @@ Wednesday May 8 Log - missing comprehensive testing and jupyter notebook compati
 
 Sub tasks for v0.04b:
     - support distinguishing between {}/[] commands at the start of a line and anywhere else [x] May 10
+    pretty sure everything works with midclip composition change but I need to be sure. May 14th will be spent testing and updating the notebook for a version release.
 
 v0.05 Redesign key words and syntax definition. Particularly the distinction between avatar_position as in where the avatar clip goes in the larger composition and avatar's position as in where the avatar goes in its own clip. Same for scale and a few other parameters. I will consider using avatar as a sub-object of composition commands but then my parsing logic gets a little messy. Adding another type of command also gets messy because it's more stuff that the user has to keep track of and more stuff that I have to cross check.
 
@@ -48,3 +49,4 @@ v0.05 Redesign key words and syntax definition. Particularly the distinction bet
 - [ ] Support non slide-type media for background (heygen has a video background format, and I know I could do it too)
 - [ ] Add word-level caption generation using whisper AI. For now we do best match and call it  day
 - [ ] Add option for before or after midline cut point (as in include the key phrase in the pre or the post clip)
+- [ ] Try to optimize all the reading and writing to and from files
