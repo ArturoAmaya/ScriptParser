@@ -46,3 +46,5 @@ v0.05 Redesign key words and syntax definition. Particularly the distinction bet
 - [ ] Support PDF slides
 - [ ] Support file slides
 - [ ] Support non slide-type media for background (heygen has a video background format, and I know I could do it too)
+- [ ] Add word-level caption generation using whisper AI. For now we do best match and call it  day
+- [ ] Add option for before or after midline cut point (as in include the key phrase in the pre or the post clip)
