@@ -195,10 +195,28 @@ def parse_script(script:list[tuple[scene,bool]], header:dict):
 
         # if the next clip is a midline cut give this one the combined text
         if script.index((line,midline))+1<len(script) and script[script.index((line,midline))+1][1] == True:
-            s.text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', line)) + re.sub('({.*?})', '', re.sub('(\[.*?\])','', script[script.index((line,midline))+1][0]))
+            lookahead = script.index((line,midline))+1
+            s.text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', line))
+            while lookahead < len(script) and script[lookahead][1]:
+                s.text = s.text + re.sub('({.*?})', '', re.sub('(\[.*?\])','', script[lookahead][0]))
+                lookahead = lookahead + 1
+            #s.text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', line)) + re.sub('({.*?})', '', re.sub('(\[.*?\])','', script[script.index((line,midline))+1][0]))
+            if s.midline_cut == True: # TODO simplify this condition block
+                lookback = script.index((line,midline))
+                #s.text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', line))
+                while script[lookback][1]:
+                    lookback = lookback -1
+                    s.text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', script[lookback][0])) + s.text
+                #s.text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', script[script.index((line,midline))-1][0])) + re.sub('({.*?})', '', re.sub('(\[.*?\])','', line))
+                s.midline_text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', line))
         elif s.midline_cut == True:
             # if this one is midline get the previous combined text
-            s.text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', script[script.index((line,midline))-1][0])) + re.sub('({.*?})', '', re.sub('(\[.*?\])','', line))
+            lookback = script.index((line,midline))
+            s.text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', line))
+            while script[lookback][1]:
+                lookback = lookback -1
+                s.text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', script[lookback][0])) + s.text
+            #s.text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', script[script.index((line,midline))-1][0])) + re.sub('({.*?})', '', re.sub('(\[.*?\])','', line))
             s.midline_text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', line))
         else:
             s.text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', line)) # line.replace('\\\\', '') # TODO return to this when we add in mid-clip cuts
@@ -253,7 +271,7 @@ def parse_from_file(filepath: str):
                         # if there's a good []{}/{}[] pair put that in the script
                         if re.compile('( *[\[{].*?[\]}]){2}').search(pair)!=None:
                             script.append((pair, False))
-                        elif re.compile('( *\[.*?\])').search(pair)!=None and re.compile('( *{.*?})').search(pair)==None and re.compile('(^ *\[.*?\])').search(line).group() != re.compile('(^ *\[.*?\])').search(pair).group(): #i.e. look for a midline cut, i.e. [] with no {} but not at the beginning of the line. isn't the last condition equivalent to just checking if it's not the first entry in the group of lines that comprise the paragraph?
+                        elif re.compile('( *\[.*?\])').search(pair)!=None and re.compile('( *{.*?})').search(pair)==None and re.compile('(^ *\[.*?\])').search(re.sub('( *{.*?})','',line)).group() != re.compile('(^ *\[.*?\])').search(pair).group(): #i.e. look for a midline cut, i.e. [] with no {} but not at the beginning of the line. isn't the last condition equivalent to just checking if it's not the first entry in the group of lines that comprise the paragraph?
                         # if there's only a [] and it's midline pair it with a concat. True indicates this is a midline cut and we need to do something about it
                             script.append(("{concat}"+pair, True))
                         elif re.compile('( *{.*?})').search(pair):
@@ -261,7 +279,7 @@ def parse_from_file(filepath: str):
                             script.append((pair,False))
                         else: 
                             # this is now for defaults and for []-only commands that are at the beginning of a line
-                            print("what is" + pair+"? I will treat it as a default default")
+                            #print("what is" + pair+"? I will treat it as a default default")
                             script.append((pair,False))
         header = parse_header(header)
         script = parse_script(script, header)
