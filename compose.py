@@ -32,10 +32,11 @@ def compose_scenes(script: tuple[dict,list[scene]]):
             
             # write to file and get it back TODO without write to file if possible
             v = scene.avatar_video.video.trim(start=cut_point, end=float(scene.avatar_video.metadata['streams'][0]['duration'])).filter('setpts', 'PTS-STARTPTS')
-            a = scene.avatar_video.video.audio.filter('atrim', start=cut_point).filter('asetpts', 'PTS-STARTPTS')
+            a = scene.avatar_video.video.audio.filter('atrim', start=cut_point).filter('asetpts', 'PTS-STARTPTS') # need to setpts so that the new clip has adjusted duration otherwise its same length but silent/frozen until the part that made it through the trim arrives
             ffmpeg.output(v,a,f"./trim{scene.number}.mp4", vcodec="h264", pix_fmt='yuv420p', crf=18, preset="veryslow", **{'b:a': '192k'}).run(overwrite_output=True)
             scene.avatar_video.video = ffmpeg.input(f"./trim{scene.number}.mp4")
             scene.avatar_video.metadata = ffmpeg.probe(f"./trim{scene.number}.mp4")
+
         elif script_body.index(scene)+1 < len(script_body) and script_body[script_body.index(scene)+1].midline_cut: # if this is the front half of a midline cut
             # try to find where the nearest phrase to the one indicated ends
             with open(scene.caption.caption_filename) as f:
