@@ -50,3 +50,4 @@ v0.05 Redesign key words and syntax definition. Particularly the distinction bet
 - [ ] Add word-level caption generation using whisper AI. For now we do best match and call it  day
 - [ ] Add option for before or after midline cut point (as in include the key phrase in the pre or the post clip)
 - [ ] Try to optimize all the reading and writing to and from files
+- [ ] Optimize the messy lookahead/lookback code the midline cuts stuff in compose.py
