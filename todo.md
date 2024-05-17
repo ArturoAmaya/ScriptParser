@@ -25,6 +25,7 @@ Wednesday May 8 Log - missing comprehensive testing and jupyter notebook compati
 Sub tasks for v0.04b:
     - support distinguishing between {}/[] commands at the start of a line and anywhere else [x] May 10
     pretty sure everything works with midclip composition change but I need to be sure. May 14th will be spent testing and updating the notebook for a version release.
+    - fix missing bool object not being subscriptable [that was an error I believe. As in error with the input]
 
 v0.05 Redesign key words and syntax definition. Particularly the distinction between avatar_position as in where the avatar clip goes in the larger composition and avatar's position as in where the avatar goes in its own clip. Same for scale and a few other parameters. I will consider using avatar as a sub-object of composition commands but then my parsing logic gets a little messy. Adding another type of command also gets messy because it's more stuff that the user has to keep track of and more stuff that I have to cross check.
 
