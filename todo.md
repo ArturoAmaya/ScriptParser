@@ -20,7 +20,7 @@ Let's make sure the notebook works and publish the versioning [done]
 - [x] v0.03 Support correctly formatted hey gen pip
 Wednesday May 8 Log - missing comprehensive testing and jupyter notebook compatibility test but I think it works. Also need to figure out how the background strings work so I can test that and add it in. Finished Thu May 9
 
-- [ ] v0.04 Support avatar-only compositions (just to have some variety) and add the mid clip composition change
+- [x] v0.04 Support avatar-only compositions (just to have some variety) and add the mid clip composition change
 
 Sub tasks for v0.04b:
     - support distinguishing between {}/[] commands at the start of a line and anywhere else [x] May 10
