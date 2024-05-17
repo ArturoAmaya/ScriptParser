@@ -39,3 +39,13 @@ Supported syntax:
  v0.04a binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArturoAmaya/ScriptParser/v0.04a?labpath=example.ipynb)
 
  Please note that moreso than other versions this version is a little experimental. I wrote it, realized there's a a few potential bugs and such BUT under the right cirucmstances it works and it's a lot of added versatility so it deserves to be published here. Version B, or 0.05 or whatever the next version is called will address some if not all of issues or observations I logged in notes.md
+
+ -------------------------------------------
+ v0.04b binder [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArturoAmaya/ScriptParser/v0.04b?labpath=example.ipynb)
+
+ Added midclip composition:
+ Refer to the example below:
+        
+        {hlwind, 3.0} [style:circle, background:#F5E3A2, position:(0.75;0.75)]This is a different video. If everything worked, it's been stitched together with the previous video with a visual and audio cross fade. The only clip composition that is currently supported is the picture in picture made by heygen with default a setting of placing the avatar at half scale in the bottom right of the slide. [type: avatar-only, style:closeUp, position:(0.25;0.75)]Slides advance in order with the each paragraph.Future versions of this program will expand on these functionalities. I will figure out how to import a PDF instead of a series of images. I will support more complex clip compositions such as side by side, avatar-only, slide-only and [type:pip, style:normal, position:(0.75;0.75)]imported media as well as more advanced transitions like sudden changes mid-sentence or wipes and slides or cross dissolves. The markdown syntax will obviously evolve concurrently.
+
+The [type: avatar-only, style:closeUp, position:(0.25;0.75)] is invoked without a {} and without a new line. In this case the script grabs the text before the mid-sentence cut (or mid-clip cut) and adds it to the text of the new clip. In this case there are three videos in one paragraph. They all have different compositions but exactly the same text. That means they produce the same words at the same times, meaning we can use the caption files to choose when to cut the clips. Right now I use the caption files made by HeyGen which don't have word level precision. The script tries to find a best match and cut there. For example, the first cut will try to find the closest timestamp to the phrase "Slides advance in order with" in the captions and cut there. The videos are then trimmed and concatenated together. This gives gives the video a more organic feel, I think. 
