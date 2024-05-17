@@ -52,3 +52,5 @@ v0.05 Redesign key words and syntax definition. Particularly the distinction bet
 - [ ] Add option for before or after midline cut point (as in include the key phrase in the pre or the post clip)
 - [ ] Try to optimize all the reading and writing to and from files
 - [ ] Optimize the messy lookahead/lookback code the midline cuts stuff in compose.py
+- [ ] Consider adding mid-line cut capabilities to clips with transitions
+- [ ] Consider not using the same exact text for midclip cuts so that we can get avatars in different sections of their animation loop, which would help disguise the fact that such a loop exists. First try it with best match but I think it will need word-level caption information, which opens up a whole different can of worms with openAI's whisper model
