@@ -92,7 +92,7 @@ if args.Input_script and not args.load_intermediate:
     # at stage 0 right now
     filepath = args.Input_script
     script = parse_from_file(filepath)
-    if args.save_intermediate:
+    if args.save_intermediate and script:
         save_intermediate(script, args.Destination+args.intermediate_filename)
 
     # stage 1 - after file parse
@@ -131,7 +131,7 @@ if args.Input_script and not args.load_intermediate:
         # can't do this section without higher API limit yet
         #print(responses)
     else:
-        print(script)
+        raise Exception("Error parsing script, please review")
 else:
     # choose the intermediate stage to start from:
     if (args.intermediate_stage == 0):
