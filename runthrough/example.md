@@ -6,17 +6,16 @@ Default Voice ID: 5dddee02307b4f49a17c123c120a60ca
 Default Composition: [type:pip, style:closeUp, position:(0.75;0.75)]
 Default Transition: {type: fade, duration: 1.0}
 Slides:
-    https://drive.google.com/file/d/1p5OyujCWBFxLogcAllLe_fPR_A72fyS2/view?usp=share_link
-    https://drive.google.com/file/d/1aCsa_WcVk4goJPBOKtSmZpIsKJNOWaw-/view?usp=share_link
-    https://drive.google.com/file/d/1y-ly8HI061xbp25DQ3mhUOEwrIxqIbbd/view?usp=share_link
-    https://drive.google.com/file/d/1xh1JPrktNOeri7bHAwu_kDc9SIt4_mjp/view?usp=share_link
-    https://drive.google.com/file/d/1az8Qxl913EG1jh2GJdlTmdCrK_FWHB-D/view?usp=share_link
-    https://drive.google.com/file/d/1dBosQvnt3V7eccNrVvJdRqyEIj7tHY9V/view?usp=share_link
-    https://drive.google.com/file/d/1Mc0xorooDDiMyeSOf6k0j8ttes3n02Sp/view?usp=share_link 
+    https://drive.google.com/file/d/1JaUxTeLHEmQJqfU6uidRqYJrRUsu4Lfx/view?usp=sharing
+    https://drive.google.com/file/d/1RWi9fGRAdglGB_-DDLxkzYDPPJBtN07V/view?usp=sharing
+    https://drive.google.com/file/d/13R1pHWEooQiUWJlIQMw4QUbok7S0VdWI/view?usp=sharing
+    https://drive.google.com/file/d/1NjQmiHkVqLx4Zk6KaYgowEc4Pfl9isOd/view?usp=sharing
 --
 
-[style:circle, background:#F5E3A2, position:(0.5;0.75)]Welcome to an alpha version of UCSD's markdown to lecture pipeline. This early version only supports basic concatenation of videos and has little to no input verification, so please use with caution. Also make sure [type:avatar-only] each paragraph has less than 2000 characters. The only interesting thing it does is fade in between videos. To indicate you want a different clip to begin, simply introduce a newline like this 🕓🕓🕓🕓🕓🕓🕓🕓🕓🕓🕓🕓
+[type:avatar-only, scale:1.0, position:(0.5;0.5), background:#03ecfc] Hi everyone, welcome back to CSE 240A. I'm your instructor, Lenny McTwisties. I hope everyone had a good weekend and has come back refreshed and ready to learn! Alright, let's get to it!
 
-{dissolve, 5.0} [style:circle, background:#F5E3A2, position:(0.5;0.75)]This is a different video. If everything worked, it's been stitched together with the previous video with a visual and audio cross fade. The only clip composition that is currently supported is the picture in picture made by heygen with default a setting of placing the avatar at half scale in the bottom right of the slide. Slides advance in order with the each paragraph.
+Let's get started with our snippet of computer history. These computers right here are called UNIVACS. Very expensive. In 1954 there were only 4 of them in operation but they were crucial in the places where it was used, which can be seen here on the left. Univac stands for UNIversal Automatic Computer. Despite only holding 1,000 words in its memory, the UNIVAC was used for important census-related calculations and even helped man land on the moon.
 
-{circlecrop}[style: normal, scale:0.7]Future versions of this program will expand on these functionalities. I will figure out how to import a PDF instead of a series of images. I will support more complex clip compositions such as side by side, avatar-only, slide-only and imported media as well as more advanced transitions like sudden changes mid-sentence or wipes and slides or cross dissolves. The markdown syntax will obviously evolve concurrently.
+Let's recap real quick. Last week I showed you this snippet of code with that we optimized in class. There were some missing statements that I've now corrected. You'll note that in the second column SLT was SGT before and that was SEQ before that. This makes out final cycle time 9, which is the same as before but is now actually correct. Apologies for the mistake. Let's move on, though.
+
+We were talking about how we have to unroll a loop in order to get some important optimizations. Within our steady state of the loop we know that we're going to be doing the next computations so we can reorder them and do more than one at a time. [type:pip, style:closeUp, position:(0.25;0.75)] You can see here the loop after it has been unrolled. We adjust the SD statements to have a negative 8 offset to accomodate some of the reordering of some of the statements. 
