@@ -5,10 +5,10 @@ import ass,re
 def find_midclip_cut(midlinetext: str, count:int, caption_events:ass.EventsSection):
     found = False
     while count > 0 and not found:
-        first_words = re.compile('^(( *([\w\-]+)){'+str(count)+'})')
+        first_words = re.compile('^(( *([\w\\-\'\"\,\.\?\!\;]+)){'+str(count)+'})') #find the first five words, including -, ", ,, ., ?, !, ;
         first_words = first_words.search(midlinetext).group().strip()
         for event in caption_events:
-            found = True if event.text.replace('\\n', '').find(first_words) != -1 else False
+            found = True if event.text.replace('\\n', '').replace(' \'', '\'').find(first_words) != -1 else False
             if found:
                 return event.end.total_seconds()
         count = count - 1
