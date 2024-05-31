@@ -330,7 +330,11 @@ def parse_from_file(filepath: str):
                         # if there's a good []{}()/{}[]() group in any order put that in the script
                         if re.compile('( *[\[{\()].*?[\])]){3}').search(pair)!=None:
                             script.append((pair, False))
-                        elif (re.compile('( *\[.*?\])').search(pair)!=None or re.compile('( *\(.*?\))').search(pair)!=None) and re.compile('( *{.*?})').search(pair)==None and re.compile('(^ *\[.*?\])').search(re.sub('( *{.*?})','',line))!=None and re.compile('(^ *\[.*?\])').search(re.sub('( *{.*?})','',line)).group() != re.compile('(^ *\[.*?\])').search(pair).group(): #i.e. look for a midline cut, i.e. [] with no {} but not at the beginning of the line. isn't the last condition equivalent to just checking if it's not the first entry in the group of lines that comprise the paragraph?
+
+                        # a midline cut is a () or a [] (or both) that are not paired with a {} and is not at the beginning of the line
+                        elif (re.compile('( *\[.*?\])').search(pair)!=None or re.compile('( *\(.*?\))').search(pair)!=None) \
+                            and re.compile('( *{.*?})').search(pair)==None and \
+                            pair != command_pairs[0]:
                         # if there's only a [] and it's midline pair it with a concat. True indicates this is a midline cut and we need to do something about it
                             script.append(("{concat}"+pair, True))
                         elif re.compile('( *{.*?})').search(pair):
