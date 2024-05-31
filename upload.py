@@ -23,7 +23,7 @@ def upload_script(script: tuple[dict, list[scene]]):
             clip = dict()
             clip["character"] = dict()
             clip["character"]["type"] = "avatar"
-            clip["character"]["avatar_id"] = script_header["Default Avatar ID"]
+            clip["character"]["avatar_id"] = scene.avatar_video.avatar_id #script_header["Default Avatar ID"]
             clip["character"]["avatar_style"] = scene.avatar_video.style.value
             clip["character"]["scale"] = scene.avatar_video.scale
             clip["character"]["offset"] = {"x": scene.avatar_video.position[0]-0.5, "y": scene.avatar_video.position[1]-0.5} 
@@ -32,12 +32,12 @@ def upload_script(script: tuple[dict, list[scene]]):
             # I want to use top-left is 0.0 because I believe that is how ffmpeg does it
             # my (0,0) (top-left) is heygen's -0.5,-0.5. We can tentatively use me-0.5
             if scene.avatar_video.style == avatar_style.CIRCLE:
-                clip["character"]["circle_background_color"] = scene.avatar_video.background
+                clip["character"]["circle_background_color"] = scene.avatar_video.circle_background
 
             clip["voice"] = dict()
             clip["voice"]["type"] = "text"
             clip["voice"]["input_text"] = scene.text
-            clip["voice"]["voice_id"] = script_header["Default Voice ID"]
+            clip["voice"]["voice_id"] = scene.avatar_video.voice_id #script_header["Default Voice ID"]
 
             clip["background"] = dict()
             clip["background"]["type"] = "image"
@@ -62,7 +62,7 @@ def upload_script(script: tuple[dict, list[scene]]):
             clip = dict()
             clip["character"] = dict()
             clip["character"]["type"] = "avatar"
-            clip["character"]["avatar_id"] = script_header["Default Avatar ID"]
+            clip["character"]["avatar_id"] = scene.avatar_video.avatar_id  #script_header["Default Avatar ID"]
             clip["character"]["avatar_style"] = scene.avatar_video.style.value
             clip["character"]["scale"] = scene.avatar_video.scale
             clip["character"]["offset"] = {"x": scene.avatar_video.position[0]-0.5, "y": scene.avatar_video.position[1]-0.5} 
@@ -76,7 +76,7 @@ def upload_script(script: tuple[dict, list[scene]]):
             clip["voice"] = dict()
             clip["voice"]["type"] = "text"
             clip["voice"]["input_text"] = scene.text
-            clip["voice"]["voice_id"] = script_header["Default Voice ID"]
+            clip["voice"]["voice_id"] = scene.avatar_video.voice_id #script_header["Default Voice ID"]
 
             clip["background"] = dict()
             clip["background"]["type"] = "color"
@@ -100,7 +100,7 @@ def parse_upload_response(responses:list[requests.models.Response], script: tupl
     for response in responses:
         if response.status_code == 200:
             body = json.loads(response.text)
-            script_body[count].avatar_video.id = body["data"]["video_id"]
+            script_body[count].avatar_video.video_id = body["data"]["video_id"]
         else:
             body = json.loads(response.text)
             body['error']
@@ -128,7 +128,7 @@ def get_avatar_clip(scene:scene, apikey:str, count:int, wait:int, dir:str="./"):
     post_header = dict()
     post_header['Content-Type'] = "application/json"
     post_header["x-api-key"] = apikey #script_header["HeyGen API key"]
-    response = requests.get("https://api.heygen.com/v1/video_status.get?video_id="+scene.avatar_video.id, headers=post_header)
+    response = requests.get("https://api.heygen.com/v1/video_status.get?video_id="+scene.avatar_video.video_id, headers=post_header)
     if response.status_code == 200:
         body = json.loads(response.text)
         if body["data"]["status"] == "completed":

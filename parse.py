@@ -4,8 +4,8 @@ import re
 def parse_composition(command:str, default: dict = None):
     composition = dict()
     composition["avatar"] = dict()
-    if ',' in command:
-        params = command[1:-1].split(',')
+    if ',' in command: 
+        params = command[1:-1].split(',') # [1:-1] get rid of the outside []
     else:
         params = [command[1:-1]]
     for param in params:
@@ -18,6 +18,7 @@ def parse_composition(command:str, default: dict = None):
                     composition["type"] = style_type(v)
                 case 'position':
                     # positions will be ;-separated for now
+                    #p = v[1:-1].split(";") for when ptuples have ()
                     p = v[1:-1].split(";")
                     composition["avatar"]["position"] = (float(p[0]), float(p[1]))
                 case 'scale':
@@ -88,6 +89,50 @@ def parse_composition(command:str, default: dict = None):
                 raise Exception("not pip wyd")
     
     return composition
+
+def parse_avatar(command:str, default: dict=None):
+    avatar = dict()
+    if ',' in command:
+        params = command[1:-1].split(',')
+    else:
+        params = [command[1:-1]]
+    for param in params:
+        if ':' in param:
+            v = param.split(":")[1].strip() 
+            k = param.split(":")[0].strip()
+            match k:
+                case 'id':
+                    avatar["avatar_id"] = v
+                case 'avatar_id':
+                    avatar['avatar_id'] = v
+                case 'voice_id':
+                    avatar["voice_id"] = v
+                case 'position':
+                    p = v.split(";")
+                    avatar["position"] = (float(p[0]),float(p[1]))
+                case 'scale':
+                    avatar['scale'] = float(v)
+                case 'style':
+                    avatar["style"] = avatar_style(v)
+                case 'cbc': # circlebackground color
+                    avatar["circle_background"] = v
+                case 'circle_background':
+                    avatar["circle_bakground"] = v
+                case 'bc': # background color
+                    avatar["background"] = v
+                case "background":
+                    avatar["background"] = v
+    
+    avatar["avatar_id"] = avatar["avatar_id"] if "avatar_id" in avatar else default["avatar_id"] if default!=None and "avatar_id" in default else "Luke_public_3_20240306"
+    avatar["voice_id"] = avatar["voice_id"] if "voice_id" in avatar else default["voice_id"] if default!=None and "voice_id" in default else "5dddee02307b4f49a17c123c120a60ca"
+    avatar["position"] = avatar["position"] if "position" in avatar else default["position"] if default!=None and "position" in default else (0.5,0.5)
+    avatar["scale"] = avatar["scale"] if "scale" in avatar else default["scale"] if default!=None and "scale" in default else 1.0
+    avatar["style"] = avatar["style"] if "style" in avatar else default["style"] if default!=None and "style" in default else style_type("normal")
+    avatar["circle_background"] = avatar["circle_background"] if "circle_background" in avatar else default["circle_background"] if default!=None and "circle_background" in default else "#FFFFFF"
+    avatar["background"] = avatar["background"] if "background" in avatar else default["background"] if default!=None and "background" in default else "#FFFFFF"
+
+    return avatar
+    
 def parse_transition(command:str, default: dict=None):
     transition = dict()
     if ',' in command:
@@ -153,6 +198,9 @@ def parse_header(header:list[str]):
                 case "Default Transition":
                     transition_command = re.compile('({.*?})')
                     true_header["Default Transition"] = parse_transition(transition_command.search(line).group())
+                case "Default Avatar":
+                    avatar_command = re.compile('(\(.*?\))')
+                    true_header["Default Avatar"] = parse_avatar(avatar_command.search(line).group())
         else:
             true_header["Slides"].append(line.strip())
 
@@ -176,7 +224,15 @@ def parse_script(script:list[tuple[scene,bool]], header:dict):
             comp = parse_composition(re.compile('(\[.*?\])').search("[]"+line).group(), header["Default Composition"])
         else:
             comp = parse_composition(re.compile('(\[.*?\])').search(line).group(), header["Default Composition"])
-        s.avatar_video = avatar_video.from_dict(comp["avatar"])
+        
+        # get the avatar command and parse it
+        avatar_command = re.compile('(\(.*?\))').search(line)
+        if avatar_command == None:
+            avatar_dict = parse_avatar(re.compile('(\(.*?\))').search("()"+line).group(), header["Default Avatar"])
+        else:
+            avatar_dict = parse_avatar(re.compile('(\(.*?\))').search(line).group(), header["Default Avatar"])
+
+        s.avatar_video = avatar_video.from_dict(avatar_dict)
         s.style = style.from_dict(comp)
         #s.style.style = style_type.PIP
         #s.style.avatar_scale = 0.5
@@ -196,9 +252,9 @@ def parse_script(script:list[tuple[scene,bool]], header:dict):
         # if the next clip is a midline cut give this one the combined text
         if script.index((line,midline))+1<len(script) and script[script.index((line,midline))+1][1] == True:
             lookahead = script.index((line,midline))+1
-            s.text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', line))
+            s.text = re.sub('(\(.*?\))','',re.sub('({.*?})', '', re.sub('(\[.*?\])','', line)))
             while lookahead < len(script) and script[lookahead][1]:
-                s.text = s.text + re.sub('({.*?})', '', re.sub('(\[.*?\])','', script[lookahead][0]))
+                s.text = s.text + re.sub('(\(.*?\))','',re.sub('({.*?})', '', re.sub('(\[.*?\])','', script[lookahead][0])))
                 lookahead = lookahead + 1
             #s.text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', line)) + re.sub('({.*?})', '', re.sub('(\[.*?\])','', script[script.index((line,midline))+1][0]))
             if s.midline_cut == True: # TODO simplify this condition block
@@ -206,20 +262,20 @@ def parse_script(script:list[tuple[scene,bool]], header:dict):
                 #s.text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', line))
                 while script[lookback][1]:
                     lookback = lookback -1
-                    s.text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', script[lookback][0])) + s.text
+                    s.text = re.sub('(\(.*?\))','',re.sub('({.*?})', '', re.sub('(\[.*?\])','', script[lookback][0]))) + s.text
                 #s.text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', script[script.index((line,midline))-1][0])) + re.sub('({.*?})', '', re.sub('(\[.*?\])','', line))
-                s.midline_text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', line))
+                s.midline_text = re.sub('(\(.*?\))','', re.sub('({.*?})', '', re.sub('(\[.*?\])','', line)))
         elif s.midline_cut == True:
             # if this one is midline get the previous combined text
             lookback = script.index((line,midline))
-            s.text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', line))
+            s.text = re.sub('(\(.*?\))','',re.sub('({.*?})', '', re.sub('(\[.*?\])','', line)))
             while script[lookback][1]:
                 lookback = lookback -1
-                s.text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', script[lookback][0])) + s.text
+                s.text = re.sub('(\(.*?\))','',re.sub('({.*?})', '', re.sub('(\[.*?\])','', script[lookback][0]))) + s.text
             #s.text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', script[script.index((line,midline))-1][0])) + re.sub('({.*?})', '', re.sub('(\[.*?\])','', line))
-            s.midline_text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', line))
+            s.midline_text = re.sub('(\(.*?\))','',re.sub('({.*?})', '', re.sub('(\[.*?\])','', line)))
         else:
-            s.text = re.sub('({.*?})', '', re.sub('(\[.*?\])','', line)) # line.replace('\\\\', '') # TODO return to this when we add in mid-clip cuts
+            s.text = re.sub('(\(.*?\))','',re.sub('({.*?})', '', re.sub('(\[.*?\])','', line))) # line.replace('\\\\', '') # TODO return to this when we add in mid-clip cuts
         
         if s.style.style == style_type.PIP:
             s.slide.slide_source_type = slide_source.URL
@@ -263,15 +319,18 @@ def parse_from_file(filepath: str):
                 # proposed new flow would be:
                 # chop up the line based on the appearance of  *[\[{].*?[\]}], i.e. either {} or []
                 # remove all the ''s that that makes
+
+
+                # adding () commands we do ((?: *[\[{\(].*?[\]}\)]){1,3}(?:[^\[{\(\n])*) per https://regex101.com/r/RY7CPb/1
                 if(str(line.strip())!=''):
-                    command_pairs = [s for s in re.split(r'((?: *[\[{].*?[\]}]){1,2}(?:[^\[{\n])*)', line) if s!='' and s!='\n'] # this produces all the command-script pairs
+                    command_pairs = [s for s in re.split(r'((?: *[\[{\(].*?[\]}\)]){1,3}(?:[^\[{\(\n])*)', line) if s!='' and s!='\n'] # this produces all the command-script pairs
                     # get the command pairs then decide what to do with them
                     for pair in command_pairs:
 
-                        # if there's a good []{}/{}[] pair put that in the script
-                        if re.compile('( *[\[{].*?[\]}]){2}').search(pair)!=None:
+                        # if there's a good []{}()/{}[]() group in any order put that in the script
+                        if re.compile('( *[\[{\()].*?[\])]){3}').search(pair)!=None:
                             script.append((pair, False))
-                        elif re.compile('( *\[.*?\])').search(pair)!=None and re.compile('( *{.*?})').search(pair)==None and re.compile('(^ *\[.*?\])').search(re.sub('( *{.*?})','',line))!=None and re.compile('(^ *\[.*?\])').search(re.sub('( *{.*?})','',line)).group() != re.compile('(^ *\[.*?\])').search(pair).group(): #i.e. look for a midline cut, i.e. [] with no {} but not at the beginning of the line. isn't the last condition equivalent to just checking if it's not the first entry in the group of lines that comprise the paragraph?
+                        elif (re.compile('( *\[.*?\])').search(pair)!=None or re.compile('( *\(.*?\))').search(pair)!=None) and re.compile('( *{.*?})').search(pair)==None and re.compile('(^ *\[.*?\])').search(re.sub('( *{.*?})','',line))!=None and re.compile('(^ *\[.*?\])').search(re.sub('( *{.*?})','',line)).group() != re.compile('(^ *\[.*?\])').search(pair).group(): #i.e. look for a midline cut, i.e. [] with no {} but not at the beginning of the line. isn't the last condition equivalent to just checking if it's not the first entry in the group of lines that comprise the paragraph?
                         # if there's only a [] and it's midline pair it with a concat. True indicates this is a midline cut and we need to do something about it
                             script.append(("{concat}"+pair, True))
                         elif re.compile('( *{.*?})').search(pair):

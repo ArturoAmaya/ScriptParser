@@ -31,6 +31,13 @@ Sub tasks for v0.04b:
 v0.05 
 Redesign key words and syntax definition. Particularly the distinction between avatar_position as in where the avatar clip goes in the larger composition and avatar's position as in where the avatar goes in its own clip. Same for scale and a few other parameters. I will consider using avatar as a sub-object of composition commands but then my parsing logic gets a little messy. Adding another type of command also gets messy because it's more stuff that the user has to keep track of and more stuff that I have to cross check.
 
+double check the syntax parsing
+correct the midline clip adjustments
+remove redundant headers
+adjust documentation and examples
+verify the integrity of the restore intermediate now
+fix issue with second voice not playing nice with the transition out.
+also why is midline cut getting default transition, should be concat
 
 ####### Old roadmap
 - [ ] v0.02     Support non-heygen picture-in-picture
