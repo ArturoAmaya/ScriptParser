@@ -146,7 +146,7 @@ def get_avatar_clip(scene:scene, apikey:str, count:int, wait:int, dir:str="./"):
             return scene
         else:
             print("trying again with video " + str(scene.number) + " waiting " + str(wait*2))
-            return get_avatar_clip(scene, apikey, count, wait*2)
+            return get_avatar_clip(scene, apikey, count, wait*2, dir)
     pass
 
 
