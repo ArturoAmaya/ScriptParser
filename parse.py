@@ -16,21 +16,21 @@ def parse_composition(command:str, default: dict = None):
                 case 'type':
                     # setting the style type
                     composition["type"] = style_type(v)
-                case 'position':
+                #case 'position':
                     # positions will be ;-separated for now
                     #p = v[1:-1].split(";") for when ptuples have ()
-                    p = v[1:-1].split(";")
-                    composition["avatar"]["position"] = (float(p[0]), float(p[1]))
-                case 'scale':
-                    composition["avatar"]["scale"] = float(v)
-                case 'style':
-                    composition["avatar"]["style"] = avatar_style(v)
+                #    p = v[1:-1].split(";")
+                #    composition["avatar"]["position"] = (float(p[0]), float(p[1]))
+                #case 'scale':
+                #    composition["avatar"]["scale"] = float(v)
+                #case 'style':
+                #    composition["avatar"]["style"] = avatar_style(v)
                 case 'outout_dim':
                     d = v[1:-1].split(";")
                     composition["output_dim"] = (float(d[0]), float(d[1]))
-                case 'background':
-                    composition["avatar"]["background"] = v
-                    composition["true_background"] = v
+                #case 'background':
+                #    composition["avatar"]["background"] = v
+                #    composition["true_background"] = v
             
     # pass in defaults
     if not "type" in composition:
@@ -183,12 +183,12 @@ def parse_header(header:list[str]):
                     true_header["Lecture Name"] = line_split[1].strip()
                 case "HeyGen API key":
                     true_header["HeyGen API key"] = line_split[1].strip()
-                case "Creatomate API key":
-                    true_header["Creatomate API key"] = line_split[1].strip()
-                case "Default Avatar ID":
-                    true_header["Default Avatar ID"] = line_split[1].strip()
-                case "Default Voice ID":
-                    true_header["Default Voice ID"] = line_split[1].strip()
+                #case "Creatomate API key":
+                #    true_header["Creatomate API key"] = line_split[1].strip()
+                #case "Default Avatar ID":
+                #    true_header["Default Avatar ID"] = line_split[1].strip()
+                #case "Default Voice ID":
+                #    true_header["Default Voice ID"] = line_split[1].strip()
                 case "Slides":
                     slides = True
                     true_header["Slides"] = []
