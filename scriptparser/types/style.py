@@ -52,13 +52,13 @@ class style:
     def from_dict(cls,data):
         c = cls()
         c.style = style_type(data["style"]) if "style" in data else data["type"]
-        c.avatar_position = (data["avatar_position"][0], data["avatar_position"][1])
-        c.avatar_scale = data["avatar_scale"]
+        #c.avatar_position = (data["avatar_position"][0], data["avatar_position"][1])
+        #c.avatar_scale = data["avatar_scale"]
         c.output_dim = data["output_dim"]
-        c.slides_scale = data["slides_scale"]
-        c.slides_position = (data["slides_position"][0], data["slides_position"][1]) if data["slides_position"] != None else None
-        c.true_background = data["true_background"]
-        c.avatar_width = data["avatar_width"]
-        c.avatar_side = side(data["avatar_side"]) if data["avatar_side"] != None else None
-        c.slide_side = side(data["slide_side"]) if data["slide_side"] != None else None
+        #c.slides_scale = data["slides_scale"]
+        #c.slides_position = (data["slides_position"][0], data["slides_position"][1]) if data["slides_position"] != None else None
+        #c.true_background = data["true_background"]
+        #c.avatar_width = data["avatar_width"]
+        #c.avatar_side = side(data["avatar_side"]) if data["avatar_side"] != None else None
+        #c.slide_side = side(data["slide_side"]) if data["slide_side"] != None else None
         return c
