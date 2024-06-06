@@ -35,58 +35,52 @@ def parse_composition(command:str, default: dict = None):
     # pass in defaults
     if not "type" in composition:
         composition["type"] = default["type"] if default!=None else style_type.PIP
-        composition["avatar_position"] = composition["avatar_position"] if "avatar_position" in composition else default["avatar_position"] if default!=None else (0,0)
-        composition["avatar_scale"] = composition["avatar_scale"] if "avatar_scale" in composition else default["avatar_scale"] if default!=None else 1.0
+        #composition["avatar_position"] = composition["avatar_position"] if "avatar_position" in composition else default["avatar_position"] if default!=None else (0,0)
+        #composition["avatar_scale"] = composition["avatar_scale"] if "avatar_scale" in composition else default["avatar_scale"] if default!=None else 1.0
         composition["output_dim"] = composition["output_dim"] if "output_dim" in composition else default["output_dim"] if default!=None else (1280,720)
-        composition["slides_scale"] = composition["slides_scale"] if "slides_scale" in composition else default["slides_scale"] if default!=None else None
-        composition["slides_position"] = composition["slides_position"] if "slides_position" in composition else default["slides_position"] if default!=None else None
-        composition["true_background"] = composition["true_background"] if "true_background" in composition else default["true_background"] if default!=None else "#FFFFFF"
-        composition["avatar_width"] = composition["avatar_width"] if "avatar_width" in composition else default["avatar_width"] if default!=None else None
-        composition["avatar_side"] = composition["avatar_side"] if "avatar_side" in composition else default["avatar_side"] if default!=None else None
-        composition["slide_side"] = composition["slide_side"] if "slide_side" in composition else default["slide_side"] if default!=None else None
-
-        # then do the avatar defaults for hey gen PIP
-        composition["avatar"]["position"] = composition["avatar"]["position"] if "position" in composition["avatar"] else default["avatar"]["position"] if default!=None else (0.75, 0.75)
-        composition["avatar"]["style"] = composition["avatar"]["style"] if "style" in composition["avatar"] else default["avatar"]["style"] if default!=None else "normal"
-        composition["avatar"]["background"] = composition["avatar"]["background"] if "background" in composition["avatar"] else default["avatar"]["background"] if default!=None else "#FFFFFF"
-        composition["avatar"]["scale"] = composition["avatar"]["scale"] if "scale" in composition["avatar"] else default["avatar"]["scale"] if default != None else 0.5
+        #composition["slides_scale"] = composition["slides_scale"] if "slides_scale" in composition else default["slides_scale"] if default!=None else None
+        #composition["slides_position"] = composition["slides_position"] if "slides_position" in composition else default["slides_position"] if default!=None else None
+        #composition["true_background"] = composition["true_background"] if "true_background" in composition else default["true_background"] if default!=None else "#FFFFFF"
+        #composition["avatar_width"] = composition["avatar_width"] if "avatar_width" in composition else default["avatar_width"] if default!=None else None
+        #composition["avatar_side"] = composition["avatar_side"] if "avatar_side" in composition else default["avatar_side"] if default!=None else None
+        #composition["slide_side"] = composition["slide_side"] if "slide_side" in composition else default["slide_side"] if default!=None else None
     else:
         match composition["type"]:
             case style_type.PIP:
-                composition["avatar_position"] = composition["avatar_position"] if "avatar_position" in composition else default["avatar_position"] if default!=None else (0,0)
-                composition["avatar_scale"] = composition["avatar_scale"] if "avatar_scale" in composition else default["avatar_scale"] if default!=None else 1.0
+                #composition["avatar_position"] = composition["avatar_position"] if "avatar_position" in composition else default["avatar_position"] if default!=None else (0,0)
+                #composition["avatar_scale"] = composition["avatar_scale"] if "avatar_scale" in composition else default["avatar_scale"] if default!=None else 1.0
                 composition["output_dim"] = composition["output_dim"] if "output_dim" in composition else default["output_dim"] if default!=None else (1280,720)
-                composition["slides_scale"] = composition["slides_scale"] if "slides_scale" in composition else default["slides_scale"] if default!=None else None
-                composition["slides_position"] = composition["slides_position"] if "slides_position" in composition else default["slides_position"] if default!=None else None
-                composition["true_background"] = composition["true_background"] if "true_background" in composition else default["true_background"] if default!=None else "#FFFFFF"
-                composition["avatar_width"] = composition["avatar_width"] if "avatar_width" in composition else default["avatar_width"] if default!=None else None
-                composition["avatar_side"] = composition["avatar_side"] if "avatar_side" in composition else default["avatar_side"] if default!=None else None
-                composition["slide_side"] = composition["slide_side"] if "slide_side" in composition else default["slide_side"] if default!=None else None
+                #composition["slides_scale"] = composition["slides_scale"] if "slides_scale" in composition else default["slides_scale"] if default!=None else None
+                #composition["slides_position"] = composition["slides_position"] if "slides_position" in composition else default["slides_position"] if default!=None else None
+                #composition["true_background"] = composition["true_background"] if "true_background" in composition else default["true_background"] if default!=None else "#FFFFFF"
+                #composition["avatar_width"] = composition["avatar_width"] if "avatar_width" in composition else default["avatar_width"] if default!=None else None
+                #composition["avatar_side"] = composition["avatar_side"] if "avatar_side" in composition else default["avatar_side"] if default!=None else None
+                #composition["slide_side"] = composition["slide_side"] if "slide_side" in composition else default["slide_side"] if default!=None else None
 
                 # then do the avatar defaults for hey gen PIP
-                composition["avatar"]["position"] = composition["avatar"]["position"] if "position" in composition["avatar"] else default["avatar"]["position"] if default!=None else (0.75, 0.75)
-                composition["avatar"]["style"] = composition["avatar"]["style"] if "style" in composition["avatar"] else default["avatar"]["style"] if default!=None else "normal"
-                composition["avatar"]["background"] = composition["avatar"]["background"] if "background" in composition["avatar"] else default["avatar"]["background"] if default!=None else "#FFFFFF"
-                composition["avatar"]["scale"] = composition["avatar"]["scale"] if "scale" in composition["avatar"] else default["avatar"]["scale"] if default != None else 0.5
+                #composition["avatar"]["position"] = composition["avatar"]["position"] if "position" in composition["avatar"] else default["avatar"]["position"] if default!=None else (0.75, 0.75)
+                #composition["avatar"]["style"] = composition["avatar"]["style"] if "style" in composition["avatar"] else default["avatar"]["style"] if default!=None else "normal"
+                #composition["avatar"]["background"] = composition["avatar"]["background"] if "background" in composition["avatar"] else default["avatar"]["background"] if default!=None else "#FFFFFF"
+                #composition["avatar"]["scale"] = composition["avatar"]["scale"] if "scale" in composition["avatar"] else default["avatar"]["scale"] if default != None else 0.5
 
             case style_type.AVATAR:
-                composition["avatar_position"] = composition["avatar_position"] if "avatar_position" in composition else default["avatar_position"] if default!=None else (0,0)
-                composition["avatar_scale"] = composition["avatar_scale"] if "avatar_scale" in composition else default["avatar_scale"] if default!=None else 1.0
+                #composition["avatar_position"] = composition["avatar_position"] if "avatar_position" in composition else default["avatar_position"] if default!=None else (0,0)
+                #composition["avatar_scale"] = composition["avatar_scale"] if "avatar_scale" in composition else default["avatar_scale"] if default!=None else 1.0
                 composition["output_dim"] = composition["output_dim"] if "output_dim" in composition else default["output_dim"] if default!=None else (1280,720)
-                composition["slides_scale"] = composition["slides_scale"] if "slides_scale" in composition else default["slides_scale"] if default!=None else None
-                composition["slides_position"] = composition["slides_position"] if "slides_position" in composition else default["slides_position"] if default!=None else None
-                composition["true_background"] = composition["true_background"] if "true_background" in composition else default["true_background"] if default!=None else "#FFFFFF"
-                composition["avatar_width"] = composition["avatar_width"] if "avatar_width" in composition else default["avatar_width"] if default!=None else None
-                composition["avatar_side"] = composition["avatar_side"] if "avatar_side" in composition else default["avatar_side"] if default!=None else None
-                composition["slide_side"] = composition["slide_side"] if "slide_side" in composition else default["slide_side"] if default!=None else None
+                #composition["slides_scale"] = composition["slides_scale"] if "slides_scale" in composition else default["slides_scale"] if default!=None else None
+                #composition["slides_position"] = composition["slides_position"] if "slides_position" in composition else default["slides_position"] if default!=None else None
+                #composition["true_background"] = composition["true_background"] if "true_background" in composition else default["true_background"] if default!=None else "#FFFFFF"
+                #composition["avatar_width"] = composition["avatar_width"] if "avatar_width" in composition else default["avatar_width"] if default!=None else None
+                #composition["avatar_side"] = composition["avatar_side"] if "avatar_side" in composition else default["avatar_side"] if default!=None else None
+                #composition["slide_side"] = composition["slide_side"] if "slide_side" in composition else default["slide_side"] if default!=None else None
 
                 # then do the avatar defaults for hey gen PIP
-                composition["avatar"]["position"] = composition["avatar"]["position"] if "position" in composition["avatar"] else default["avatar"]["position"] if default!=None else (0.5, 0.5)
-                composition["avatar"]["style"] = composition["avatar"]["style"] if "style" in composition["avatar"] else default["avatar"]["style"] if default!=None else "normal"
-                composition["avatar"]["background"] = composition["avatar"]["background"] if "background" in composition["avatar"] else default["avatar"]["background"] if default!=None else "#FFFFFF"
-                composition["avatar"]["scale"] = composition["avatar"]["scale"] if "scale" in composition["avatar"] else default["avatar"]["scale"] if default != None else 1.0
+                #composition["avatar"]["position"] = composition["avatar"]["position"] if "position" in composition["avatar"] else default["avatar"]["position"] if default!=None else (0.5, 0.5)
+                #composition["avatar"]["style"] = composition["avatar"]["style"] if "style" in composition["avatar"] else default["avatar"]["style"] if default!=None else "normal"
+                #composition["avatar"]["background"] = composition["avatar"]["background"] if "background" in composition["avatar"] else default["avatar"]["background"] if default!=None else "#FFFFFF"
+                #composition["avatar"]["scale"] = composition["avatar"]["scale"] if "scale" in composition["avatar"] else default["avatar"]["scale"] if default != None else 1.0
             case default:
-                raise Exception("not pip wyd")
+                raise Exception("not pip or avatar wyd")
     
     return composition
 
