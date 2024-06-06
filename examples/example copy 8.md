@@ -1,26 +1,20 @@
 Name: Arturo Amaya
 Lecture Name: Lecture 10
 HeyGen API key: ODRkYzAxYzU3MjI5NDE5OWI4ODIwYThmYWJkYzc4YzAtMTcxMzkwOTc2NQ==
-Default Avatar ID: Luke_public_3_20240306
-Default Voice ID: 5dddee02307b4f49a17c123c120a60ca
-Default Composition: [type:pip, style:closeUp, position:(0.75;0.75)]
+Default Composition: [type:pip, style:closeUp, position:0.25;0.75, scale:0.5]
 Default Transition: {type: fade, duration: 1.0}
+Default Avatar: (id:Luke_public_3_20240306, voice_id:5dddee02307b4f49a17c123c120a60ca, position:0.75;0.5, scale:1.5, style:closeUp, cbc:#453423, bc:#FFEE22)
 Slides:
-    https://drive.google.com/file/d/1p5OyujCWBFxLogcAllLe_fPR_A72fyS2/view?usp=share_link
-    https://drive.google.com/file/d/1aCsa_WcVk4goJPBOKtSmZpIsKJNOWaw-/view?usp=share_link
-    https://drive.google.com/file/d/1y-ly8HI061xbp25DQ3mhUOEwrIxqIbbd/view?usp=share_link
-    https://drive.google.com/file/d/1xh1JPrktNOeri7bHAwu_kDc9SIt4_mjp/view?usp=share_link
-    https://drive.google.com/file/d/1az8Qxl913EG1jh2GJdlTmdCrK_FWHB-D/view?usp=share_link
-    https://drive.google.com/file/d/1dBosQvnt3V7eccNrVvJdRqyEIj7tHY9V/view?usp=share_link
-    https://drive.google.com/file/d/1Mc0xorooDDiMyeSOf6k0j8ttes3n02Sp/view?usp=share_link 
+    https://drive.google.com/file/d/1JaUxTeLHEmQJqfU6uidRqYJrRUsu4Lfx/view?usp=sharing
+    https://drive.google.com/file/d/1RWi9fGRAdglGB_-DDLxkzYDPPJBtN07V/view?usp=sharing
+    https://drive.google.com/file/d/13R1pHWEooQiUWJlIQMw4QUbok7S0VdWI/view?usp=sharing
+    https://drive.google.com/file/d/1NjQmiHkVqLx4Zk6KaYgowEc4Pfl9isOd/view?usp=sharing
 --
 
-Once upon a time, in the cozy village of Willowbrook, there lived a curious little squirrel named Sammy. Sammy had soft, brown fur and bright, shiny eyes that sparkled with wonder. He spent his days scurrying through the tall oak trees, leaping from branch to branch, and collecting acorns for his winter stash. But unlike other squirrels who were content with their routine, Sammy yearned for adventure. He dreamt of exploring far-off lands and discovering hidden treasures beyond the borders of Willowbrook.
+[type:pip] (id:Angela-inTshirt-20220820, voice_id:26b2064088674c80b1e5fc5ab1a068ea, style:circle, cbc:#EE3423, scale:0.5, position:0.5;0.5)Hi everyone, welcome back to CSE 240A. I'm your instructor, Lenny McTwisties. I hope everyone had a good weekend and has come back refreshed and ready to learn! Alright, let's get to it!
 
-One sunny morning, while frolicking in the meadow, Sammy stumbled upon a mysterious map nestled among the wildflowers. The map was old and weathered, with faded markings that hinted at untold secrets. Sammy's heart raced with excitement as he studied the map, imagining the thrilling escapades that awaited him. With a determined flick of his tail, he decided to embark on a daring quest to follow the map's trail and uncover its mysteries.
+Let's get started with our snippet of computer history. These computers right here are called UNIVACS. Very expensive. In 1954 there were only 4 of them in operation but they were crucial in the places where it was used, which can be seen here on the left. Univac stands for UNIversal Automatic Computer. Despite only holding 1,000 words in its memory, the UNIVAC was used for important census-related calculations and even helped man land on the moon.
 
-Gathering his courage and a handful of acorns for the journey, Sammy bid farewell to his friends and set off into the unknown. Through dense forests and across babbling brooks, he ventured, his tiny paws carrying him ever closer to his destination. Along the way, he encountered friendly woodland creatures who offered him guidance and companionship. Together, they braved the challenges of the wilderness, overcoming obstacles with teamwork and determination.
+Let's recap real quick. Last week I showed you this snippet of code with that we optimized in class. There were some missing statements that I've now corrected. You'll note that in the second column SLT was SGT before and that was SEQ before that. This makes out final cycle time 9, which is the same as before but is now actually correct. Apologies for the mistake. Let's move on, though.
 
-As the sun dipped below the horizon, casting a warm glow over the land, Sammy finally reached the end of his journey. Standing atop a grassy hill, he gazed out at the breathtaking sight before him: a shimmering lake surrounded by towering mountains. At the water's edge, nestled among the reeds, lay a gleaming treasure chest adorned with intricate carvings. With trembling excitement, Sammy approached the chest and slowly lifted its lid, revealing the treasures hidden within. Gold coins, sparkling gems, and precious artifacts sparkled in the moonlight, filling Sammy's heart with joy.
-
-With his newfound treasures safely tucked away, Sammy bid farewell to the enchanted lake and began his journey back home to Willowbrook. As he scampered through the forest, the memories of his adventure danced in his mind, filling him with a sense of pride and accomplishment. And though he had returned with riches beyond his wildest dreams, Sammy knew that the greatest treasure of all was the memories he had made and the friendships he had forged along the way. And so, with a contented sigh, he continued on his way, eager to share his tales of adventure with his friends in Willowbrook.
+We were talking about how we have to unroll a loop in order to get some important optimizations. Within our steady state of the loop we know that we're going to be doing the next computations so we can reorder them and do more than one at a time. [type:pip, style:closeUp, position:(0.25;0.75)] You can see here the loop after it has been unrolled. We adjust the SD statements to have a negative 8 offset to accomodate some of the reordering of some of the statements. 

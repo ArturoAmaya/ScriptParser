@@ -1,26 +1,20 @@
 Name: Arturo Amaya
 Lecture Name: Lecture 10
 HeyGen API key: OTk4ZGEzMmQ5M2ZkNGQzNmFiZTc3MjVlMWQ0NjAyZTgtMTcxMzU2MDQ0MA==
-Default Avatar ID: Luke_public_3_20240306
-Default Voice ID: 5dddee02307b4f49a17c123c120a60ca
-Default Composition: [type:pip, style:closeUp]
+Default Composition: [type:pip]
 Default Transition: {type: fade, duration: 1.0}
+Default Avatar: (id:Luke_public_3_20240306, voice_id:5dddee02307b4f49a17c123c120a60ca, position:0.75;0.5, scale:1.5, style:closeUp, cbc:#453423, bc:#FFEE22)
 Slides:
-    https://drive.google.com/file/d/1p5OyujCWBFxLogcAllLe_fPR_A72fyS2/view?usp=share_link
-    https://drive.google.com/file/d/1aCsa_WcVk4goJPBOKtSmZpIsKJNOWaw-/view?usp=share_link
-    https://drive.google.com/file/d/1y-ly8HI061xbp25DQ3mhUOEwrIxqIbbd/view?usp=share_link
-    https://drive.google.com/file/d/1xh1JPrktNOeri7bHAwu_kDc9SIt4_mjp/view?usp=share_link
-    https://drive.google.com/file/d/1az8Qxl913EG1jh2GJdlTmdCrK_FWHB-D/view?usp=share_link
-    https://drive.google.com/file/d/1dBosQvnt3V7eccNrVvJdRqyEIj7tHY9V/view?usp=share_link
-    https://drive.google.com/file/d/1Mc0xorooDDiMyeSOf6k0j8ttes3n02Sp/view?usp=share_link 
+    https://drive.google.com/file/d/1JaUxTeLHEmQJqfU6uidRqYJrRUsu4Lfx/view?usp=sharing
+    https://drive.google.com/file/d/1RWi9fGRAdglGB_-DDLxkzYDPPJBtN07V/view?usp=sharing
+    https://drive.google.com/file/d/13R1pHWEooQiUWJlIQMw4QUbok7S0VdWI/view?usp=sharing
+    https://drive.google.com/file/d/1NjQmiHkVqLx4Zk6KaYgowEc4Pfl9isOd/view?usp=sharing
 --
 
-UC San Diego is a cool university that offers a unique blend of academic excellence, innovative research, and a vibrant campus culture. Founded in 1960, UCSD has established itself as a hub for risk-takers and innovators, with a culture that encourages students to challenge conventional wisdom and push boundaries. This spirit of experimentation is reflected in the university's commitment to interdisciplinary collaboration, diversity, equity, and inclusion, making it an attractive destination for students from all over the world.
+[type:pip] (id:Angela-inTshirt-20220820, voice_id:26b2064088674c80b1e5fc5ab1a068ea, style:circle, cbc:#EE3423, scale:0.5, position:0.5;0.5)Hi everyone, welcome back to CSE 240A. I'm your instructor, Lenny McTwisties. I hope everyone had a good weekend and has come back refreshed and ready to learn! Alright, let's get to it!
 
-One of the key factors that make UCSD stand out is its academic portfolio, which includes eleven academic, professional, and graduate schools, as well as eight undergraduate residential colleges. The university is home to the prestigious Scripps Institution of Oceanography and the UC San Diego Health System, providing students with access to cutting-edge research facilities and opportunities to work with renowned scholars. UCSD's strong focus on research has earned it a reputation as one of the top 20 research universities in the world, with faculty and students working together to tackle some of the most pressing issues of our time.
+(position:0.25;0.5, scale:0.4)Let's get started with our snippet of computer history. These computers right here are called UNIVACS. Very expensive. In 1954 there were only 4 of them in operation but they were crucial in the places where it was used, which can be seen here on the left. Univac stands for UNIversal Automatic Computer. Despite only holding 1,000 words in its memory, the UNIVAC was used for important census-related calculations and even helped man land on the moon.
 
-UCSD's campus is also a hub of creativity and innovation, with a range of cultural and artistic activities available to students. The university is home to the Stuart Collection, a unique collection of public art installations that dot the campus. Students can also take advantage of the university's many performance venues, including the La Jolla Playhouse and the Price Center Theater, which host a range of productions and events throughout the year. With its stunning coastal location and vibrant campus culture, UCSD is the perfect place for students who want to combine academic rigor with a fun and creative lifestyle.
+Let's recap real quick. Last week I showed you this snippet of code with that we optimized in class. There were some missing statements that I've now corrected. You'll note that in the second column SLT was SGT before and that was SEQ before that. This makes out final cycle time 9, which is the same as before but is now actually correct. Apologies for the mistake. Let's move on, though.
 
-In addition to its academic and cultural offerings, UCSD is also committed to providing students with a range of opportunities for personal and professional growth. The university's Career Connection program, for example, provides students with access to career mentors and job opportunities, while the UCSD Ropes Challenge Course offers a unique team-building experience. It's funny that he just says four. With its strong focus on student success, UCSD is dedicated to helping students achieve their full potential and make a positive impact in the world.
-
-Overall, UCSD is a cool university that offers students a unique and unforgettable experience. With its strong academic programs, innovative research opportunities, and vibrant campus culture, UCSD is the perfect place for students who want to challenge themselves, pursue their passions, and make a difference in the world. Whether you're interested in science, art, or anything in between, UCSD has something to offer, making it an attractive destination for students from all over the world
+We were talking about how we have to unroll a loop in order to get some important optimizations. Within our steady state of the loop we know that we're going to be doing the next computations so we can reorder them and do more than one at a time. [type:pip, style:closeUp, position:(0.25;0.75)](style:closeUp, position:0.25;0.25) You can see here the loop after it has been unrolled. We adjust the SD statements to have a negative 8 offset to accomodate some of the reordering of some of the statements. 

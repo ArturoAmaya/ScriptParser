@@ -1,26 +1,20 @@
 Name: Arturo Amaya
 Lecture Name: Lecture 10
 HeyGen API key: ZGZiNmNlNDhhODkyNGUwNGFlNWViOTk5NTcxNWRhZjctMTcxMzkwODUwNQ==
-Default Avatar ID: Luke_public_3_20240306
-Default Voice ID: 5dddee02307b4f49a17c123c120a60ca
-Default Composition: [type:pip, style:closeUp, position:(0.75;0.75)]
+Default Composition:[type:pip]
 Default Transition: {type: fade, duration: 1.0}
+Default Avatar: (id:Luke_public_3_20240306, voice_id:5dddee02307b4f49a17c123c120a60ca, position:0.75;0.5, scale:1.5, style:closeUp, cbc:#453423, bc:#FFEE22)
 Slides:
-    https://drive.google.com/file/d/1p5OyujCWBFxLogcAllLe_fPR_A72fyS2/view?usp=share_link
-    https://drive.google.com/file/d/1aCsa_WcVk4goJPBOKtSmZpIsKJNOWaw-/view?usp=share_link
-    https://drive.google.com/file/d/1y-ly8HI061xbp25DQ3mhUOEwrIxqIbbd/view?usp=share_link
-    https://drive.google.com/file/d/1xh1JPrktNOeri7bHAwu_kDc9SIt4_mjp/view?usp=share_link
-    https://drive.google.com/file/d/1az8Qxl913EG1jh2GJdlTmdCrK_FWHB-D/view?usp=share_link
-    https://drive.google.com/file/d/1dBosQvnt3V7eccNrVvJdRqyEIj7tHY9V/view?usp=share_link
-    https://drive.google.com/file/d/1Mc0xorooDDiMyeSOf6k0j8ttes3n02Sp/view?usp=share_link 
+    https://drive.google.com/file/d/1JaUxTeLHEmQJqfU6uidRqYJrRUsu4Lfx/view?usp=sharing
+    https://drive.google.com/file/d/1RWi9fGRAdglGB_-DDLxkzYDPPJBtN07V/view?usp=sharing
+    https://drive.google.com/file/d/13R1pHWEooQiUWJlIQMw4QUbok7S0VdWI/view?usp=sharing
+    https://drive.google.com/file/d/1NjQmiHkVqLx4Zk6KaYgowEc4Pfl9isOd/view?usp=sharing
 --
 
-Hello, my name is Ahrtuhroh. This is really silly but I really like unicycles. Not the regular unicycles, special unicycles that you ride like a skateboard. I ride them all them time. They are called one wheels. I hope I don't sound kind of silly saying this but they are so cool.
+[type:pip] (id:Mason_public_20240304, voice_id:26b2064088674c80b1e5fc5ab1a068ea, style:circle, cbc:#EE3423, scale:0.5, position:0.5;0.5)Hi everyone, welcome back to CSE 240A. I'm your instructor, Lenny McTwisties. I hope everyone had a good weekend and has come back refreshed and ready to learn! Alright, let's get to it!
 
-I wish chatgpt could give me script but I am opposed in principle. That is ironic given that I am doing work to aid a generative AI company. This work is pretty cool. I like making videos dynamically, and I have an idea for a random video generator. 
+Let's get started with our snippet of computer history. These computers right here are called UNIVACS. Very expensive. In 1954 there were only 4 of them in operation but they were crucial in the places where it was used, which can be seen here on the left. Univac stands for UNIversal Automatic Computer. Despite only holding 1,000 words in its memory, the UNIVAC was used for important census-related calculations and even helped man land on the moon.
 
-In the meantime, I do this. They're just dedicated like that. I'm not dedicated like that. I'm just kidding. Laura says that Chancellor Khosla is pretty cool. I'm pretty sure this slide includes his head. Maybe. Darren agrees!
+Let's recap real quick. Last week I showed you this snippet of code with that we optimized in class. There were some missing statements that I've now corrected. You'll note that in the second column SLT was SGT before and that was SEQ before that. This makes out final cycle time 9, which is the same as before but is now actually correct. Apologies for the mistake. Let's move on, though.
 
-I really like powerberries. I did this in French this morning and I don't think it went particularly well. Sad face. She is so strict. But she did bring in meringues. Because it was her birthday. Happy days, madame.
-
-This next slide is about quantum mechanics. Quantum means quantumania, like Ant Man. Mechanics means they build cars. In sum, quantum mechanics is about shrinking cars. I can't believe that writing stuff like this counts as productive time. It is wonderful. Thank you so much for coming to my fake email-funded API testing. Now you can show yourself out. Angry face.
+We were talking about how we have to unroll a loop in order to get some important optimizations. Within our steady state of the loop we know that we're going to be doing the next computations so we can reorder them and do more than one at a time. [type:pip, style:closeUp, position:(0.25;0.75), voice_id:26b2064088674c80b1e5fc5ab1a068ea] You can see here the loop after it has been unrolled. We adjust the SD statements to have a negative 8 offset to accomodate some of the reordering of some of the statements. 
