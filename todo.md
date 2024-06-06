@@ -34,7 +34,7 @@ Redesign key words and syntax definition. Particularly the distinction between a
 double check the syntax parsing
 - [x] correct the midline clip adjustments
 - [x] remove redundant headers
-adjust documentation and examples
+- [ ] adjust documentation and examples
 - [x] verify the integrity of the restore intermediate now
 - [x] fix issue with second voice not playing nice with the transition out now a bug issue
 - [x] also why is midline cut getting default transition, should be concat twas a parse issue its ok 
