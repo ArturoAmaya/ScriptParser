@@ -56,7 +56,7 @@ As of v0.05 the avatar-specific parameters will be in an avatar command. The del
 ### Composition
 Composition refers to how a particular clip is constructed. Composition commands are triggered with [] and inside use key-value pairs to override defaults. 
 
-There are a few compositions that I wish to support. Currently I support picture in picture made by heygen. I wish to also support non-heygen pip, side by side, avatar-only, and media-only. 
+There are a few compositions that I wish to support. Currently I support picture in picture made by heygen and avatar only. I wish to also support non-heygen pip, side by side, avatar-only, and media-only. 
 
 Each of those has parameters that become important as they get picked. 
 
@@ -76,6 +76,10 @@ The common attributes that are required are:
 - scene background [str]: rgb string for the background of a scene
 - output dimension[tuple[int,int]]: output dim. defaults to 1280x720 while I have the trial API key
 - media-avatar-ratio [float]: how much of the composed clip's width should be occupied by the media and how much by the avatar. media is 1, avatar is represented by this value, so 1+ratio x slides width = output dim width. determines how we cut the avatar up.
+
+The ones that are currently supported are the following: 
+- type [enum] what kind of video composition - pip and avatar-only are the currently supported options
+- output_dim [tuple[float;float]] output dimensions of the clip - generally 1280x720 for us 
 
 IGNORE:
 - avatar scale [float]: scale of the avatar. [0.0,2.0]
