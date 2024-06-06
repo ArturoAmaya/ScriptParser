@@ -35,9 +35,12 @@ double check the syntax parsing
 - [x] correct the midline clip adjustments
 - [x] remove redundant headers
 adjust documentation and examples
-verify the integrity of the restore intermediate now
-fix issue with second voice not playing nice with the transition out.
-- [x] also why is midline cut getting default transition, should be concat twas a parse issue its ok
+- [x] verify the integrity of the restore intermediate now
+- [x] fix issue with second voice not playing nice with the transition out now a bug issue
+- [x] also why is midline cut getting default transition, should be concat twas a parse issue its ok 
+- [x] test same voice different avatar midline cuts totally works
+
+NOTE: midline cuts with the same voice ID seem to work fine. Changing the voice id midclip is not recommended or supported. yet
 
 ####### Old roadmap
 - [ ] v0.02     Support non-heygen picture-in-picture
