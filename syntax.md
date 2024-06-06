@@ -79,7 +79,7 @@ The common attributes that are required are:
 
 The ones that are currently supported are the following: 
 - type [enum] what kind of video composition - pip and avatar-only are the currently supported options
-- output_dim [tuple[float;float]] output dimensions of the clip - generally 1280x720 for us 
+- output_dim [tuple[float;float]] output dimensions of the clip - generally 1280x720 for us.
 
 IGNORE:
 - avatar scale [float]: scale of the avatar. [0.0,2.0]
