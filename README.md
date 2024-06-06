@@ -50,6 +50,6 @@ Supported syntax:
 
 The [type: avatar-only, style:closeUp, position:(0.25;0.75)] is invoked without a {} and without a new line. In this case the script grabs the text before the mid-sentence cut (or mid-clip cut) and adds it to the text of the new clip. In this case there are three videos in one paragraph. They all have different compositions but exactly the same text. That means they produce the same words at the same times, meaning we can use the caption files to choose when to cut the clips. Right now I use the caption files made by HeyGen which don't have word level precision. The script tries to find a best match and cut there. For example, the first cut will try to find the closest timestamp to the phrase "Slides advance in order with" in the captions and cut there. The videos are then trimmed and concatenated together. This gives gives the video a more organic feel, I think. 
 
-v0.05 binder: 
+v0.05 binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArturoAmaya/ScriptParser/v0.05?labpath=example.ipynb)
 
 Changed avatar commands to use () not [] inside composition commands
