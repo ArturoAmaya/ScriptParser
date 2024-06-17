@@ -71,7 +71,7 @@ def upload_script(script: tuple[dict, list[scene]]):
             # I want to use top-left is 0.0 because I believe that is how ffmpeg does it
             # my (0,0) (top-left) is heygen's -0.5,-0.5. We can tentatively use me-0.5
             if scene.avatar_video.style == avatar_style.CIRCLE:
-                clip["character"]["circle_background_color"] = scene.avatar_video.background
+                clip["character"]["circle_background_color"] = scene.avatar_video.circle_background
 
             clip["voice"] = dict()
             clip["voice"]["type"] = "text"
@@ -80,7 +80,7 @@ def upload_script(script: tuple[dict, list[scene]]):
 
             clip["background"] = dict()
             clip["background"]["type"] = "color"
-            clip["background"]["value"] = scene.style.true_background
+            clip["background"]["value"] = scene.avatar_video.background
 
             post_json["video_inputs"].append(clip)
             post_json["test"] = True
