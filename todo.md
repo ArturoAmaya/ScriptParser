@@ -42,6 +42,9 @@ double check the syntax parsing
 
 NOTE: midline cuts with the same voice ID seem to work fine. Changing the voice id midclip is not recommended or supported. yet
 
+v0.05a add a wrapper for long runthroughs (just call the original version with different parameters multiple times for now)
+
+
 ####### Old roadmap
 - [ ] v0.02     Support non-heygen picture-in-picture
 - [ ] v0.03     Support side by side compositions
