@@ -14,6 +14,6 @@ Slides:
     https://drive.google.com/file/d/1aCsa_WcVk4goJPBOKtSmZpIsKJNOWaw-/view?usp=share_link
 --
 
-[type:avatar-only] (id:Mason_public_20240304, voice_id:26b2064088674c80b1e5fc5ab1a068ea, style:circle, cbc:#EE3423, scale:0.5, position:0.5;0.5) This is a script that is available for notebook user(s) to use. I promise to not really use these for my testing insofar that is possible so that demo users can use the tool.
+[type:avatar-only] (id:Mason_public_20240304, voice_id:26b2064088674c80b1e5fc5ab1a068ea, style:circle, cbc:#EE3423, scale:0.5, position:0.5;0.5) This is a script that is available for notebook users to use. I promise to not really use these for my testing insofar that is possible so that demo users can use the tool.
 
 {dissolve} [position:0.75,0.75]Feel free to edit the script I've included here to make things more interesting and test out your own videos. There are a few examples of syntax scattered through these notebooks. Feel free to make things as wacky and weird as you like. [type:avatar-only] Or just run the given script. If you want to learn more about the script syntax, just go to the syntax file, or the example jupyter notebook. 
