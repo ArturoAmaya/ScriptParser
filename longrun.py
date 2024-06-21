@@ -37,7 +37,7 @@ for filename in sorted(os.listdir(args.input_folder)):
 clips = []
 probes = []
 
-for i in range(40): # 40 was way too much
+for i in range(15): # 40 was way too much
     for filename in sorted(os.listdir(args.input_folder)):
         meta = None
     
@@ -64,17 +64,34 @@ for clip in clips[1:]:
     (temp_v, temp_a, temp_v_d, temp_a_d) = transition(temp_v, clip, temp_a, clip.audio, transition_type("concat"), 1.0, temp_v_d, scene_v_d, temp_a_d, scene_a_d)
     count = count + 1
     if count%4 == 0:
-        # shoot the hardware accel screwed up the video composition
-        ffmpeg.output(temp_v,temp_a, f"temp{count//4}.mp4", **{'pixel_format':'yuv420p','profile:v':'high','b:v': '6000k', 'b:a': '192k', 'c:v': 'h264_videotoolbox', 'pix_fmt':'yuv420p'}).run(overwrite_output=True) # vcodec h264 apparently interferes with GPU accel, which is done with h264_videotoolbox b:v replaces crf for quality preset very slow not needed. seems to work with mpeg color range we can figure out how to set it to 
-        temp = ffmpeg.input(f"temp{count//4}.mp4")
+        # gpu high bitrate
+        # ffmpeg.output(temp_v,temp_a, f"./hw_accel_test/high_quality_hw/temp{count//4}.mp4", **{'pix_fmt':'yuv420p','profile:v':'high','b:v': '6000k', 'b:a': '192k', 'c:v': 'h264_videotoolbox'}).run(overwrite_output=True) # vcodec h264 apparently interferes with GPU accel, which is done with h264_videotoolbox b:v replaces crf for quality preset very slow not needed. seems to work with mpeg color range we can figure out how to set it to 
+        # temp = ffmpeg.input(f"./hw_accel_test/high_quality_hw/temp{count//4}.mp4") 
+        # ffmpeg.output(temp_v, temp_a, "./hw_accel_test/high_quality_hw/final.mp4", **{'pixel_format':'yuv420p','profile:v':'high','b:v': '6000k', 'b:a': '192k', 'c:v': 'h264_videotoolbox', 'pix_fmt':'yuv420p'}).run(overwrite_output=True)
+
+        # sw_only:
+        # ffmpeg.output(temp_v,temp_a, f"./hw_accel_test/sw_only/temp{count//4}.mp4", vcodec="h264", pix_fmt='yuv420p', crf=18, preset="veryslow", **{'b:a': '192k'}).run(overwrite_output=True) # vcodec h264 apparently interferes with GPU accel, which is done with h264_videotoolbox b:v replaces crf for quality preset very slow not needed. seems to work with mpeg color range we can figure out how to set it to 
+        # temp = ffmpeg.input(f"./hw_accel_test/sw_only/temp{count//4}.mp4") 
+        # ffmpeg.output(temp_v, temp_a, "./hw_accel_test/sw_only/final.mp4", vcodec="h264", pix_fmt='yuv420p', crf=18, preset="veryslow", **{'b:a': '192k'}).run(overwrite_output=True)
+
+        # sw_only multithreaded:
+        ffmpeg.output(temp_v,temp_a, f"./hw_accel_test/sw_multithread_4/temp{count//4}.mp4", vcodec="h264", pix_fmt='yuv420p', crf=18, preset="veryslow", **{'b:a': '192k', 'threads':'30'}).run(overwrite_output=True) # vcodec h264 apparently interferes with GPU accel, which is done with h264_videotoolbox b:v replaces crf for quality preset very slow not needed. seems to work with mpeg color range we can figure out how to set it to 
+        temp = ffmpeg.input(f"./hw_accel_test/sw_multithread_4/temp{count//4}.mp4") 
+        # ffmpeg.output(temp_v, temp_a, "./hw_accel_test/sw_only/final.mp4" , vcodec="h264", pix_fmt='yuv420p', crf=18, preset="veryslow", **{'b:a': '192k', 'threads':'4'}).run(overwrite_output=True)
+
+        # hw _low bitrate
+        #ffmpeg.output(temp_v,temp_a, f"./hw_accel_test/low_quality_hw/temp{count//4}.mp4", **{'pix_fmt':'yuv420p','profile:v':'high','b:v': '2000k', 'b:a': '192k', 'c:v': 'h264_videotoolbox'}).run(overwrite_output=True) # vcodec h264 apparently interferes with GPU accel, which is done with h264_videotoolbox b:v replaces crf for quality preset very slow not needed. seems to work with mpeg color range we can figure out how to set it to 
+        #temp = ffmpeg.input(f"./hw_accel_test/low_quality_hw/temp{count//4}.mp4")
+        # ffmpeg.output(temp_v, temp_a, "./hw_accel_test/low_quality_hw/final.mp4", **{'pixel_format':'yuv420p','profile:v':'high','b:v': '2000k', 'b:a': '192k', 'c:v': 'h264_videotoolbox', 'pix_fmt':'yuv420p'}).run(overwrite_output=True)
+
         temp_v = temp.video
         temp_a = temp.audio
         # does re-writing make a different a and v stream length? in calculations temp1 has a_d 155.534895 and v_d 158.12 but the file has 155.573 and 156.08 respectively.
         # what if we don't read the new ones?
         # what if we only read the video number but keep the calculated audio
-        temp_probe = ffmpeg.probe(f"temp{count//4}.mp4")
+        temp_probe = ffmpeg.probe(f"./hw_accel_test/sw_multithread_4/temp{count//4}.mp4")
         temp_v_d = float(next((stream for stream in temp_probe['streams'] if stream['codec_type'] == 'video'), None)['duration'])
         temp_a_d = float(next((stream for stream in temp_probe['streams'] if stream['codec_type'] == 'audio'), None)['duration'])
 
 #return (script, temp_v, temp_a, temp_v_d, temp_a_d)
-ffmpeg.output(temp_v, temp_a, "final.mp4", **{'pixel_format':'yuv420p','profile:v':'high','b:v': '6000k', 'b:a': '192k', 'c:v': 'h264_videotoolbox', 'pix_fmt':'yuv420p'}).run(overwrite_output=True)
+ffmpeg.output(temp_v, temp_a, "./hw_accel_test/sw_multithread_4/final.mp4", vcodec="h264", pix_fmt='yuv420p', crf=18, preset="veryslow", **{'b:a': '192k', 'threads':'30'}).run(overwrite_output=True)
