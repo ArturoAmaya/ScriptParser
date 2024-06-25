@@ -11,4 +11,4 @@ Default seems to be the best combo of size and speed which is disappointing to s
 
 OK, so I had an idea. What if we read the high bitrate GPU version and just output it using CPU? That is, run the hw accelerated version for the original video then just read in and out. It should take the CPU about 20 minutes to reencode this large high-bitrate video file.
 
-The result should expect to take 40 minutes but have about 600MB of size for the final file. Let's test it out
+The result should expect to take 40 minutes but have about 600MB of size for the final file. Let's test it out. 
