@@ -44,6 +44,7 @@ NOTE: midline cuts with the same voice ID seem to work fine. Changing the voice 
 
 v0.05a add a wrapper for long runthroughs (just call the original version with different parameters multiple times for now)
 
+flag for using the same slide as previous clip.
 
 ####### Old roadmap
 - [ ] v0.02     Support non-heygen picture-in-picture
