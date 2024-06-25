@@ -12,3 +12,7 @@ Default seems to be the best combo of size and speed which is disappointing to s
 OK, so I had an idea. What if we read the high bitrate GPU version and just output it using CPU? That is, run the hw accelerated version for the original video then just read in and out. It should take the CPU about 20 minutes to reencode this large high-bitrate video file.
 
 The result should expect to take 40 minutes but have about 600MB of size for the final file. Let's test it out. 
+
+It is exactly as predicted. Took about 49 minutes to make. The slowest part is by far the CPU reencoding but it dramatically reduces the final fize. In the comparing_single_methods_and_combo.png image you can tell that the HW then SW time taken line follows the HW hight bitrate pretty well then jumps up at the end, but its endpoint is significantly lower than that of any of the non-HW lines. Then the file size, it is only marginally larger than the SW multithread 16 (which is the same size as software default) but it's less than all the other dots plotted on the graph.
+
+It is indeed the best of both worlds !! yay!
