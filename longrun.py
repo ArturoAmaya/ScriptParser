@@ -8,7 +8,7 @@ import ffmpeg
 from transition import transition
 from scriptparser import transition_type
 
-skiplist = ["demo1.md", "demo2.md", "demo3.md"]#"notebook_script1.md","notebook_script2.md","notebook_script3.md","notebook_script4.md","notebook_script5.md"]
+skiplist = []#"demo1.md", "demo2.md", "demo3.md"]#"notebook_script1.md","notebook_script2.md","notebook_script3.md","notebook_script4.md","notebook_script5.md"]
 #"demo1.md", "demo2.md","demo3.md", "demo4.md"]#["demo1.md", "demo2.md"]
 
 msg = "very dumb wrapper for making long form videos"
