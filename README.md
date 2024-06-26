@@ -4,7 +4,12 @@ This is a basic script parser for generating AI videos, from text to final cut. 
 
 Note to self for the future: use the clock emoji to introduce 0.5 second pauses to the video through the API. might be necessary for handling transitions.
 
-If you want
+Please click [here](https://drive.google.com/file/d/1KiqV0E-sYHMi1N6KijxRI9_aMKPk3Y9x/view?usp=sharing) to see a 27-minute mini-lecture made with this tool using lecture material from professor Bryan Chin's lecture from CSE 240A, a wonderful class.
+
+------------------------------------------
+v0.05a binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArturoAmaya/ScriptParser/v0.05a?labpath=example.ipynb)
+
+Added long-form video wrapper. Not recommended for notebook use put I'll put it up here anyway. It's not recommended because longer videos take forever. I've fixed that on my local machine by using a hw-accelerator. The discussion of the effectiveness of that method for scaling up can be found in the stats folder, but it doesn't work for the notebook because the notebook doesn't have any hardware acceleration. Might be worth it to put this on a Google Colab notebook, though. They have TPUs and GPUs available for short amounts of time. 
 
 ------------------------------------------
 v0.05 binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArturoAmaya/ScriptParser/v0.05?labpath=example.ipynb)
