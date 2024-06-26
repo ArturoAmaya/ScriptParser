@@ -34,7 +34,7 @@ Redesign key words and syntax definition. Particularly the distinction between a
 double check the syntax parsing
 - [x] correct the midline clip adjustments
 - [x] remove redundant headers
-- [ ] adjust documentation and examples
+- [x] adjust documentation and examples
 - [x] verify the integrity of the restore intermediate now
 - [x] fix issue with second voice not playing nice with the transition out now a bug issue
 - [x] also why is midline cut getting default transition, should be concat twas a parse issue its ok 
@@ -42,9 +42,17 @@ double check the syntax parsing
 
 NOTE: midline cuts with the same voice ID seem to work fine. Changing the voice id midclip is not recommended or supported. yet
 
-v0.05a add a wrapper for long runthroughs (just call the original version with different parameters multiple times for now)
+[x] v0.05a add a wrapper for long runthroughs (just call the original version with different parameters multiple times for now)
 
-flag for using the same slide as previous clip.
+v0.06:
+Misc quality of life updates in no order yet:
+- [ ] Use PDF files as an other option to the slides.
+- [ ] Update how we assign the slides
+- [ ] Multithread the downloading to cut down on time
+- [ ] Add a previous keyword to just use the previous command
+- [ ] Add better syntax checking and 2k character enforcement.
+- [ ] IMPORTANT: Add a preview pane to the jupyter notebook to try and make it easier to pick size and position parameters for pip and avatar-only
+
 
 ####### Old roadmap
 - [ ] v0.02     Support non-heygen picture-in-picture
@@ -70,3 +78,6 @@ flag for using the same slide as previous clip.
 - [ ] Optimize the messy lookahead/lookback code the midline cuts stuff in compose.py
 - [ ] Consider adding mid-line cut capabilities to clips with transitions
 - [ ] Consider not using the same exact text for midclip cuts so that we can get avatars in different sections of their animation loop, which would help disguise the fact that such a loop exists. First try it with best match but I think it will need word-level caption information, which opens up a whole different can of worms with openAI's whisper model
+- [ ] Add previous parameter, applicable to slides and avatar, composition and transition commands
+- [ ] Add better way to indicate which slides are which as opposed to sequentially
+- [ ] Find out if there's any way to index through the assets that I've uploaded to heygen so I can check if they match the ones I have on hand. Honestly no clue how I'd do that
