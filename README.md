@@ -6,6 +6,10 @@ Note to self for the future: use the clock emoji to introduce 0.5 second pauses 
 
 Please click [here](https://drive.google.com/file/d/1KiqV0E-sYHMi1N6KijxRI9_aMKPk3Y9x/view?usp=sharing) to see a 27-minute mini-lecture made with this tool using lecture material from professor Bryan Chin's lecture from CSE 240A, a wonderful class.
 
+Here is a link to the HEAD of the repo in notebook form. Anyone is welcome to use it, but I make no promises as to stability or usability.
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArturoAmaya/ScriptParser/HEAD?labpath=example.ipynb)
+
+
 ------------------------------------------
 v0.05a binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArturoAmaya/ScriptParser/v0.05a?labpath=example.ipynb)
 
