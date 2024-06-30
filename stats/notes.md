@@ -16,3 +16,6 @@ The result should expect to take 40 minutes but have about 600MB of size for the
 It is exactly as predicted. Took about 49 minutes to make. The slowest part is by far the CPU reencoding but it dramatically reduces the final fize. In the comparing_single_methods_and_combo.png image you can tell that the HW then SW time taken line follows the HW hight bitrate pretty well then jumps up at the end, but its endpoint is significantly lower than that of any of the non-HW lines. Then the file size, it is only marginally larger than the SW multithread 16 (which is the same size as software default) but it's less than all the other dots plotted on the graph.
 
 It is indeed the best of both worlds !! yay!
+
+
+The space_to_time_ratio tableau shows that from a pareto front-type analysis using SW encoding for small videos is more worth it than the HW-encoded clips. They don't take too much longer as long as the clips don't go over 15 minutes. They are significantly smaller, though. I will thus retain the approach of SW-encoding for now. Systems that have lots of HDD memory or don't care about its use can easily see that maximizing speed is through Hw encoding, though.

@@ -8,7 +8,7 @@ import ffmpeg
 from transition import transition
 from scriptparser import transition_type
 
-skiplist = []#"demo1.md", "demo2.md", "demo3.md"]#"notebook_script1.md","notebook_script2.md","notebook_script3.md","notebook_script4.md","notebook_script5.md"]
+skiplist = ["demo1.md", "demo2.md", "demo3.md", "demo4.md", "demo5.md"]#"notebook_script1.md","notebook_script2.md","notebook_script3.md","notebook_script4.md","notebook_script5.md"]
 #"demo1.md", "demo2.md","demo3.md", "demo4.md"]#["demo1.md", "demo2.md"]
 
 msg = "very dumb wrapper for making long form videos"
@@ -37,7 +37,7 @@ for filename in sorted(os.listdir(args.input_folder)):
 clips = []
 probes = []
 
-for i in range(1): # 40 was way too much
+for i in range(3): # 40 was way too much
     for filename in sorted(os.listdir(args.input_folder)):
         meta = None
     

@@ -7,3 +7,22 @@ clips are pretty short so I don't know if it's worth it.
 I can definitely multithread the get avatar clips function so they wait for 200 seconds in 
 parallel rather than in sequence
 
+So I ran the test with the high bitrate version on all output functions ended in a 1:03 total runtime
+The file is indeed larger, 160 MB to the previous 137 MB.
+
+Whether or not that is worth it seems to be up to the user. 
+I don't particularly think it's worth it unless you're making a 2 hours-long video.
+The aggregate sum of the total disk space used by all the intermediate files is interesting though.
+We can compare:
+
+The gpu only on longrun folder has a total size of 233 MB
+The gpu always folder has a total size of 1.2 GB
+
+And that's without considering the temp files used to make up the final video pre-sw
+Apparently this didn't use any but either way the final file was 1.12 GB, which is presumably larger than before.
+
+So we're talking at least 800 MB larger total size for this run, which is not too bad.
+It is however, at least 5x the size of the other one, at LEAST.
+
+Would be interesting to see what happens without it and repeated lots of times. Let's run that
+
