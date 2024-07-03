@@ -44,7 +44,13 @@ NOTE: midline cuts with the same voice ID seem to work fine. Changing the voice 
 
 [x] v0.05a add a wrapper for long runthroughs (just call the original version with different parameters multiple times for now)
 
-v0.06:
+v0.06: 
+Add voiceover
+
+v0.07:
+Add side by side (HARD)
+
+v0.08:
 Misc quality of life updates in no order yet:
 - [ ] Use PDF files as an other option to the slides.
 - [ ] Update how we assign the slides
