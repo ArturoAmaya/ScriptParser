@@ -37,7 +37,7 @@ for filename in sorted(os.listdir(args.input_folder)):
 clips = []
 probes = []
 
-for i in range(3): # 40 was way too much
+for i in range(1): # 40 was way too much
     for filename in sorted(os.listdir(args.input_folder)):
         meta = None
     

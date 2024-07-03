@@ -26,3 +26,9 @@ It is however, at least 5x the size of the other one, at LEAST.
 
 Would be interesting to see what happens without it and repeated lots of times. Let's run that
 
+--------------------------
+
+Everything above was discussed in the context of 4 original demo files.
+I will add four more that use the examples 1-5 API keys. 
+That way we can make about 60 minutes of actual content.
+I'm using the API keys that I already have because apparently you can't claim new ones something is broken on the site.
