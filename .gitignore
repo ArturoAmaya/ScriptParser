@@ -3,6 +3,7 @@
 *.mov
 *.ass
 *.jpg
+*.mp3
 
 # artifacts
 *.json
