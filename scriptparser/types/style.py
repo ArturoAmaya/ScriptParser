@@ -6,7 +6,8 @@ class style_type(str,Enum):
     FPIP = "fpip" #ffmpeg pip
     AVATAR = "avatar-only"
     SBS = "side-by-side"
-    SLIDE = "slide-only"
+    VOICEOVER = "voiceover"
+    #SLIDE = "slide-only"
 
 class av_style(str, Enum):
     NORMAL = "normal"
