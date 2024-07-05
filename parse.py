@@ -79,6 +79,8 @@ def parse_composition(command:str, default: dict = None):
                 #composition["avatar"]["style"] = composition["avatar"]["style"] if "style" in composition["avatar"] else default["avatar"]["style"] if default!=None else "normal"
                 #composition["avatar"]["background"] = composition["avatar"]["background"] if "background" in composition["avatar"] else default["avatar"]["background"] if default!=None else "#FFFFFF"
                 #composition["avatar"]["scale"] = composition["avatar"]["scale"] if "scale" in composition["avatar"] else default["avatar"]["scale"] if default != None else 1.0
+            case style_type.VOICEOVER:
+                composition["output_dim"] = composition["output_dim"] if "output_dim" in composition else default["output_dim"]
             case default:
                 raise Exception("not pip or avatar wyd")
     
@@ -271,7 +273,7 @@ def parse_script(script:list[tuple[scene,bool]], header:dict):
         else:
             s.text = re.sub('(\(.*?\))','',re.sub('({.*?})', '', re.sub('(\[.*?\])','', line))) # line.replace('\\\\', '') # TODO return to this when we add in mid-clip cuts
         
-        if s.style.style == style_type.PIP:
+        if s.style.style == style_type.PIP or s.style.style == style_type.VOICEOVER:
             s.slide.slide_source_type = slide_source.URL
             s.slide.slide_url = header['Slides'][slide_count] if slide_count < len(header["Slides"]) else header["Slides"][-1]
             slide_count = slide_count + 1
@@ -344,7 +346,6 @@ def parse_from_file(filepath: str):
     except:
         return False
     
-
 def restore_intermediate(script: dict)->tuple[dict, list[scene]]:
     scenes = []
     for item in script["body"]:
