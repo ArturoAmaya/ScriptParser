@@ -2,7 +2,7 @@ import requests
 from scriptparser import scene, style_type, avatar_style
 import json
 from urllib.request import urlretrieve
-import time
+import time, sys, re
 # cut up a script and put it into the format of a V2 HeyGen video
 
 def upload_script(script: tuple[dict, list[scene]]):
@@ -90,6 +90,45 @@ def upload_script(script: tuple[dict, list[scene]]):
             print(post_json)
             response = requests.post("https://api.heygen.com/v2/video/generate", json = post_json, headers=post_header)
             responses.append(response)
+        elif scene.style.style == style_type.VOICEOVER:
+            post_header = dict()
+            post_header["Content-Type"] = "application/json"
+            post_header["x-api-key"] = script_header["HeyGen API key"]
+
+            ## json body
+            post_json = dict()
+            post_json["video_inputs"] = []
+            clip = dict()
+            clip["character"] = dict()
+            clip["character"]["type"] = "avatar"
+            clip["character"]["avatar_id"] = scene.avatar_video.avatar_id #script_header["Default Avatar ID"]
+            clip["character"]["avatar_style"] = scene.avatar_video.style.value
+            clip["character"]["scale"] = scene.avatar_video.scale
+            clip["character"]["offset"] = {"x": scene.avatar_video.position[0]-0.5, "y": scene.avatar_video.position[1]-0.5} 
+            # hey gen uses offset of of the middle of the canvas for the 
+            # middle of the avatar so middle middle is 0.0,0.0, bottom left is -0.25,0.25 etc . 
+            # I want to use top-left is 0.0 because I believe that is how ffmpeg does it
+            # my (0,0) (top-left) is heygen's -0.5,-0.5. We can tentatively use me-0.5
+            if scene.avatar_video.style == avatar_style.CIRCLE:
+                clip["character"]["circle_background_color"] = scene.avatar_video.circle_background
+
+            clip["voice"] = dict()
+            clip["voice"]["type"] = "text"
+            clip["voice"]["input_text"] = scene.text
+            clip["voice"]["voice_id"] = scene.avatar_video.voice_id #script_header["Default Voice ID"]
+
+            clip["background"] = dict()
+            clip["background"]["type"] = "image"
+            clip["background"]["url"] = scene.slide.slide_url #script_header["Slides"][script_body.index(line)] if script_body.index(line) < len(script_header["Slides"]) else script_header["Slides"][-1]
+
+            post_json["video_inputs"].append(clip)
+            post_json["test"] = True
+            post_json["caption"] = True
+            post_json["dimension"] = {"width": scene.style.output_dim[0], "height": scene.style.output_dim[1]}
+
+            print(post_json)
+            response = requests.post("https://api.heygen.com/v2/video/generate", json = post_json, headers=post_header)
+            responses.append(response)
         else: 
             raise Exception("unsupported composition type for now")
     return responses
@@ -113,14 +152,54 @@ def parse_upload_response(responses:list[requests.models.Response], script: tupl
         count = count + 1
     return script
 
+# HELPER FNS
+def download_file_from_google_drive(file_id, destination):
+    URL = "https://docs.google.com/uc?export=download&confirm=1"
+
+    session = requests.Session()
+
+    response = session.get(URL, params={"id": file_id}, stream=True)
+    token = get_confirm_token(response)
+
+    if token:
+        params = {"id": file_id, "confirm": token}
+        response = session.get(URL, params=params, stream=True)
+
+    save_response_content(response, destination)
+
+def get_confirm_token(response):
+    for key, value in response.cookies.items():
+        if key.startswith("download_warning"):
+            return value
+
+    return None
+
+def save_response_content(response, destination):
+    CHUNK_SIZE = 32768
+
+    with open(destination, "wb") as f:
+        for chunk in response.iter_content(CHUNK_SIZE):
+            if chunk:  # filter out keep-alive new chunks
+                f.write(chunk)
+
+
 def get_slides(script:list[scene], dir:str="./")->list[scene]:
     count  = 0
     script_header, script_body = script
+
     for scene in script_body:
         if scene.slide.slide_url != None and scene.slide.slide_url != '':
-            path, headers = urlretrieve(scene.slide.slide_url, dir+f"slide{count}.jpg") # todo return and decide how to import the file format. don't think this thing cares tho
-            scene.slide.slide_filename = path
-            count = count + 1
+            url_pieces = re.split('\/', scene.slide.slide_url)
+            if url_pieces[2] == 'drive.google.com':
+                file_id = url_pieces[5]
+                download_file_from_google_drive(file_id, dir+f"slide{count}.jpg")
+                scene.slide.slide_filename = dir+f"slide{count}.jpg"
+                count = count + 1
+    #for scene in script_body:
+    #    if scene.slide.slide_url != None and scene.slide.slide_url != '':
+    #        path, headers = urlretrieve(scene.slide.slide_url, dir+f"slide{count}.jpg") # todo return and decide how to import the file format. don't think this thing cares tho
+    #        scene.slide.slide_filename = path
+    #        count = count + 1
     return script
 
 def get_avatar_clip(scene:scene, apikey:str, count:int, wait:int, dir:str="./"):
