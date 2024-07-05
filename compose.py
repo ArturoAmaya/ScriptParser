@@ -59,10 +59,24 @@ def compose_scenes(script: tuple[dict,list[scene]]):
             ffmpeg.output(v,a,f"./trim{scene.number}.mp4", vcodec="h264", pix_fmt='yuv420p', crf=18, preset="veryslow", **{'b:a': '192k'}).run(overwrite_output=True)
             scene.avatar_video.video = ffmpeg.input(f"./trim{scene.number}.mp4")
             scene.avatar_video.metadata = ffmpeg.probe(f"./trim{scene.number}.mp4")
+        
         if scene.style.style == style_type.PIP:
             scene.clip = scene.avatar_video.video # for now there's not much to do with a pip since we've generated it in heygen
         elif scene.style.style == style_type.AVATAR:
             scene.clip = scene.avatar_video.video
+        elif scene.style.style == style_type.VOICEOVER:
+            # TODO REVISIT THIS THIS IS BRITTLE
+             
+            # get the slide
+            slide = ffmpeg.input(scene.slide.slide_filename, **{'loop':'1'})
+            
+            # cut the audio out
+            ffmpeg.output(scene.avatar_video.video.audio, f"{scene.avatar_video.filename}.mp3").run()
+            audio = ffmpeg.input(f"{scene.avatar_video.filename}.mp3")
+
+            # then put em together
+            ffmpeg.concat(slide, audio,v=1,a=1).output(f"{scene.avatar_video.filename}_voiceover.mp4", shortest=None).run()
+            scene.clip = ffmpeg.input(f"{scene.avatar_video.filename}_voiceover.mp4")
         else:
             raise Exception("error unsupported scene style: " + scene.style.style)
 
