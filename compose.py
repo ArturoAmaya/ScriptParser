@@ -69,13 +69,20 @@ def compose_scenes(script: tuple[dict,list[scene]]):
              
             # get the slide
             slide = ffmpeg.input(scene.slide.slide_filename, **{'loop':'1'})
-            
+
+            # make sure the slide is the right size, crudely
+            #ffmpeg.filter(slide, 'scale', script_head["Default Composition"]["output_dim"][0], script_head["Default Composition"]["output_dim"][1]).output(f"{scene.slide.slide_filename}_format.jpg").run()
+            #slide_format = ffmpeg.input(f"{scene.slide.slide_filename}_format.jpg")
+
             # cut the audio out
             ffmpeg.output(scene.avatar_video.video.audio, f"{scene.avatar_video.filename}.mp3").run()
             audio = ffmpeg.input(f"{scene.avatar_video.filename}.mp3")
 
             # then put em together
-            ffmpeg.concat(slide, audio,v=1,a=1).output(f"{scene.avatar_video.filename}_voiceover.mp4", shortest=None).run()
+            dar = next((stream for stream in scene.avatar_video.metadata['streams'] if stream['codec_type'] == 'video'), None)['display_aspect_ratio'].split(':')
+            sar = next((stream for stream in scene.avatar_video.metadata['streams'] if stream['codec_type'] == 'video'), None)['sample_aspect_ratio'].split(':')
+            #dar = (dar[0], dar[1])
+            ffmpeg.concat(slide, audio,v=1,a=1).filter('scale', script_head["Default Composition"]["output_dim"][0], script_head["Default Composition"]["output_dim"][1]).filter('setdar', f"{dar[0]}/{dar[1]}").filter('setsar', f"{sar[0]}/{sar[1]}").output(f"{scene.avatar_video.filename}_voiceover.mp4", shortest=None).run() # scene.avatar_video.metadata['streams'][0]['sample_aspect_ratio'], scene.avatar_video.metadata['streams'][0]['display_aspect_ratio']
             scene.clip = ffmpeg.input(f"{scene.avatar_video.filename}_voiceover.mp4")
         else:
             raise Exception("error unsupported scene style: " + scene.style.style)
