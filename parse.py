@@ -28,6 +28,10 @@ def parse_composition(command:str, default: dict = None):
                 case 'outout_dim':
                     d = v[1:-1].split(";")
                     composition["output_dim"] = (float(d[0]), float(d[1]))
+                case 'tbc':
+                    # TODO: make less brittle
+                    d = v.replace('#','')
+                    composition["true_background_color"] = d
                 #case 'background':
                 #    composition["avatar"]["background"] = v
                 #    composition["true_background"] = v
@@ -80,7 +84,10 @@ def parse_composition(command:str, default: dict = None):
                 #composition["avatar"]["background"] = composition["avatar"]["background"] if "background" in composition["avatar"] else default["avatar"]["background"] if default!=None else "#FFFFFF"
                 #composition["avatar"]["scale"] = composition["avatar"]["scale"] if "scale" in composition["avatar"] else default["avatar"]["scale"] if default != None else 1.0
             case style_type.VOICEOVER:
-                composition["output_dim"] = composition["output_dim"] if "output_dim" in composition else default["output_dim"]
+                composition["output_dim"] = composition["output_dim"] if "output_dim" in composition else default["output_dim"] if default!=None else (1280,720)
+            case style_type.SBS:
+                composition["output_dim"] = composition["output_dim"] if "output_dim" in composition else default["output_dim"] if default!=None else (1280,720)
+                composition["true_background_color"] = composition["true_background_color"] if "true_background_color" in composition else default["true_background_color"] if "true_background_color" in default else "white"
             case default:
                 raise Exception("not pip or avatar wyd")
     

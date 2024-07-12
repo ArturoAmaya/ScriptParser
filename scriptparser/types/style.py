@@ -56,6 +56,7 @@ class style:
         #c.avatar_position = (data["avatar_position"][0], data["avatar_position"][1])
         #c.avatar_scale = data["avatar_scale"]
         c.output_dim = data["output_dim"]
+        c.true_background = data["true_background_color"] if "true_background_color" in data else data["true_background"] if "true_background" in data else "white"
         #c.slides_scale = data["slides_scale"]
         #c.slides_position = (data["slides_position"][0], data["slides_position"][1]) if data["slides_position"] != None else None
         #c.true_background = data["true_background"]

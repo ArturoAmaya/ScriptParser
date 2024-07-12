@@ -84,6 +84,28 @@ def compose_scenes(script: tuple[dict,list[scene]]):
             #dar = (dar[0], dar[1])
             ffmpeg.concat(slide, audio,v=1,a=1).filter('scale', script_head["Default Composition"]["output_dim"][0], script_head["Default Composition"]["output_dim"][1]).filter('setdar', f"{dar[0]}/{dar[1]}").filter('setsar', f"{sar[0]}/{sar[1]}").output(f"{scene.avatar_video.filename}_voiceover.mp4", shortest=None).run() # scene.avatar_video.metadata['streams'][0]['sample_aspect_ratio'], scene.avatar_video.metadata['streams'][0]['display_aspect_ratio']
             scene.clip = ffmpeg.input(f"{scene.avatar_video.filename}_voiceover.mp4")
+        elif scene.style.style == style_type.SBS:
+            margin = 10
+            c = 4*margin
+            output_dim = scene.style.output_dim
+            
+            bckgrnd = ffmpeg.input(f'color={scene.style.true_background}:size={output_dim[0]}x{output_dim[1]}', f='lavfi').video  # background with color string, captials work too
+            avatar = scene.avatar_video.video#'./longrun/demo2.md/avatar4.mp4')#ffmpeg.input('SidebysideClip.mp4')
+            slide = ffmpeg.input(scene.slide.slide_filename, **{'loop':'1', })
+
+            cropped_avatar_dim = (int((output_dim[0]-c)/3), int(int((output_dim[0]-c)/3)*output_dim[1]/output_dim[0]))
+            scaled_slides_dim = (2*cropped_avatar_dim[0], 2*cropped_avatar_dim[1])
+
+            cropped_avatar = avatar.filter('crop', *['iw/2', 'ih', '325', '0']).filter('scale', *[str(cropped_avatar_dim[0]), str(2*cropped_avatar_dim[1])]) # in width, height, x, y format
+            scaled_slides = slide.filter('scale', *[str(scaled_slides_dim[0]), str(scaled_slides_dim[1])])#*['1280', '720'])#*['0.9*iw', '0.9*ih'])
+
+
+            bkgnd_slides = ffmpeg.filter([bckgrnd, scaled_slides], 'overlay', shortest=1, x=str(margin), y='(main_h-overlay_h)/2') #*['10','(main_h-overlay_h)/2'])
+            out = ffmpeg.filter([bkgnd_slides, cropped_avatar], 'overlay', shortest= 1, x=str(3*margin+scaled_slides_dim[0]), y='(main_h-overlay_h)/2')
+
+            #ffmpeg.concat(out, clip.audio, v=1, a=1).output("AH.mp4").run()
+            ffmpeg.output(out, avatar.audio, f"{scene.avatar_video.filename}_side_by_side.mp4").run()
+            scene.clip = ffmpeg.input(f"{scene.avatar_video.filename}_side_by_side.mp4")
         else:
             raise Exception("error unsupported scene style: " + scene.style.style)
 
