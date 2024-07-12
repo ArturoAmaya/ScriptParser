@@ -45,7 +45,7 @@ NOTE: midline cuts with the same voice ID seem to work fine. Changing the voice 
 [x] v0.05a add a wrapper for long runthroughs (just call the original version with different parameters multiple times for now)
 
 v0.06: 
-Add voiceover
+[x] Add voiceover
 
 v0.07:
 Add side by side (HARD)
@@ -58,6 +58,8 @@ Misc quality of life updates in no order yet:
 - [ ] Add a previous keyword to just use the previous command
 - [ ] Add better syntax checking and 2k character enforcement.
 - [ ] IMPORTANT: Add a preview pane to the jupyter notebook to try and make it easier to pick size and position parameters for pip and avatar-only
+
+v0.09: GUI
 
 
 ####### Old roadmap
