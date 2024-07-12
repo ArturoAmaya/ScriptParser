@@ -90,7 +90,8 @@ def upload_script(script: tuple[dict, list[scene]]):
             print(post_json)
             response = requests.post("https://api.heygen.com/v2/video/generate", json = post_json, headers=post_header)
             responses.append(response)
-        elif scene.style.style == style_type.VOICEOVER:
+
+        elif scene.style.style == style_type.SBS:
             post_header = dict()
             post_header["Content-Type"] = "application/json"
             post_header["x-api-key"] = script_header["HeyGen API key"]
@@ -118,8 +119,8 @@ def upload_script(script: tuple[dict, list[scene]]):
             clip["voice"]["voice_id"] = scene.avatar_video.voice_id #script_header["Default Voice ID"]
 
             clip["background"] = dict()
-            clip["background"]["type"] = "image"
-            clip["background"]["url"] = scene.slide.slide_url #script_header["Slides"][script_body.index(line)] if script_body.index(line) < len(script_header["Slides"]) else script_header["Slides"][-1]
+            clip["background"]["type"] = "color"
+            clip["background"]["value"] = scene.avatar_video.background
 
             post_json["video_inputs"].append(clip)
             post_json["test"] = True
@@ -129,6 +130,7 @@ def upload_script(script: tuple[dict, list[scene]]):
             print(post_json)
             response = requests.post("https://api.heygen.com/v2/video/generate", json = post_json, headers=post_header)
             responses.append(response)
+        
         else: 
             raise Exception("unsupported composition type for now")
     return responses
@@ -158,13 +160,16 @@ def download_file_from_google_drive(file_id, destination):
 
     session = requests.Session()
 
+    print("get session response")
     response = session.get(URL, params={"id": file_id}, stream=True)
     token = get_confirm_token(response)
 
+    print("if token")
     if token:
         params = {"id": file_id, "confirm": token}
         response = session.get(URL, params=params, stream=True)
 
+    print("gonna save response content")
     save_response_content(response, destination)
 
 def get_confirm_token(response):
@@ -181,6 +186,7 @@ def save_response_content(response, destination):
         for chunk in response.iter_content(CHUNK_SIZE):
             if chunk:  # filter out keep-alive new chunks
                 f.write(chunk)
+                print("writing chunk")
 
 
 def get_slides(script:list[scene], dir:str="./")->list[scene]:
@@ -192,7 +198,9 @@ def get_slides(script:list[scene], dir:str="./")->list[scene]:
             url_pieces = re.split('\/', scene.slide.slide_url)
             if url_pieces[2] == 'drive.google.com':
                 file_id = url_pieces[5]
+                print("about to download from google drive")
                 download_file_from_google_drive(file_id, dir+f"slide{count}.jpg")
+                print("just downloaded from google drive")
                 scene.slide.slide_filename = dir+f"slide{count}.jpg"
                 count = count + 1
     #for scene in script_body:
