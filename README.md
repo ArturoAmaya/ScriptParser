@@ -9,6 +9,9 @@ Please click [here](https://drive.google.com/file/d/1KiqV0E-sYHMi1N6KijxRI9_aMKP
 Here is a link to the HEAD of the repo in notebook form. Anyone is welcome to use it, but I make no promises as to stability or usability.
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArturoAmaya/ScriptParser/HEAD?labpath=example.ipynb)
 
+------------------------------------------
+
+v0.06 binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArturoAmaya/ScriptParser/v0.06?labpath=example.ipynb) Added voiceover. Simply use [type:voiceover]. The tool will take care of downloading slides. It is a little brittle so if you choose to use it pleases use the google drive link format. We are unfortunately tied to that for now.
 
 ------------------------------------------
 v0.05a binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArturoAmaya/ScriptParser/v0.05a?labpath=example.ipynb)
