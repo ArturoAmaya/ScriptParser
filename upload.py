@@ -51,7 +51,7 @@ def upload_script(script: tuple[dict, list[scene]]):
             print(post_json)
             response = requests.post("https://api.heygen.com/v2/video/generate", json = post_json, headers=post_header)
             responses.append(response)
-        elif scene.style.style == style_type.AVATAR:
+        elif scene.style.style == style_type.AVATAR or scene.style.style == style_type.VOICEOVER:
             post_header = dict()
             post_header["Content-Type"] = "application/json"
             post_header["x-api-key"] = script_header["HeyGen API key"]
@@ -161,16 +161,19 @@ def download_file_from_google_drive(file_id, destination):
     session = requests.Session()
 
     print("get session response")
-    response = session.get(URL, params={"id": file_id}, stream=True)
-    token = get_confirm_token(response)
+    try: 
+        response = session.get(URL, params={"id": file_id}, stream=True, timeout=100)
+        token = get_confirm_token(response)
 
-    print("if token")
-    if token:
-        params = {"id": file_id, "confirm": token}
-        response = session.get(URL, params=params, stream=True)
+        print("if token")
+        if token:
+            params = {"id": file_id, "confirm": token}
+            response = session.get(URL, params=params, stream=True)
 
-    print("gonna save response content")
-    save_response_content(response, destination)
+        print("gonna save response content")
+        save_response_content(response, destination)
+    except requests.exceptions.ReadTimeout:
+        download_file_from_google_drive(file_id, destination)
 
 def get_confirm_token(response):
     for key, value in response.cookies.items():
