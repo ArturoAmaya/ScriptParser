@@ -1,4 +1,4 @@
-from scriptparser import scene, caption, avatar_video, background, slide, slide_source, style, style_type, transition_type, transition_in, avatar_style
+from scriptparser import scene, caption, avatar_video, background, slide, slide_source, style, style_type, transition_type, transition_in, avatar_style, side
 import re
 
 def parse_composition(command:str, default: dict = None):
@@ -25,13 +25,15 @@ def parse_composition(command:str, default: dict = None):
                 #    composition["avatar"]["scale"] = float(v)
                 #case 'style':
                 #    composition["avatar"]["style"] = avatar_style(v)
-                case 'outout_dim':
+                case 'output_dim':
                     d = v[1:-1].split(";")
                     composition["output_dim"] = (float(d[0]), float(d[1]))
                 case 'tbc':
                     # TODO: make less brittle
                     d = v.replace('#','')
                     composition["true_background_color"] = d
+                case 'avatar_side':
+                    composition["avatar_side"] = side(v)
                 #case 'background':
                 #    composition["avatar"]["background"] = v
                 #    composition["true_background"] = v
@@ -88,6 +90,7 @@ def parse_composition(command:str, default: dict = None):
             case style_type.SBS:
                 composition["output_dim"] = composition["output_dim"] if "output_dim" in composition else default["output_dim"] if default!=None else (1280,720)
                 composition["true_background_color"] = composition["true_background_color"] if "true_background_color" in composition else default["true_background_color"] if "true_background_color" in default else "white"
+                composition["avatar_side"] = composition["avatar_side"] if "avatar_side" in composition else default["avatar_side"] if "avatar_side" in default else "right"
             case default:
                 raise Exception("not pip or avatar wyd")
     
@@ -280,7 +283,7 @@ def parse_script(script:list[tuple[scene,bool]], header:dict):
         else:
             s.text = re.sub('(\(.*?\))','',re.sub('({.*?})', '', re.sub('(\[.*?\])','', line))) # line.replace('\\\\', '') # TODO return to this when we add in mid-clip cuts
         
-        if s.style.style == style_type.PIP or s.style.style == style_type.VOICEOVER:
+        if s.style.style == style_type.PIP or s.style.style == style_type.VOICEOVER or s.style.style == style_type.SBS:
             s.slide.slide_source_type = slide_source.URL
             s.slide.slide_url = header['Slides'][slide_count] if slide_count < len(header["Slides"]) else header["Slides"][-1]
             slide_count = slide_count + 1
