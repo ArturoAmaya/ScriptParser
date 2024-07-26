@@ -80,6 +80,8 @@ The common attributes that are required are:
 The ones that are currently supported are the following: 
 - type [enum] what kind of video composition - pip and avatar-only are the currently supported options
 - output_dim [tuple[float;float]] output dimensions of the clip - generally 1280x720 for us.
+- tbc [string] true background color for side by side. leaves a band above and below the clips that has to be some color
+- avatar_position [string] left or right for now. only works for side by side
 
 IGNORE:
 - avatar scale [float]: scale of the avatar. [0.0,2.0]
