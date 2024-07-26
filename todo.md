@@ -52,6 +52,7 @@ Add side by side (HARD)
 
 v0.08:
 Misc quality of life updates in no order yet:
+- [ ] Make certain processes less brittle
 - [ ] Use PDF files as an other option to the slides.
 - [ ] Update how we assign the slides
 - [ ] Multithread the downloading to cut down on time
