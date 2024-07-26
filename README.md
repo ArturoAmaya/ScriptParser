@@ -9,7 +9,7 @@ Please click [here](https://drive.google.com/file/d/1KiqV0E-sYHMi1N6KijxRI9_aMKP
 Here is a link to the HEAD of the repo in notebook form. Anyone is welcome to use it, but I make no promises as to stability or usability.
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArturoAmaya/ScriptParser/HEAD?labpath=example.ipynb)
 
-v0.07 binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArturoAmaya/ScriptParser/v0.06?labpath=example.ipynb) Added side-by-side type. Use [type:side-by-side]. It also takes tbc (a hex color string with no '#') and avatar_side, which is left or right. Make sure to place the avatar in the middle of the composition for it to make sense.
+v0.07 binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArturoAmaya/ScriptParser/v0.06?labpath=example.ipynb) Added side-by-side type. Use [type:side-by-side]. It also takes tbc (a hex color string with no '#') and avatar_side, which is left or right (which side of the canvas the avatar clip should be in). Make sure to place the avatar in the middle of the composition for it to make sense. Defaults to right side and white background.
 
 Sample command: 
 
