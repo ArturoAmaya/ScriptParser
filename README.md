@@ -9,6 +9,12 @@ Please click [here](https://drive.google.com/file/d/1KiqV0E-sYHMi1N6KijxRI9_aMKP
 Here is a link to the HEAD of the repo in notebook form. Anyone is welcome to use it, but I make no promises as to stability or usability.
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArturoAmaya/ScriptParser/HEAD?labpath=example.ipynb)
 
+v0.07 binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArturoAmaya/ScriptParser/v0.06?labpath=example.ipynb) Added side-by-side type. Use [type:side-by-side]. It also takes tbc (a hex color string with no '#') and avatar_side, which is left or right. Make sure to place the avatar in the middle of the composition for it to make sense.
+
+Sample command: 
+
+[type:side-by-side, tbc:000000, avatar_side:left] (style:normal, position:0.5;0.5, scale:1.0)
+
 ------------------------------------------
 
 v0.06 binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArturoAmaya/ScriptParser/v0.06?labpath=example.ipynb) Added voiceover. Simply use [type:voiceover]. The tool will take care of downloading slides. It is a little brittle so if you choose to use it pleases use the google drive link format. We are unfortunately tied to that for now.
