@@ -34,6 +34,25 @@ def parse_composition(command:str, default: dict = None):
                     composition["true_background_color"] = d
                 case 'avatar_side':
                     composition["avatar_side"] = side(v)
+                case 'avatar_position':
+                    try:
+                        d = v[1:-1].split(";")
+                        composition["avatar_position"] = (float(d[0]), float(d[1]))
+                    except:
+                        # use presets here! ASSUME THAT OUTPUT DIM, AVATAR AND SLIDES ALL HAVE THE SAME DEFAULT SIZE AND THAT IF NOT OTHERWISE SPECIFIED *BEFORE* AVATAR_POS THAT AVATAR_SCALE IS 0.4. IT's JANK I KNOW
+                        match v:
+                            case 'tl': # bottom left
+                                composition["avatar_position"] = (0,0)
+                            case 'tr': # top right
+                                composition["avatar_position"] = ( 1-composition["avatar_scale"] , 0) if "avatar_scale" in composition else (0.6,0)
+                            case 'bl': # bottom left
+                                composition["avatar_position"] = (0, 1-composition["avatar_scale"]) if "avatar_scale" in composition else (0,0.6)
+                            case 'br':
+                                composition["avatar_position"] = (1-composition["avatar_scale"] , 1-composition["avatar_scale"]) if "avatar_scale" in composition else (0.6,0.6)
+                            case _:
+                                composition["avatar_position"] = (0.6,0.6)
+                case 'avatar_scale':
+                    composition["avatar_scale"] = float(v)
                 #case 'background':
                 #    composition["avatar"]["background"] = v
                 #    composition["true_background"] = v
@@ -91,6 +110,10 @@ def parse_composition(command:str, default: dict = None):
                 composition["output_dim"] = composition["output_dim"] if "output_dim" in composition else default["output_dim"] if default!=None else (1280,720)
                 composition["true_background_color"] = composition["true_background_color"] if "true_background_color" in composition else default["true_background_color"] if "true_background_color" in default else "white"
                 composition["avatar_side"] = composition["avatar_side"] if "avatar_side" in composition else default["avatar_side"] if "avatar_side" in default else "right"
+            case style_type.FPIP:
+                composition["output_dim"] = composition["output_dim"] if "output_dim" in composition else default["output_dim"] if default!=None else (1280,720)
+                composition["avatar_scale"] = composition["avatar_scale"] if "avatar_scale" in composition else default["avatar_scale"] if default!=None and "avatar_scale" in default else 0.4
+                composition["avatar_position"] = composition["avatar_position"] if "avatar_position" in composition else default["avatar_position"] if default!=None and "avatar_position" in default else (0,0)
             case default:
                 raise Exception("not pip or avatar wyd")
     
@@ -283,7 +306,7 @@ def parse_script(script:list[tuple[scene,bool]], header:dict):
         else:
             s.text = re.sub('(\(.*?\))','',re.sub('({.*?})', '', re.sub('(\[.*?\])','', line))) # line.replace('\\\\', '') # TODO return to this when we add in mid-clip cuts
         
-        if s.style.style == style_type.PIP or s.style.style == style_type.VOICEOVER or s.style.style == style_type.SBS:
+        if s.style.style == style_type.PIP or s.style.style == style_type.VOICEOVER or s.style.style == style_type.SBS or s.style.style==style_type.FPIP:
             s.slide.slide_source_type = slide_source.URL
             s.slide.slide_url = header['Slides'][slide_count] if slide_count < len(header["Slides"]) else header["Slides"][-1]
             slide_count = slide_count + 1
