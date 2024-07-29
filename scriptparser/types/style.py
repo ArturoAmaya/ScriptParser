@@ -53,8 +53,8 @@ class style:
     def from_dict(cls,data):
         c = cls()
         c.style = style_type(data["style"]) if "style" in data else data["type"]
-        #c.avatar_position = (data["avatar_position"][0], data["avatar_position"][1])
-        #c.avatar_scale = data["avatar_scale"]
+        c.avatar_position = (float(data["avatar_position"][0]), float(data["avatar_position"][1])) if "avatar_position" in data else (0,0)
+        c.avatar_scale = float(data["avatar_scale"]) if "avatar_scale" in data else 0.4
         c.output_dim = data["output_dim"]
         c.true_background = data["true_background_color"] if "true_background_color" in data else data["true_background"] if "true_background" in data else "white"
         c.avatar_side = side(data["avatar_side"]) if "avatar_side" in data else "right"
