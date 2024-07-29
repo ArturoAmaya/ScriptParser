@@ -129,6 +129,21 @@ def compose_scenes(script: tuple[dict,list[scene]]):
                 #ffmpeg.concat(out, clip.audio, v=1, a=1).output("AH.mp4").run()
                 ffmpeg.output(out, avatar.audio, f"{scene.avatar_video.filename}_side_by_side.mp4").run(overwrite_output=True)
                 scene.clip = ffmpeg.input(f"{scene.avatar_video.filename}_side_by_side.mp4")
+        elif scene.style.style == style_type.FPIP:
+            slide = ffmpeg.input(scene.slide.slide_filename, **{'loop':'1',})
+            clip = scene.avatar_video.video
+
+            scaled_slide = slide.filter('scale', *[f'{scene.style.output_dim[0]}', f'{scene.style.output_dim[1]}'])
+            scaled_clip = clip.filter('scale', *[f'{scene.style.avatar_scale}*iw', f'{scene.style.avatar_scale}*ih'])
+            
+            # apparently this also has issue with the sar/dar, idk
+            dar = next((stream for stream in scene.avatar_video.metadata['streams'] if stream['codec_type'] == 'video'), None)['display_aspect_ratio'].split(':')
+            sar = next((stream for stream in scene.avatar_video.metadata['streams'] if stream['codec_type'] == 'video'), None)['sample_aspect_ratio'].split(':')
+            #dar = (dar[0], dar[1])
+            overlaid = ffmpeg.filter([scaled_slide,scaled_clip], 'overlay', shortest=1, x=f'ceil(main_w*{scene.style.avatar_position[0]})', y=f'ceil(main_h*{scene.style.avatar_position[1]})').filter('setdar', f"{dar[0]}/{dar[1]}").filter('setsar', f"{sar[0]}/{sar[1]}") # scene.avatar_video.metadata['streams'][0]['sample_aspect_ratio'], scene.avatar_video.metadata['streams'][0]['display_aspect_ratio']
+
+            out = ffmpeg.output(overlaid, clip.audio, f"{scene.avatar_video.filename}_fpip.mp4").run(overwrite_output=True)
+            scene.clip = ffmpeg.input(f"{scene.avatar_video.filename}_fpip.mp4")
         else:
             raise Exception("error unsupported scene style: " + scene.style.style)
 
