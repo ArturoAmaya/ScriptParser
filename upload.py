@@ -91,7 +91,7 @@ def upload_script(script: tuple[dict, list[scene]]):
             response = requests.post("https://api.heygen.com/v2/video/generate", json = post_json, headers=post_header)
             responses.append(response)
 
-        elif scene.style.style == style_type.SBS:
+        elif scene.style.style == style_type.SBS or scene.style.style == style_type.FPIP:
             post_header = dict()
             post_header["Content-Type"] = "application/json"
             post_header["x-api-key"] = script_header["HeyGen API key"]
