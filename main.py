@@ -1,8 +1,8 @@
-from parse import parse_from_file, restore_intermediate
-from upload import upload_script, parse_upload_response, get_slides, get_avatar_clips
-from compose import compose_scenes
+from scriptparser.parse import parse_from_file, restore_intermediate
+from scriptparser.upload import upload_script, parse_upload_response, get_slides, get_avatar_clips
+from scriptparser.compose import compose_scenes
 import sys
-from transition import transitions
+from scriptparser.transition import transitions
 import ffmpeg
 import argparse
 import json
