@@ -5,7 +5,7 @@ import os
 import shutil
 import json
 import ffmpeg
-from transition import transition
+from scriptparser.transition import transition
 from scriptparser import transition_type
 
 skiplist = []#"demo1.md", "demo2.md", "demo3.md", "demo4.md", "demo5.md", "demo6.md","demo7.md", "demo8.md", "demo9.md"]#"notebook_script1.md","notebook_script2.md","notebook_script3.md","notebook_script4.md","notebook_script5.md"]
