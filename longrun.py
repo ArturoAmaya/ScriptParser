@@ -8,7 +8,7 @@ import ffmpeg
 from transition import transition
 from scriptparser import transition_type
 
-skiplist = ["demo1.md", "demo2.md", "demo3.md", "demo4.md", "demo5.md"]#"notebook_script1.md","notebook_script2.md","notebook_script3.md","notebook_script4.md","notebook_script5.md"]
+skiplist = []#"demo1.md", "demo2.md", "demo3.md", "demo4.md", "demo5.md", "demo6.md","demo7.md", "demo8.md", "demo9.md"]#"notebook_script1.md","notebook_script2.md","notebook_script3.md","notebook_script4.md","notebook_script5.md"]
 #"demo1.md", "demo2.md","demo3.md", "demo4.md"]#["demo1.md", "demo2.md"]
 
 msg = "very dumb wrapper for making long form videos"
@@ -46,8 +46,8 @@ for i in range(1): # 40 was way too much
             with open(f"./longrun/{filename}/data.json") as f:
                 meta = json.load(f)
             vid = meta["header"]["Lecture Name"] # the name of the video file output
-            clips.append(ffmpeg.input(f"./longrun/{filename}/{vid}.mp4"))
             probes.append(ffmpeg.probe(f"./longrun/{filename}/{vid}.mp4"))
+            clips.append(ffmpeg.input(f"./longrun/{filename}/{vid}.mp4"))
         except:
             print(f"no folder with name {filename}")
 temp_v = clips[0].video
