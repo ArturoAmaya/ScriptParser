@@ -15,5 +15,5 @@ classifiers = [
   "License :: OSI Approved :: GNU AFFERO GENERAL PUBLIC LICENSE",
   "Operating System :: OS Independent",
 ]
-dependencies = ["ffmpeg-python"=="0.2.0", "pdf2image"=="1.17.0"]
+dependencies = ["ffmpeg-python==0.2.0", "pdf2image==1.17.0"]
 ]
