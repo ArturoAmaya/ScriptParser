@@ -11,6 +11,10 @@ Here is a link to the HEAD of the repo in notebook form. Anyone is welcome to us
 
 ------------------------------------------
 
+v0.09a1 binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArturoAmaya/ScriptParser/v0.09a1?labpath=example.ipynb) Exposed parse from string. Not a big deal, but for consistency I'll make a release for binder to track.
+
+------------------------------------------
+
 v0.08 binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArturoAmaya/ScriptParser/v0.08?labpath=example.ipynb) Added ffmpeg pip. It is unoptimized, not as fast as it could be. Oh well. It works is the important thing for now. It takes an additional parameter of avatar_position and avatar_scale. 
 
 avatar_position describes where the top left of the avatar video will be with respect to the entire canvas. Takes two floats 0-1;0-1 describing the x and y. Also takes macros tl, tr, bl, br meaning top left, top right, bottom left, bottom right. default value is 0.6;0.6
