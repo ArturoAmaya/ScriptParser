@@ -325,13 +325,10 @@ def parse_script(script:list[tuple[scene,bool]], header:dict):
         true_script.append(s)
     return true_script
 
-def parse_from_file(filepath: str):
+def parse_from_string(lines: list[str]):
     try:
-        # read the files
-        file = open(filepath, 'r')
         header = []
         script = []
-        lines = file.readlines()
         head = True
         for line in lines:
             if head and line.strip() != "--":
@@ -376,6 +373,15 @@ def parse_from_file(filepath: str):
         header = parse_header(header)
         script = parse_script(script, header)
         return (header, script)
+    except:
+        raise Exception("Error parsing script from string")
+
+def parse_from_file(filepath: str):
+    try:
+        # read the files
+        file = open(filepath, 'r')
+        lines = file.readlines()
+        return parse_from_string(lines)
     except:
         return False
     
