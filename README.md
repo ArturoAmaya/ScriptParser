@@ -11,6 +11,20 @@ Here is a link to the HEAD of the repo in notebook form. Anyone is welcome to us
 
 ------------------------------------------
 
+v0.08 binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArturoAmaya/ScriptParser/v0.08?labpath=example.ipynb) Added ffmpeg pip. It is unoptimized, not as fast as it could be. Oh well. It works is the important thing for now. It takes an additional parameter of avatar_position and avatar_scale. 
+
+avatar_position describes where the top left of the avatar video will be with respect to the entire canvas. Takes two floats 0-1;0-1 describing the x and y. Also takes macros tl, tr, bl, br meaning top left, top right, bottom left, bottom right. default value is 0.6;0.6
+avatar_scale describes how large the avatar video should be with respect to its original size. One float, 0-1. Defaults to 0.4. height and width are both scaled by the same amount.
+
+Please note that to use this properly you need to have the avatar positioned in the middle its own canvas. So almost always follow this up with (position:0.5;0.5, scale:1.0)
+
+Example usage:
+
+[type: fpip, avatar_scale:0.3, avatar_position: 0.5;0.6](position:0.5;0.5, scale:1.0)
+
+
+------------------------------------------
+
 v0.07 binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArturoAmaya/ScriptParser/v0.07?labpath=example.ipynb) Added side-by-side type. Use [type:side-by-side]. It also takes tbc (a hex color string with no '#') and avatar_side, which is left or right (which side of the canvas the avatar clip should be in). Make sure to place the avatar in the middle of the composition for it to make sense. Defaults to right side and white background.
 
 Sample command: 
