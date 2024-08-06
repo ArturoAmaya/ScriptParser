@@ -85,13 +85,15 @@ parser.add_argument("-in", "--Input-intermediate", default="data.json", help="na
 parser.add_argument("-d", "--Destination", default="./", type=str, help="base destination folder for downloads")
 
 parser.add_argument("-f", "--force", default=False, action="store_true", help="Force overwrite a file with matching name")
+parser.add_argument("-pdf", "--pdf", default="", type=str, help="filename of a pdf of slides to be taken in order")
+
 args = parser.parse_args()
 
 if args.Input_script and not args.load_intermediate:
 
     # at stage 0 right now
     filepath = args.Input_script
-    script = parse_from_file(filepath)
+    script = parse_from_file(filepath, args.Destination, True if args.pdf != "" else False, args.pdf)
     if args.save_intermediate and script:
         save_intermediate(script, args.Destination+args.intermediate_filename)
 

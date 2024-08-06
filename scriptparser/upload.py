@@ -41,7 +41,10 @@ def upload_script(script: tuple[dict, list[scene]]):
 
             clip["background"] = dict()
             clip["background"]["type"] = "image"
-            clip["background"]["url"] = scene.slide.slide_url #script_header["Slides"][script_body.index(line)] if script_body.index(line) < len(script_header["Slides"]) else script_header["Slides"][-1]
+            if "pdf" in script_header:
+                clip["background"]["image_asset_id"] = scene.slide.asset_id
+            else:
+                clip["background"]["url"] = scene.slide.slide_url #script_header["Slides"][script_body.index(line)] if script_body.index(line) < len(script_header["Slides"]) else script_header["Slides"][-1]
 
             post_json["video_inputs"].append(clip)
             post_json["test"] = True
@@ -196,16 +199,17 @@ def get_slides(script:list[scene], dir:str="./")->list[scene]:
     count  = 0
     script_header, script_body = script
 
-    for scene in script_body:
-        if scene.slide.slide_url != None and scene.slide.slide_url != '':
-            url_pieces = re.split('\/', scene.slide.slide_url)
-            if url_pieces[2] == 'drive.google.com':
-                file_id = url_pieces[5]
-                print("about to download from google drive")
-                download_file_from_google_drive(file_id, dir+f"slide{count}.jpg")
-                print("just downloaded from google drive")
-                scene.slide.slide_filename = dir+f"slide{count}.jpg"
-                count = count + 1
+    if "pdf" not in script_header:
+        for scene in script_body:
+            if scene.slide.slide_url != None and scene.slide.slide_url != '':
+                url_pieces = re.split('\/', scene.slide.slide_url)
+                if url_pieces[2] == 'drive.google.com':
+                    file_id = url_pieces[5]
+                    print("about to download from google drive")
+                    download_file_from_google_drive(file_id, dir+f"slide{count}.jpg")
+                    print("just downloaded from google drive")
+                    scene.slide.slide_filename = dir+f"slide{count}.jpg"
+                    count = count + 1
     #for scene in script_body:
     #    if scene.slide.slide_url != None and scene.slide.slide_url != '':
     #        path, headers = urlretrieve(scene.slide.slide_url, dir+f"slide{count}.jpg") # todo return and decide how to import the file format. don't think this thing cares tho

@@ -3,6 +3,7 @@ from enum import Enum
 
 class slide_source(str, Enum):
     URL = "url"
+    PDF = "pdf"
 
 @dataclass
 class slide:
@@ -10,12 +11,14 @@ class slide:
     slide_url: str | None
     slide_img: object
     slide_filename: str
+    asset_id: str
 
     def __init__(self):
         self.slide_source_type = None
         self.slide_url = None
         self.slide_img = None
         self.slide_filename = None
+        self.asset_id = None
     
     def to_dict(self):
         return asdict(self)
@@ -27,4 +30,5 @@ class slide:
         c.slide_url = data["slide_url"]
         c.slide_img = data["slide_img"]
         c.slide_filename = data["slide_filename"]
+        c.asset_id = data["asset_id"]
         return c

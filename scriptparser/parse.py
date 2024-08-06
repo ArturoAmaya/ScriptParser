@@ -1,5 +1,11 @@
 from scriptparser import scene, caption, avatar_video, background, slide, slide_source, style, style_type, transition_type, transition_in, avatar_style, side
+from scriptparser import slide_source as s_s
 import re
+from pdf2image import convert_from_path
+import PIL.Image
+import requests
+PIL.Image.MAX_IMAGE_PIXELS = 100005000
+
 
 def parse_composition(command:str, default: dict = None):
     composition = dict()
@@ -199,7 +205,7 @@ def parse_transition(command:str, default: dict=None):
         transition["t_type"] = default["t_type"] if default != None else transition_type.FADE
     return transition
 
-def parse_header(header:list[str]):
+def parse_header(header:list[str], folder:str, pdf:bool=False, pdf_file:str=""):
     true_header = dict()
     slides = False
     for line in header:
@@ -218,6 +224,14 @@ def parse_header(header:list[str]):
                 #    true_header["Default Avatar ID"] = line_split[1].strip()
                 #case "Default Voice ID":
                 #    true_header["Default Voice ID"] = line_split[1].strip()
+                case "PDF Name":
+                    true_header["pdf"] = folder+line_split[1].strip()
+                    try: 
+                        pages = convert_from_path(true_header["pdf"], 48)
+                    except: 
+                        raise Exception("no pdf found")
+                    for count, page in enumerate(pages):
+                        page.save(folder+'slide'+str(count)+'.jpg')
                 case "Slides":
                     slides = True
                     true_header["Slides"] = []
@@ -233,10 +247,19 @@ def parse_header(header:list[str]):
         else:
             true_header["Slides"].append(line.strip())
 
-    # TODO populate default composition and transition if needed
+    # if the pdf file exists flag that and write the jpgs. assign them in parsing each scene
+    if pdf and pdf_file != "":
+        true_header["pdf"] = folder+pdf_file
+        try: 
+            pages = convert_from_path(true_header["pdf"], 48)
+        except: 
+            raise Exception("no pdf found")
+        for count, page in enumerate(pages):
+            page.save(folder+'slide'+str(count)+'.jpg')
+
     return true_header
 
-def parse_script(script:list[tuple[scene,bool]], header:dict):
+def parse_script(script:list[tuple[scene,bool]], header:dict, folder: str):
     true_script = []
     count = 0
     slide_count = 0
@@ -307,9 +330,27 @@ def parse_script(script:list[tuple[scene,bool]], header:dict):
             s.text = re.sub('(\(.*?\))','',re.sub('({.*?})', '', re.sub('(\[.*?\])','', line))) # line.replace('\\\\', '') # TODO return to this when we add in mid-clip cuts
         
         if s.style.style == style_type.PIP or s.style.style == style_type.VOICEOVER or s.style.style == style_type.SBS or s.style.style==style_type.FPIP:
-            s.slide.slide_source_type = slide_source.URL
-            s.slide.slide_url = header['Slides'][slide_count] if slide_count < len(header["Slides"]) else header["Slides"][-1]
-            slide_count = slide_count + 1
+            if "pdf" in header and header["pdf"] != "":
+                # if the pdf exists find the already split image and upload it for the asset id
+                s.slide.slide_source_type = s_s.PDF # did this because it didn't recognize the original name
+                s.slide.slide_filename = f'{folder}slide{slide_count}.jpg'
+                slide_count = slide_count + 1
+
+                url = 'https://upload.heygen.com/v1/asset'
+                headers = {
+                    "Content-Type": "image/jpeg",
+                    "X-Api-Key": header["HeyGen API key"]
+                }
+                with open(s.slide.slide_filename, "rb") as file:
+                    response = requests.post(url, headers=headers, data=file)
+                #body = json.loads(response.text)
+                #script_body[count].avatar_video.video_id = body["data"]["video_id"]
+                s.slide.asset_id = response.json()["data"]["id"]
+                
+            else:
+                s.slide.slide_source_type = s_s.URL
+                s.slide.slide_url = header['Slides'][slide_count] if slide_count < len(header["Slides"]) else header["Slides"][-1]
+                slide_count = slide_count + 1
         # at this point, the only things in scene with no value are
         # avatar_video - id, metadata, url and video depend on uploading the clips
         # this is PIP only so no background needed
@@ -325,7 +366,7 @@ def parse_script(script:list[tuple[scene,bool]], header:dict):
         true_script.append(s)
     return true_script
 
-def parse_from_string(lines: list[str]):
+def parse_from_string(lines: list[str], folder:str, pdf:bool=False, pdf_file:str=""):
     try:
         header = []
         script = []
@@ -370,18 +411,18 @@ def parse_from_string(lines: list[str]):
                             # this is now for defaults and for []-only commands that are at the beginning of a line
                             #print("what is" + pair+"? I will treat it as a default default")
                             script.append((pair,False))
-        header = parse_header(header)
-        script = parse_script(script, header)
+        header = parse_header(header, folder, pdf, pdf_file)
+        script = parse_script(script, header, folder)
         return (header, script)
     except:
         raise Exception("Error parsing script from string")
 
-def parse_from_file(filepath: str):
+def parse_from_file(filepath: str, folder:str, pdf: bool=False, pdf_file:str=""):
     try:
         # read the files
         file = open(filepath, 'r')
         lines = file.readlines()
-        return parse_from_string(lines)
+        return parse_from_string(lines, folder, pdf, pdf_file)
     except:
         return False
     
