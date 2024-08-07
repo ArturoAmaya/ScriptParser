@@ -35,9 +35,13 @@ def upload_script(script: tuple[dict, list[scene]]):
                 clip["character"]["circle_background_color"] = scene.avatar_video.circle_background
 
             clip["voice"] = dict()
-            clip["voice"]["type"] = "text"
-            clip["voice"]["input_text"] = scene.text
-            clip["voice"]["voice_id"] = scene.avatar_video.voice_id #script_header["Default Voice ID"]
+            if scene.audio_file == None:
+                clip["voice"]["type"] = "text"
+                clip["voice"]["input_text"] = scene.text
+                clip["voice"]["voice_id"] = scene.avatar_video.voice_id #script_header["Default Voice ID"]
+            else:
+                clip["voice"]["type"] = "audio"
+                clip["voice"]["audio_asset_id"] = scene.audio_asset_id
 
             clip["background"] = dict()
             clip["background"]["type"] = "image"
@@ -77,9 +81,13 @@ def upload_script(script: tuple[dict, list[scene]]):
                 clip["character"]["circle_background_color"] = scene.avatar_video.circle_background
 
             clip["voice"] = dict()
-            clip["voice"]["type"] = "text"
-            clip["voice"]["input_text"] = scene.text
-            clip["voice"]["voice_id"] = scene.avatar_video.voice_id #script_header["Default Voice ID"]
+            if scene.audio_file == None:
+                clip["voice"]["type"] = "text"
+                clip["voice"]["input_text"] = scene.text
+                clip["voice"]["voice_id"] = scene.avatar_video.voice_id #script_header["Default Voice ID"]
+            else:
+                clip["voice"]["type"] = "audio"
+                clip["voice"]["audio_asset_id"] = scene.audio_asset_id
 
             clip["background"] = dict()
             clip["background"]["type"] = "color"
@@ -117,9 +125,13 @@ def upload_script(script: tuple[dict, list[scene]]):
                 clip["character"]["circle_background_color"] = scene.avatar_video.circle_background
 
             clip["voice"] = dict()
-            clip["voice"]["type"] = "text"
-            clip["voice"]["input_text"] = scene.text
-            clip["voice"]["voice_id"] = scene.avatar_video.voice_id #script_header["Default Voice ID"]
+            if scene.audio_file == None:
+                clip["voice"]["type"] = "text"
+                clip["voice"]["input_text"] = scene.text
+                clip["voice"]["voice_id"] = scene.avatar_video.voice_id #script_header["Default Voice ID"]
+            else:
+                clip["voice"]["type"] = "audio"
+                clip["voice"]["audio_asset_id"] = scene.audio_asset_id
 
             clip["background"] = dict()
             clip["background"]["type"] = "color"

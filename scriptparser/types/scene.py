@@ -15,6 +15,8 @@ class scene:
     transition_in: in_
     avatar_video: vid
     text: str
+    audio_file: str # This is so that we can make the avatar lipsync
+    audio_asset_id: str
     clip: object
     caption: cap
     # stuff to keep track of midline edits
@@ -33,6 +35,8 @@ class scene:
         self.caption = cap()
         self.midline_cut = None
         self.midline_text = None
+        self.audio_file = None
+        self.audio_asset_id = None
 
     def to_dict(self):
         return asdict(self)
@@ -51,4 +55,7 @@ class scene:
         s.caption = cap.from_dict(data["caption"])
         s.midline_cut = data["midline_cut"]
         s.midline_text = data["midline_text"]
+        s.audio_file = data["audio_file"]
+        s.audio_asset_id = data["audio_asset_id"]
+
  

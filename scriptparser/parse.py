@@ -224,6 +224,11 @@ def parse_header(header:list[str], folder:str, pdf:bool=False, pdf_file:str=""):
                 #    true_header["Default Avatar ID"] = line_split[1].strip()
                 #case "Default Voice ID":
                 #    true_header["Default Voice ID"] = line_split[1].strip()
+                case "Audio Files":
+                    true_header["audio"] = []
+                    files = line_split[1].split(',')
+                    for file in files:
+                        true_header["audio"].append(folder+file.strip())
                 case "PDF Name":
                     true_header["pdf"] = folder+line_split[1].strip()
                     try: 
@@ -359,6 +364,19 @@ def parse_script(script:list[tuple[scene,bool]], header:dict, folder: str):
         # slide img - havent gotten the slides yet
         # the first slide should have no transition in information
 
+        # if there's audio to be had, use that
+        if "audio" in header:
+            s.audio_file = header["audio"][count] if count < len(header['audio']) else header["audio"][-1]
+            url = 'https://upload.heygen.com/v1/asset'
+            headers = {
+                "Content-Type": "audio/mpeg",
+                "X-Api-Key": header["HeyGen API key"]
+            }
+            with open(s.audio_file, "rb") as file:
+                response = requests.post(url, headers=headers, data=file)
+                #body = json.loads(response.text)
+                #script_body[count].avatar_video.video_id = body["data"]["video_id"]
+            s.audio_asset_id = response.json()["data"]["id"]
         # increment the count
         count = count + 1
 
